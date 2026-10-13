@@ -6,3 +6,14 @@ body.dark{--paper:#0E1420;--surface:#172232;--text:#EEF4FA;--muted:#9DAEC3;--bor
 
 /* Piloto em tema escuro alinhado à identidade B. */
 .brand{letter-spacing:-1.3px}.story-footer .tag-bubble{max-width:80%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.story-modal .modal-actions a.action{text-align:center;display:inline-flex;align-items:center;justify-content:center}.story-head{align-items:flex-start}.story-read{white-space:normal;text-align:right}.footer-note{opacity:.8}
+
+/* Órbita — identidade B v0.3. Wordmark, geometria e cores alinhados à marca. */
+.brand{font-family:var(--heading);display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:30px;letter-spacing:normal;white-space:nowrap;}
+.brand-symbol{width:40px;height:40px;flex:0 0 auto;overflow:visible;}
+.brand-wordmark{display:inline-block;font-family:'Plus Jakarta Sans',Inter,system-ui,sans-serif;font-size:inherit;font-weight:800;letter-spacing:-.072em;line-height:1;transform:translateY(-1px);}
+.topbar{background:#0B0F14;}
+.page-header h1{letter-spacing:-.047em;font-weight:800;}
+.hero h2,.section-top h2,.story-title{letter-spacing:-.035em;}
+.demo-dot{background:#22D3EE;}
+@media(max-width:760px){.brand{font-size:26px;gap:8px}.brand-symbol{width:34px;height:34px}.brand-wordmark{letter-spacing:-.068em}}
+@media(max-width:360px){.brand{font-size:24px}.brand-symbol{width:32px;height:32px}}
