@@ -35,6 +35,35 @@ class FeedTests(unittest.TestCase):
         items=parse_rss(RSS,'Agencia de teste — Geral','Brasil')
         selected,_=select(items+items,datetime(2026,10,13,11,0,tzinfo=timezone.utc))
         self.assertEqual(len(selected),2)
+    def test_excludes_lottery_and_football(self):
+        news=[
+            dict(id='loteria',title='Mega-Sena sorteia prêmio acumulado de R$ 150 milhões',url='https://example.org/l',publishedAt='2026-10-13T10:00:00+00:00',source='Agência Brasil',feed='Agência Brasil — Geral',baseCategory='Brasil'),
+            dict(id='futebol',title='Copa do Brasil: Bragantino abre vantagem sobre Ferroviária',url='https://example.org/f',publishedAt='2026-10-13T10:00:00+00:00',source='Agência Brasil',feed='Agência Brasil — Esportes',baseCategory='Brasil'),
+            dict(id='juros',title='Banco Central debate taxa de juros e inflação',url='https://example.org/j',publishedAt='2026-10-13T10:00:00+00:00',source='Agência Brasil',feed='Agência Brasil — Economia',baseCategory='Brasil'),
+        ]
+        chosen,_=select(news,datetime(2026,10,13,11,0,tzinfo=timezone.utc))
+        self.assertEqual([n['id'] for n in chosen],['juros'])
+
+    def test_no_stale_items_older_than_48h(self):
+        news=[dict(id='stale',title='Nova exposição em São Paulo',url='https://example.org/c',publishedAt='2026-10-09T10:00:00+00:00',source='Agência Brasil',feed='Agência Brasil — Cultura',baseCategory='Interesses')]
+        chosen,_=select(news,datetime(2026,10,13,11,0,tzinfo=timezone.utc))
+        self.assertEqual(chosen,[])
+
+    def test_keeps_formula_one(self):
+        news=[dict(id='f1',title='Fórmula 1 anuncia novo calendário de grandes prêmios',url='https://example.org/f1',publishedAt='2026-10-13T10:00:00+00:00',source='Fonte',feed='Agência Brasil — Esportes',baseCategory='Interesses')]
+        chosen,_=select(news,datetime(2026,10,13,11,0,tzinfo=timezone.utc))
+        self.assertEqual(len(chosen),1)
+        self.assertEqual(chosen[0]['category'],'Interesses')
+
+    def test_relevance_over_recency(self):
+        news=[
+            dict(id='lot',title='Mega-Sena sorteia prêmio acumulado',url='https://example.org/l',publishedAt='2026-10-13T10:20:00+00:00',source='Fonte',feed='Agência Brasil — Geral',baseCategory='Brasil'),
+            dict(id='local',title='Novo financiamento imobiliário em São Paulo',url='https://example.org/x',publishedAt='2026-10-13T08:00:00+00:00',source='Fonte',feed='Agência Brasil — Economia',baseCategory='Brasil'),
+            dict(id='economic',title='Inflação e taxa de juros impactam o mercado',url='https://example.org/z',publishedAt='2026-10-13T10:10:00+00:00',source='Fonte',feed='Agência Brasil — Economia',baseCategory='Brasil')]
+        chosen,_=select(news,datetime(2026,10,13,11,0,tzinfo=timezone.utc))
+        self.assertEqual(chosen[0]['id'],'local')
+        self.assertEqual({x['id'] for x in chosen},{'local','economic'})
+
     def test_canonical_rejects_javascript(self):
         self.assertIsNone(canonical('javascript:alert(1)'))
 

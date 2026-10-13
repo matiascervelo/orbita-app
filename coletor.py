@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Órbita 0.2 — agregação gratuita para piloto pessoal, sem dependências externas.
+"""Órbita 0.3 — agregação gratuita para piloto pessoal, sem dependências externas.
 
 Rastreia SOMENTE manchete, URL e metadados RSS. Não republica textos, imagens,
 resumos de terceiros nem inventa análises com IA. Uso público/comercial depende de
@@ -98,38 +98,100 @@ def classify(article):
             return category
     return article["baseCategory"] if article["baseCategory"] in ("Mundo","Brasil") else "Brasil"
 
+# A filtragem não usa IA. São regras iniciais, transparentes e ajustáveis
+# para reduzir manchetes pouco úteis no piloto imobiliário.
+BLOCKED_TOPICS = re.compile(
+    r"mega.sena|loto.f[aá]cil|lotomania|\bquina\b|timemania|lot[eé]rica|"
+    r"pr[eê]mio acumulado|\bapostas?\b|"
+    r"brasileir[aã]o|copa do brasil|\bgols?\b|\bplacar\b|"
+    r"\bfutebol\b|\bferrovi[aá]ria\b|\bbragantino\b|"
+    r"\bs[eé]rie [ab]\b|\bcampeonato paulista\b",
+    re.I,
+)
+F1_TOPICS = re.compile(r"f[oó]rmula 1|\bf1\b|\bgrande pr[eê]mio\b|\bformula one\b", re.I)
+ECONOMY_TOPICS = re.compile(
+    r"juros|\bselic\b|\bipca\b|infla[cç][aã]o|c[aâ]mbio|\bd[oó]lar\b|"
+    r"investiment|banco central|\bpib\b|mercado financeir|\bbolsa\b|"
+    r"impostos?|tribut|\bfiscal\b|cr[eé]dito|\beconomia\b|"
+    r"neg[oó]cios|exporta[cç]|importa[cç]|empresas?|empreendedor",
+    re.I,
+)
+PUBLIC_IMPACT_TOPICS = re.compile(
+    r"elei[cç]|democracia|governo|president|congresso|senado|"
+    r"supremo|\bstf\b|reforma|pol[ií]tica|guerra|conflit|"
+    r"san[cç][oõ]es|geopol[ií]tica|diplomac|acordo internacional|"
+    r"crise|seguran[cç]a p[uú]blica|transi[cç][aã]o energ[eé]tica",
+    re.I,
+)
+LOCAL_CONTEXT_TOPICS = re.compile(
+    r"mobilidade|infraestrutura|urbanismo|\bmetr[oô]\b|"
+    r"transport|prefeitura|zoneamento|requalifica[cç]|urban[aio]",
+    re.I,
+)
+
+
+def is_relevant(item):
+    title=item["title"]
+    # No piloto, outros esportes e sorteios ficam fora, mesmo sendo recentes.
+    if F1_TOPICS.search(title):
+        return True
+    if BLOCKED_TOPICS.search(title):
+        return False
+    if item.get("feed", "").endswith("— Esportes"):
+        return False
+    return True
+
+
+def relevance_score(item, cutoff):
+    title=item["title"]
+    category=item["category"]
+    # Um assunto setorial ou local ganha prioridade sobre variedade genérica.
+    score={"Mercado imobiliário": 12, "São Paulo": 9,
+           "Mundo": 4, "Brasil": 3, "Interesses": 6}.get(category,0)
+    if ECONOMY_TOPICS.search(title): score+=8
+    if PUBLIC_IMPACT_TOPICS.search(title): score+=5
+    if LOCAL_CONTEXT_TOPICS.search(title): score+=4
+    if F1_TOPICS.search(title): score+=7
+    hours=(cutoff-datetime.fromisoformat(item["publishedAt"])).total_seconds()/3600
+    # Atualidade conta, mas não deve superar a relevância para o usuário.
+    score-=hours/10
+    return score
+
+
 def select(items, now):
-    # Encerra a janela de fatos às 7:30 no fuso local; em execução manual após 8h,
-    # também adota o corte para esta edição, sem apresentar novidades como se pré-8h.
+    # Edição de 08:00: somente fatos divulgados até 07:30, horário de SP.
     local=now.astimezone(TZ)
     edition_date=local.date()
     cutoff=datetime.combine(edition_date,time(7,30),TZ).astimezone(timezone.utc)
-    # Em execução antes das 7:30, só pode usar notícias já publicadas.
     cutoff=min(cutoff,now.astimezone(timezone.utc))
-    start=cutoff-timedelta(days=5)
+    # Evitar selecionar notícias de quatro ou cinco dias atrás só para completar uma cota.
+    start=cutoff-timedelta(hours=48)
     seen=set(); eligible=[]
     for item in items:
         when=datetime.fromisoformat(item["publishedAt"])
         if when<start or when>cutoff: continue
         title_key=re.sub(r"\W+","",unicodedata.normalize('NFKD',item["title"]).encode('ascii','ignore').decode().lower())
         signature=title_key[:90]
-        if item["id"] in seen or signature in seen:continue
+        if item["id"] in seen or signature in seen: continue
         seen.update([item["id"],signature])
+        if not is_relevant(item): continue
         copy={k:v for k,v in item.items() if k!="baseCategory"}
         copy["category"]=classify(item)
         eligible.append(copy)
-    eligible.sort(key=lambda a:a["publishedAt"],reverse=True)
+    # Selecionar os melhores itens por editoria e ordenar os destaques pela relevância.
+    eligible.sort(key=lambda a:(relevance_score(a,cutoff),a["publishedAt"]),reverse=True)
     selected=[]; used=set()
-    for category,n in TARGETS:
-        for article in (a for a in eligible if a["category"]==category and a["id"] not in used):
-            if sum(1 for a in selected if a["category"]==category)>=n:break
-            selected.append(article);used.add(article["id"])
-    # Não completar artificialmente categorias sem cobertura adequada.
-    selected.sort(key=lambda a:a["publishedAt"],reverse=True)
+    for category, n in TARGETS:
+        count=0
+        for article in eligible:
+            if count>=n: break
+            if article["category"]!=category or article["id"] in used: continue
+            selected.append(article); used.add(article["id"]); count+=1
+    selected.sort(key=lambda a:(relevance_score(a,cutoff),a["publishedAt"]),reverse=True)
     return selected, edition_date.isoformat()
 
 def fetch(url):
-    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.2 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
+    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.3 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
     with urlopen(req,timeout=13) as response:
         data=response.read(1_200_001)
         if len(data)>1_200_000:raise ValueError("Feed excede limite de segurança")
@@ -148,7 +210,7 @@ def build(now=None,fixture=None,out=OUT):
         except Exception as exc:
             warnings.append(f"{name}: {type(exc).__name__} ({str(exc)[:110]})")
     chosen,day=select(stories,now)
-    data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS),"items":chosen,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes e links de RSS. Sem resumos IA ou checagem editorial humana. Não publicar comercialmente antes de validar direitos."}
+    data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS),"items":chosen,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Não publicar comercialmente antes de validar direitos."}
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
     # Nunca sobrescrever uma edição com artigos por uma falha momentânea de rede.
     if not chosen and out.exists():

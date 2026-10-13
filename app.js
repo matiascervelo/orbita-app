@@ -1,5 +1,5 @@
 'use strict';
-/* Órbita 0.2: títulos, datas e URLs de feeds; sem resumos gerados ou afirmações fictícias. */
+/* Órbita 0.3: títulos, datas e URLs de feeds; sem resumos gerados ou afirmações fictícias. */
 const TOPICS=['Economia e investimentos','Mercado imobiliário','Arquitetura e design','Mercado de luxo','Gastronomia e viagens','Fórmula 1'];
 const CATS=['Todas','Mundo','Brasil','São Paulo','Mercado imobiliário','Interesses'];
 const DEFAULT={name:'Lourenço',profession:'Corretor de imóveis',speciality:'Alto padrão',city:'São Paulo',time:'08:00',topics:TOPICS,theme:'dark'};
@@ -29,7 +29,7 @@ function isReady(){return Array.isArray(data.items)&&data.items.length>0&&canRel
 function sourceBanner(){return `<div class="disclaimer">${ico('info')}<span><strong>Piloto de manchetes RSS.</strong> ${isReady()?`Edição de ${esc(fmtDay(data.editionDate))}, com links originais. Ainda não oferece resumo por IA, checagem independente nem sugestões de conversa.`:'Não há edição liberada. Se o arquivo do dia já foi gerado, será exibido a partir das 08:00, horário de São Paulo.'} Fontes e direitos precisam de validação antes de uso comercial.</span></div>`}
 function card(a,featured=false){return `<button class="story-card ${featured?'primary':''}" data-open="${esc(a.id)}"><div class="story-head"><span class="story-cat">${esc(a.category)}</span><span class="story-read">${esc(fmtMoment(a.publishedAt))}</span></div><h3 class="story-title">${esc(a.title)}</h3><p class="story-desc">${esc(a.source)} · Abrir referência e conferir o conteúdo original</p><div class="story-footer"><span class="tag-bubble">${esc(a.feed)}</span><span class="card-arrow">${saved.includes(a.id)?'♥':'↗'}</span></div></button>`}
 function noItems(){return `<div class="empty-state"><div class="empty-icon">◌</div><h3>Nenhuma edição real disponível</h3><p>O coletor deve rodar com internet. Se a edição de hoje já estiver preparada, será liberada às 08:00 no horário de São Paulo.</p><button class="action" id="reloadData">Verificar novamente</button></div>`}
-function foot(){return `<div class="footer-note">Órbita 0.2 · Piloto pessoal gratuito · Fontes originais sempre identificadas</div>`}
+function foot(){return `<div class="footer-note">Órbita 0.3 · Piloto pessoal gratuito · Fontes originais sempre identificadas</div>`}
 function home(){let items=isReady()?data.items:[];return `${head('Bom dia, '+profile.name+'.',`Briefing de ${fmtDay(data.editionDate)} · ${profile.city}`,'SEU MUNDO. EM PERSPECTIVA.')}
 <section class="hero"><div class="hero-glow"></div><div class="hero-caption">SEU BRIEFING DIÁRIO · ${esc(profile.time)}</div><h2>O essencial, sem ruído.<br>Na sua órbita.</h2><p>Manchetes de fontes públicas para começar o dia. Notícias completas permanecem na fonte original.</p><div class="hero-foot"><span>${ico('calendar')} ${esc(fmtDay(data.editionDate))}</span><span>${ico('clock')} ${items.length} manchetes</span></div></section>
 ${sourceBanner()}

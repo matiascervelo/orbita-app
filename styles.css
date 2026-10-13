@@ -17,3 +17,15 @@ body.dark{--paper:#0E1420;--surface:#172232;--text:#EEF4FA;--muted:#9DAEC3;--bor
 .demo-dot{background:#22D3EE;}
 @media(max-width:760px){.brand{font-size:26px;gap:8px}.brand-symbol{width:34px;height:34px}.brand-wordmark{letter-spacing:-.068em}}
 @media(max-width:360px){.brand{font-size:24px}.brand-symbol{width:32px;height:32px}}
+
+
+/* Órbita 0.3 — Correção de contraste: botões não herdam color do body. */
+.story-card,
+.story-card .story-title,
+.story-modal h2 { color: var(--text); }
+.story-card .story-title { -webkit-text-fill-color: var(--text); }
+.story-card:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.story-card:hover .story-title { color: var(--text); }
+@media (prefers-color-scheme: dark) {
+  .story-card { color: var(--text); }
+}
