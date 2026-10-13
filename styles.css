@@ -29,3 +29,14 @@ body.dark{--paper:#0E1420;--surface:#172232;--text:#EEF4FA;--muted:#9DAEC3;--bor
 @media (prefers-color-scheme: dark) {
   .story-card { color: var(--text); }
 }
+
+/* Órbita 0.4 — leitura organizada por editorias, versão B */
+.coverage-strip {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:10px 0 23px}
+.coverage-chip {display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:13px;padding:12px 13px;font-size:11px;color:var(--muted);min-width:0}
+.coverage-chip strong {font-size:16px;color:var(--blue)}
+.category-block{margin:10px 0 27px}
+.category-block .section-top {margin-top:26px;margin-bottom:12px}
+.section-kicker{color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.1em;margin-bottom:3px}
+.coverage-empty{border:1px dashed var(--border);background:var(--surface);color:var(--muted);border-radius:14px;padding:18px 20px;font-size:12px;line-height:1.6}
+@media (max-width:900px){.coverage-strip{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.coverage-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.coverage-chip{padding:10px 11px}.category-block{margin-bottom:20px}}

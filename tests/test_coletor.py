@@ -68,3 +68,32 @@ class FeedTests(unittest.TestCase):
         self.assertIsNone(canonical('javascript:alert(1)'))
 
 if __name__=='__main__':unittest.main()
+
+# Extensões do piloto 0.4 — os testes usam somente dados sintéticos.
+class NewSourcesTests(unittest.TestCase):
+    def sample(self,id,title,feed,base):
+        return dict(id=id,title=title,url='https://example.org/'+id,
+                    publishedAt='2026-10-13T09:30:00+00:00',
+                    source=feed.split(' — ')[0],feed=feed,baseCategory=base)
+    def test_bbc_world_and_brazil(self):
+        from coletor import classify
+        self.assertEqual(classify(self.sample('b1','Acordo de paz internacional altera cenário da guerra', 'BBC News Brasil — Geral','Mundo')), 'Mundo')
+        self.assertEqual(classify(self.sample('b2','Governo do Brasil anuncia medida econômica','BBC News Brasil — Geral','Mundo')), 'Brasil')
+    def test_specialist_source_requires_specialist_title(self):
+        from coletor import classify
+        self.assertEqual(classify(self.sample('s1','Venda de imóveis e mercado imobiliário em São Paulo','Secovi-SP — Notícias','Mercado imobiliário')),'Mercado imobiliário')
+        self.assertEqual(classify(self.sample('s2','Entidade promove seminário institucional','Secovi-SP — Notícias','Mercado imobiliário')),'Brasil')
+    def test_sp_health_does_not_mean_city_news(self):
+        from coletor import classify
+        self.assertEqual(classify(self.sample('sp1','Campanha nacional de vacinação','Governo SP Saúde — Notícias','São Paulo')),'Brasil')
+        self.assertEqual(classify(self.sample('sp2','Metrô de São Paulo inaugura nova linha','Governo SP Saúde — Notícias','São Paulo')),'São Paulo')
+    def test_incomplete_categories_are_allowed(self):
+        from coletor import select
+        stories=[self.sample('f1','Fórmula 1 anuncia novo calendário','Agência Brasil — Esportes','Interesses')]
+        chosen,_=select(stories,datetime(2026,10,13,11,0,tzinfo=timezone.utc))
+        self.assertEqual(len(chosen),1)
+        self.assertEqual(chosen[0]['category'],'Interesses')
+    def test_licensed_feed_only_is_not_implicitly_true(self):
+        from coletor import FEEDS
+        self.assertGreater(len(FEEDS),6)
+        self.assertEqual(len({url for _,_,url in FEEDS}),len(FEEDS))

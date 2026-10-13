@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Órbita 0.3 — agregação gratuita para piloto pessoal, sem dependências externas.
+"""Órbita 0.4 — agregação gratuita para piloto pessoal, sem dependências externas.
 
 Rastreia SOMENTE manchete, URL e metadados RSS. Não republica textos, imagens,
 resumos de terceiros nem inventa análises com IA. Uso público/comercial depende de
@@ -32,6 +32,12 @@ FEEDS = [
     ("Agência Brasil — Geral", "Brasil", "https://agenciabrasil.ebc.com.br/rss/geral/feed.xml"),
     ("Agência Brasil — Cultura", "Interesses", "https://agenciabrasil.ebc.com.br/rss/cultura/feed.xml"),
     ("Agência Brasil — Esportes", "Interesses", "https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml"),
+    # Fontes públicas adicionais: acesso RSS em teste, direitos de redistribuição
+    # devem ser revisados antes de ampliar o produto além do piloto pessoal.
+    ("Senado Notícias — Geral", "Brasil", "https://www12.senado.leg.br/noticias/feed/todasnoticias"),
+    ("Agência Câmara — Geral", "Brasil", "https://www.camara.leg.br/noticias/rss/ultimas-noticias"),
+    ("Governo SP Saúde — Notícias", "São Paulo", "https://www.saude.sp.gov.br/ses/noticias.rss"),
+    ("MDIC — Comércio exterior", "Brasil", "https://www.gov.br/mdic/pt-br/assuntos/comercio-exterior/estatisticas/informativos/RSS"),
 ]
 TARGETS = [("Mundo",3), ("Brasil",3), ("São Paulo",2), ("Mercado imobiliário",4), ("Interesses",2)]
 PATTERNS = {
@@ -96,7 +102,17 @@ def classify(article):
     for category in ["Mercado imobiliário","São Paulo","Interesses"]:
         if re.search(PATTERNS[category],t,re.I):
             return category
-    return article["baseCategory"] if article["baseCategory"] in ("Mundo","Brasil") else "Brasil"
+    base=article.get("baseCategory", "Brasil")
+    if base=="São Paulo":
+        # Uma nota estadual de saúde não é automaticamente notícia da cidade.
+        return "São Paulo" if re.search(PATTERNS["São Paulo"],t,re.I) else "Brasil"
+    if base=="Mercado imobiliário":
+        return "Mercado imobiliário" if re.search(PATTERNS["Mercado imobiliário"],t,re.I) else "Brasil"
+    if article.get("feed", "").startswith("BBC News Brasil"):
+        # O feed da BBC contém notícias nacionais e internacionais.
+        if re.search(r"\bbrasil\b|brasileir|\blula\b|\bbolsonaro\b|\bstf\b|\bs[aã]o paulo\b",t,re.I):
+            return "Brasil"
+    return base if base in ("Mundo","Brasil") else "Brasil"
 
 # A filtragem não usa IA. São regras iniciais, transparentes e ajustáveis
 # para reduzir manchetes pouco úteis no piloto imobiliário.
@@ -152,6 +168,8 @@ def relevance_score(item, cutoff):
     if PUBLIC_IMPACT_TOPICS.search(title): score+=5
     if LOCAL_CONTEXT_TOPICS.search(title): score+=4
     if F1_TOPICS.search(title): score+=7
+    if category=="Interesses" and re.search(PATTERNS["Interesses"], title, re.I): score+=4
+    # Fontes especialistas ajudam, mas não devem vencer notícias nacionais relevantes só pela origem.
     hours=(cutoff-datetime.fromisoformat(item["publishedAt"])).total_seconds()/3600
     # Atualidade conta, mas não deve superar a relevância para o usuário.
     score-=hours/10
@@ -181,17 +199,21 @@ def select(items, now):
     # Selecionar os melhores itens por editoria e ordenar os destaques pela relevância.
     eligible.sort(key=lambda a:(relevance_score(a,cutoff),a["publishedAt"]),reverse=True)
     selected=[]; used=set()
+    # Portão mínimo de relevância: evita preencher a edição com celebridades, loteria,
+    # notas burocráticas ou saúde genérica só para alcançar a meta de 14 itens.
+    minimum={"Mundo":7, "Brasil":7, "São Paulo":9, "Mercado imobiliário":10, "Interesses":8}
     for category, n in TARGETS:
         count=0
         for article in eligible:
             if count>=n: break
             if article["category"]!=category or article["id"] in used: continue
+            if relevance_score(article,cutoff)<minimum[category]: continue
             selected.append(article); used.add(article["id"]); count+=1
     selected.sort(key=lambda a:(relevance_score(a,cutoff),a["publishedAt"]),reverse=True)
     return selected, edition_date.isoformat()
 
 def fetch(url):
-    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.3 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
+    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.4 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
     with urlopen(req,timeout=13) as response:
         data=response.read(1_200_001)
         if len(data)>1_200_000:raise ValueError("Feed excede limite de segurança")
@@ -210,7 +232,8 @@ def build(now=None,fixture=None,out=OUT):
         except Exception as exc:
             warnings.append(f"{name}: {type(exc).__name__} ({str(exc)[:110]})")
     chosen,day=select(stories,now)
-    data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS),"items":chosen,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Não publicar comercialmente antes de validar direitos."}
+    coverage=[{"category":category,"target":n,"count":sum(a["category"]==category for a in chosen)} for category,n in TARGETS]
+    data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS),"items":chosen,"coverage":coverage,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Feeds públicos não implicam autorização para redistribuição comercial; licenças precisam ser validadas."}
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
     # Nunca sobrescrever uma edição com artigos por uma falha momentânea de rede.
     if not chosen and out.exists():
