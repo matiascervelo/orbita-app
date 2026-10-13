@@ -1,29 +1,11 @@
 {
   "editionDate": "2026-10-13",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-13T20:19:49.335640+00:00",
+  "generatedAt": "2026-10-13T22:22:35.126223+00:00",
   "status": "ready",
   "sourceFeedsOk": 6,
   "sourceFeedsTotal": 6,
   "items": [
-    {
-      "id": "e7437891d3d4eb49",
-      "title": "Mega-Sena sorteia prêmio acumulado de R$ 150 milhões nesta quarta",
-      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/mega-sena-sorteia-premio-acumulado-de-r-150-milhoes-nesta-quarta",
-      "publishedAt": "2026-10-13T10:02:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Geral",
-      "category": "Brasil"
-    },
-    {
-      "id": "010db8d8019a9532",
-      "title": "Copa do Brasil: Bragantino abre vantagem sobre Ferroviária nas quartas",
-      "url": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/copa-do-brasil-bragantino-abre-vantagem-sobre-ferroviaria-nas-quartas",
-      "publishedAt": "2026-10-12T23:36:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Esportes",
-      "category": "Brasil"
-    },
     {
       "id": "160a25eb0b8f3f29",
       "title": "Milhares ocupam Copacabana em ato pela democracia e em apoio a Lula",
@@ -43,6 +25,24 @@
       "category": "Mundo"
     },
     {
+      "id": "8b12986d47953361",
+      "title": "Flávio Bolsonaro participa de missa na Catedral de Brasília",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-bolsonaro-participa-de-missa-na-catedral-de-brasilia-0",
+      "publishedAt": "2026-10-12T21:03:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Política",
+      "category": "Brasil"
+    },
+    {
+      "id": "a979d503dc8b026b",
+      "title": "Polícia do Rio apreende armas após morte de suboficial do Bope",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-do-rio-apreende-armas-apos-morte-de-suboficial-do-bope",
+      "publishedAt": "2026-10-12T20:49:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Geral",
+      "category": "Brasil"
+    },
+    {
       "id": "283c1a39250c7a40",
       "title": "Papa Leão XIV fará cirurgia para retirar nódulo no pulmão",
       "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/papa-leao-xiv-fara-cirurgia-para-retirar-nodulo-no-pulmao",
@@ -50,26 +50,8 @@
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
-    },
-    {
-      "id": "592692b26de40377",
-      "title": "Brasileiras na Polônia procuram embaixada após ameaça de deputado",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/brasileiras-na-polonia-procuram-embaixada-apos-ameaca-de-deputado",
-      "publishedAt": "2026-10-09T19:31:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "edf6546247b30e6a",
-      "title": "MAB prorroga exposição de Miró em São Paulo",
-      "url": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/mab-prorroga-exposicao-de-miro-em-sao-paulo",
-      "publishedAt": "2026-10-09T10:28:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Cultura",
-      "category": "São Paulo"
     }
   ],
   "warnings": [],
-  "editorialNote": "Piloto experimental: manchetes e links de RSS. Sem resumos IA ou checagem editorial humana. Não publicar comercialmente antes de validar direitos."
+  "editorialNote": "Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Não publicar comercialmente antes de validar direitos."
 }
