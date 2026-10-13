@@ -1,0 +1,11 @@
+{
+  "editionDate": null,
+  "timezone": "America/Sao_Paulo",
+  "generatedAt": null,
+  "status": "pending",
+  "sourceFeedsOk": 0,
+  "sourceFeedsTotal": 6,
+  "items": [],
+  "warnings": [],
+  "editorialNote": "Nenhuma notícia carregada ainda. Execute python coletor.py em ambiente com acesso à internet."
+}
