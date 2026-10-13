@@ -1,10 +1,10 @@
 {
   "editionDate": "2026-10-13",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-13T22:48:38.275171+00:00",
+  "generatedAt": "2026-10-13T23:04:18.359655+00:00",
   "status": "ready",
-  "sourceFeedsOk": 7,
-  "sourceFeedsTotal": 10,
+  "sourceFeedsOk": 10,
+  "sourceFeedsTotal": 11,
   "items": [
     {
       "id": "160a25eb0b8f3f29",
@@ -44,9 +44,7 @@
     }
   ],
   "warnings": [
-    "Senado Notícias — Geral: ParseError (undefined entity: line 24, column 25)",
-    "Governo SP Saúde — Notícias: URLError (<urlopen error timed out>)",
-    "MDIC — Comércio exterior: ValueError (Feed vazio, sem datas ou em formato inesperado)"
+    "IBGE — Agência de Notícias: UnicodeDecodeError ('utf-8' codec can't decode byte 0x8b in position 1: invalid start byte)"
   ],
-  "editorialNote": "Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Feeds públicos não implicam autorização para redistribuição comercial; licenças precisam ser validadas."
+  "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
 }
