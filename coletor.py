@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Órbita 0.4.1 — agregação gratuita para piloto pessoal, sem dependências externas.
+"""Órbita 0.5 — agregação gratuita para piloto pessoal, sem dependências externas.
 
 Rastreia SOMENTE manchete, URL e metadados RSS. Não republica textos, imagens,
 resumos de terceiros nem inventa análises com IA. Uso público/comercial depende de
@@ -26,19 +26,24 @@ OUT = ROOT / "data" / "briefing.json"
 # URLs confirmadas no diretório de feeds da Agência Brasil; disponibilidade precisa
 # ser validada no ambiente onde o coletor for executado.
 FEEDS = [
+    # Seis RSS públicos da EBC observados como funcionais em 13/10/2026 no GitHub Actions.
     ("Agência Brasil — Internacional", "Mundo", "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml"),
     ("Agência Brasil — Economia", "Brasil", "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml"),
     ("Agência Brasil — Política", "Brasil", "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml"),
     ("Agência Brasil — Geral", "Brasil", "https://agenciabrasil.ebc.com.br/rss/geral/feed.xml"),
     ("Agência Brasil — Cultura", "Interesses", "https://agenciabrasil.ebc.com.br/rss/cultura/feed.xml"),
     ("Agência Brasil — Esportes", "Interesses", "https://agenciabrasil.ebc.com.br/rss/esportes/feed.xml"),
-    # Fontes públicas adicionais: acesso RSS em teste, direitos de redistribuição
-    # devem ser revisados antes de ampliar o produto além do piloto pessoal.
-    ("Senado Notícias — Geral", "Brasil", "https://www12.senado.leg.br/noticias/feed/todasnoticias"),
     ("Agência Câmara — Geral", "Brasil", "https://www.camara.leg.br/noticias/rss/ultimas-noticias"),
-    ("Governo SP Saúde — Notícias", "São Paulo", "https://www.saude.sp.gov.br/ses/noticias.rss"),
-    ("MDIC — Comércio exterior", "Brasil", "https://www.gov.br/mdic/pt-br/assuntos/comercio-exterior/estatisticas/informativos/RSS"),
+    # RSS em avaliação — não foram confirmados pelo GitHub Actions ainda.
+    ("Agência SP — Notícias", "São Paulo", "https://www.agenciasp.sp.gov.br/feed/"),
+    ("Secovi-SP — Notícias", "Mercado imobiliário", "https://secovi.com.br/feed/"),
+    ("Sebrae-SP — Notícias", "Brasil", "https://sp.agenciasebrae.com.br/feed/"),
 ]
+# API oficial sem autenticação; retorna JSON, não RSS.
+API_SOURCES = [
+    ("IBGE — Agência de Notícias", "Brasil", "https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=30"),
+]
+
 TARGETS = [("Mundo",3), ("Brasil",3), ("São Paulo",2), ("Mercado imobiliário",4), ("Interesses",2)]
 PATTERNS = {
  "São Paulo": r"\bs[aã]o paulo\b|\bpaulistan[oa]s?\b|\bcapital paulista\b|\bmetro de sp\b|\bmetr[oô] de s[aã]o paulo\b|\bavenida paulista\b|\bpinheiros\b|\bmoema\b|\bbrooklin\b|\bitai[m]?\b",
@@ -97,6 +102,35 @@ def parse_rss(raw, source_name, base_cat):
         out.append({"id":hashlib.sha256(link.encode()).hexdigest()[:16],"title":title[:260],"url":link,"publishedAt":when.isoformat(),"source":source_name.split(" — ")[0],"feed":source_name,"baseCategory":base_cat})
     return out
 
+
+def parse_ibge_news(raw, source_name="IBGE — Agência de Notícias", base_cat="Brasil"):
+    """Interpreta JSON da API oficial sem copiar introduções ou artigos.
+
+    Os horários publicados sem timezone são interpretados como horário de Brasília.
+    """
+    payload=json.loads(raw)
+    entries=payload.get("items",[]) if isinstance(payload,dict) else []
+    if not isinstance(entries,list): raise ValueError("IBGE: items não é lista")
+    result=[]
+    for entry in entries:
+        if not isinstance(entry,dict):continue
+        title=normalize(entry.get("titulo", ""))
+        link=canonical(entry.get("link", ""))
+        raw_date=entry.get("data_publicacao", "")
+        dt=None
+        if isinstance(raw_date,str):
+            for fmt in ("%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d"):
+                try:
+                    dt=datetime.strptime(raw_date.strip(),fmt).replace(tzinfo=TZ).astimezone(timezone.utc)
+                    break
+                except ValueError:pass
+            if dt is None: dt=parse_date(raw_date)
+        if not (title and link and dt):continue
+        result.append({"id":hashlib.sha256(link.encode()).hexdigest()[:16],
+                       "title":title[:260],"url":link,"publishedAt":dt.isoformat(),
+                       "source":"IBGE","feed":source_name,"baseCategory":base_cat})
+    return result
+
 def classify(article):
     t=article["title"].lower()
     for category in ["Mercado imobiliário","São Paulo","Interesses"]:
@@ -129,7 +163,7 @@ ECONOMY_TOPICS = re.compile(
     r"juros|\bselic\b|\bipca\b|infla[cç][aã]o|c[aâ]mbio|\bd[oó]lar\b|"
     r"investiment|banco central|\bpib\b|mercado financeir|\bbolsa\b|"
     r"impostos?|tribut|\bfiscal\b|cr[eé]dito|\beconomia\b|"
-    r"neg[oó]cios|exporta[cç]|importa[cç]|empresas?|empreendedor",
+    r"neg[oó]cios|exporta[cç]|importa[cç]|empresas?|empreendedor|\bsinapi\b|\bibge\b|\bind[uú]stria\b|\bconsumo\b",
     re.I,
 )
 PUBLIC_IMPACT_TOPICS = re.compile(
@@ -214,7 +248,7 @@ def select(items, now):
     return selected, edition_date.isoformat()
 
 def fetch(url):
-    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.4.1 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
+    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.5 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
     with urlopen(req,timeout=13) as response:
         data=response.read(1_200_001)
         if len(data)>1_200_000:raise ValueError("Feed excede limite de segurança")
@@ -235,6 +269,18 @@ def build(now=None,fixture=None,out=OUT):
             message=f"{name}: {type(exc).__name__} ({str(exc)[:110]})"
             warnings.append(message)
             print(f"[FEED FALHOU] {message}",file=sys.stderr,flush=True)
+    for name,cat,url in (API_SOURCES if not fixture else []):
+        try:
+            raw=Path(fixture).read_bytes() if fixture else fetch(url)
+            articles=parse_ibge_news(raw,name,cat)
+            if not articles: raise ValueError("API vazia ou formato inesperado")
+            stories.extend(articles)
+            ok+=1
+            print(f"[API OK] {name}: {len(articles)} entradas",flush=True)
+        except Exception as exc:
+            message=f"{name}: {type(exc).__name__} ({str(exc)[:110]})"
+            warnings.append(message)
+            print(f"[API FALHOU] {message}",file=sys.stderr,flush=True)
     local=now.astimezone(TZ)
     editorial_cutoff=min(
         datetime.combine(local.date(),time(7,30),TZ).astimezone(timezone.utc),
@@ -249,11 +295,11 @@ def build(now=None,fixture=None,out=OUT):
     chosen,day=select(stories,now)
     coverage=[{"category":category,"target":n,"count":sum(a["category"]==category for a in chosen)} for category,n in TARGETS]
     cutoff_sp=editorial_cutoff.astimezone(TZ).strftime('%d/%m/%Y %H:%M')
-    print(f"[DIAGNÓSTICO] Fuso SP; corte editorial {cutoff_sp}; feeds OK {ok}/{len(FEEDS)}; "
+    print(f"[DIAGNÓSTICO] Fuso SP; corte editorial {cutoff_sp}; feeds OK {ok}/{len(FEEDS)+len(API_SOURCES)}; "
           f"entradas totais {len(stories)}; últimas 48h antes do corte {seen_recent}; "
           f"sem bloqueios temáticos {recent_unblocked}; selecionadas {len(chosen)}", flush=True)
     print("[EDITORIAS] "+", ".join(f"{x['category']}={x['count']}" for x in coverage),flush=True)
-    data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS),"items":chosen,"coverage":coverage,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Feeds públicos não implicam autorização para redistribuição comercial; licenças precisam ser validadas."}
+    data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS)+len(API_SOURCES),"items":chosen,"coverage":coverage,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."}
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
     # Quando há fontes válidas mas nenhum fato supera os critérios editoriais,
     # a execução técnica funciona: manter a edição anterior é uma decisão editorial.
@@ -270,7 +316,7 @@ def build(now=None,fixture=None,out=OUT):
                 return ok>0
         except (ValueError,OSError): pass
     out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f"[RESULTADO] Edição {day}: {len(chosen)} manchetes; feeds OK {ok}/{len(FEEDS)}; erros {len(warnings)}",flush=True)
+    print(f"[RESULTADO] Edição {day}: {len(chosen)} manchetes; feeds OK {ok}/{len(FEEDS)+len(API_SOURCES)}; erros {len(warnings)}",flush=True)
     if not ok:
         print("[ERRO] Nenhuma fonte forneceu RSS válido. Edição indisponível.",file=sys.stderr,flush=True)
         return False

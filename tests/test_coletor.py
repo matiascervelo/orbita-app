@@ -130,3 +130,61 @@ class DiagnosticRegressionTests(unittest.TestCase):
             with patch('coletor.fetch',side_effect=ConnectionError('offline')):
                 self.assertFalse(build(datetime(2026,10,13,22,0,tzinfo=timezone.utc),out=p))
             self.assertEqual(json.loads(p.read_text(encoding='utf-8')),previous)
+
+class OfficialSources05Tests(unittest.TestCase):
+    def test_ibge_json_extracts_metadata_only(self):
+        import json
+        from coletor import parse_ibge_news
+        raw=json.dumps({"items":[{"titulo":"IBGE divulga IPCA e custos da construção civil",
+          "link":"https://agenciadenoticias.ibge.gov.br/agencia-noticias/1-test.html",
+          "data_publicacao":"13/10/2026 07:05:00","introducao":"CORPO NÃO AUTORIZADO"}]}).encode()
+        values=parse_ibge_news(raw)
+        self.assertEqual(len(values),1)
+        self.assertEqual(values[0]['source'],'IBGE')
+        self.assertEqual(values[0]['publishedAt'],'2026-10-13T10:05:00+00:00')
+        self.assertNotIn('introducao',values[0])
+        self.assertNotIn('CORPO NÃO AUTORIZADO',str(values))
+
+    def test_ibge_bad_item_skipped(self):
+        from coletor import parse_ibge_news
+        self.assertEqual(parse_ibge_news(b'{"items":[{"titulo":"Sem link","data_publicacao":"13/10/2026 07:05:00"}]}'),[])
+
+    def test_ibge_economy_selection(self):
+        import json
+        from coletor import parse_ibge_news
+        raw=json.dumps({"items":[{"titulo":"IBGE divulga IPCA e inflação no país",
+          "link":"https://agenciadenoticias.ibge.gov.br/noticias/123",
+          "data_publicacao":"13/10/2026 07:05:00"}]}).encode()
+        selected,_=select(parse_ibge_news(raw), datetime(2026,10,13,12,tzinfo=timezone.utc))
+        self.assertEqual(len(selected),1)
+        self.assertEqual(selected[0]['category'],'Brasil')
+
+    def test_sector_and_city_rss_classification(self):
+        from coletor import classify
+        sector={'title':'Mercado imobiliário de São Paulo tem nova pesquisa','baseCategory':'Mercado imobiliário','feed':'Secovi-SP — Notícias'}
+        city={'title':'Metrô de São Paulo inaugura estação na capital','baseCategory':'São Paulo','feed':'Agência SP — Notícias'}
+        generic={'title':'Governo estadual divulga concurso para outras cidades','baseCategory':'São Paulo','feed':'Agência SP — Notícias'}
+        self.assertEqual(classify(sector),'Mercado imobiliário')
+        self.assertEqual(classify(city),'São Paulo')
+        self.assertEqual(classify(generic),'Brasil')
+
+    def test_failing_new_feed_does_not_break_valid_feeds(self):
+        import tempfile, json
+        from unittest.mock import patch
+        from coletor import build
+        sample=(b'<?xml version="1.0"?><rss><channel><item>'
+                b'<title>Banco Central altera perspectiva de juros e inflacao</title>'
+                b'<link>https://example.org/economia</link>'
+                b'<pubDate>Tue, 13 Oct 2026 09:00:00 GMT</pubDate>'
+                b'</item></channel></rss>')
+        def fake_fetch(url):
+            if 'agenciabrasil' in url: return sample
+            raise ConnectionError('feed em teste indisponível')
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/'briefing.json'
+            with patch('coletor.fetch',side_effect=fake_fetch):
+                self.assertTrue(build(datetime(2026,10,13,12,0,tzinfo=timezone.utc),out=path))
+            outcome=json.loads(path.read_text())
+            self.assertEqual(outcome['status'],'ready')
+            self.assertGreaterEqual(outcome['sourceFeedsOk'],1)
+            self.assertEqual(outcome['sourceFeedsTotal'],11)
