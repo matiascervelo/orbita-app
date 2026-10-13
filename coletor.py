@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Órbita 0.4 — agregação gratuita para piloto pessoal, sem dependências externas.
+"""Órbita 0.4.1 — agregação gratuita para piloto pessoal, sem dependências externas.
 
 Rastreia SOMENTE manchete, URL e metadados RSS. Não republica textos, imagens,
 resumos de terceiros nem inventa análises com IA. Uso público/comercial depende de
@@ -84,7 +84,7 @@ def parse_rss(raw, source_name, base_cat):
             ns="{http://www.w3.org/2005/Atom}"
             title=node_text(item,ns+"title")
             links=item.findall(ns+"link")
-            link=next((x.get("href","") for x in links if x.get("rel","alternate")=="alternate"), "")
+            link=next((x.get("href","") for x in links if x.get("rel","alternate")=="alternate"), "") or next((x.get("href","") for x in links), "")
             published=node_text(item,ns+"published") or node_text(item,ns+"updated")
         else:
             title=node_text(item,"title")
@@ -201,7 +201,8 @@ def select(items, now):
     selected=[]; used=set()
     # Portão mínimo de relevância: evita preencher a edição com celebridades, loteria,
     # notas burocráticas ou saúde genérica só para alcançar a meta de 14 itens.
-    minimum={"Mundo":7, "Brasil":7, "São Paulo":9, "Mercado imobiliário":10, "Interesses":8}
+    # Um fato público relevante da noite anterior não deve ser descartado por uma diferença marginal de pontuação.
+    minimum={"Mundo":6, "Brasil":6, "São Paulo":9, "Mercado imobiliário":10, "Interesses":8}
     for category, n in TARGETS:
         count=0
         for article in eligible:
@@ -213,7 +214,7 @@ def select(items, now):
     return selected, edition_date.isoformat()
 
 def fetch(url):
-    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.4 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
+    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.4.1 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
     with urlopen(req,timeout=13) as response:
         data=response.read(1_200_001)
         if len(data)>1_200_000:raise ValueError("Feed excede limite de segurança")
@@ -226,26 +227,56 @@ def build(now=None,fixture=None,out=OUT):
         try:
             raw=Path(fixture).read_bytes() if fixture else fetch(url)
             articles=parse_rss(raw,name,cat)
-            if not articles:raise ValueError("RSS vazio ou formato inesperado")
+            if not articles: raise ValueError("Feed vazio, sem datas ou em formato inesperado")
             stories.extend(articles)
             ok+=1
+            print(f"[FEED OK] {name}: {len(articles)} entradas", flush=True)
         except Exception as exc:
-            warnings.append(f"{name}: {type(exc).__name__} ({str(exc)[:110]})")
+            message=f"{name}: {type(exc).__name__} ({str(exc)[:110]})"
+            warnings.append(message)
+            print(f"[FEED FALHOU] {message}",file=sys.stderr,flush=True)
+    local=now.astimezone(TZ)
+    editorial_cutoff=min(
+        datetime.combine(local.date(),time(7,30),TZ).astimezone(timezone.utc),
+        now.astimezone(timezone.utc)
+    )
+    seen_recent=0; recent_unblocked=0
+    for item in stories:
+        when=datetime.fromisoformat(item['publishedAt'])
+        if editorial_cutoff-timedelta(hours=48)<=when<=editorial_cutoff:
+            seen_recent+=1
+            if is_relevant(item): recent_unblocked+=1
     chosen,day=select(stories,now)
     coverage=[{"category":category,"target":n,"count":sum(a["category"]==category for a in chosen)} for category,n in TARGETS]
+    cutoff_sp=editorial_cutoff.astimezone(TZ).strftime('%d/%m/%Y %H:%M')
+    print(f"[DIAGNÓSTICO] Fuso SP; corte editorial {cutoff_sp}; feeds OK {ok}/{len(FEEDS)}; "
+          f"entradas totais {len(stories)}; últimas 48h antes do corte {seen_recent}; "
+          f"sem bloqueios temáticos {recent_unblocked}; selecionadas {len(chosen)}", flush=True)
+    print("[EDITORIAS] "+", ".join(f"{x['category']}={x['count']}" for x in coverage),flush=True)
     data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS),"items":chosen,"coverage":coverage,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Feeds públicos não implicam autorização para redistribuição comercial; licenças precisam ser validadas."}
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
-    # Nunca sobrescrever uma edição com artigos por uma falha momentânea de rede.
+    # Quando há fontes válidas mas nenhum fato supera os critérios editoriais,
+    # a execução técnica funciona: manter a edição anterior é uma decisão editorial.
     if not chosen and out.exists():
         try:
             prev=json.loads(out.read_text(encoding="utf-8"))
             if prev.get("items"):
-                print("Falha de coleta: edição anterior preservada, com sua data original.",file=sys.stderr)
-                return False
-        except (ValueError,OSError):pass
+                print("[SEM NOVA EDIÇÃO] Edição anterior preservada, com sua data original.",flush=True)
+                if not ok:
+                    print("[ERRO] Todas as fontes falharam; é necessário corrigir os feeds.",file=sys.stderr,flush=True)
+                else:
+                    print("[AVISO] Houve feeds disponíveis, mas nenhuma notícia passou pelo corte/filtro. "+
+                          "Isto NÃO significa que novas notícias foram publicadas.",flush=True)
+                return ok>0
+        except (ValueError,OSError): pass
     out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f"Edição {day}: {len(chosen)} manchetes; feeds OK {ok}/{len(FEEDS)}; erros {len(warnings)}")
-    return bool(chosen)
+    print(f"[RESULTADO] Edição {day}: {len(chosen)} manchetes; feeds OK {ok}/{len(FEEDS)}; erros {len(warnings)}",flush=True)
+    if not ok:
+        print("[ERRO] Nenhuma fonte forneceu RSS válido. Edição indisponível.",file=sys.stderr,flush=True)
+        return False
+    if not chosen:
+        print("[AVISO] Nenhuma notícia elegível; arquivo marcado como indisponível, sem inventar manchetes.",flush=True)
+    return True
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser()

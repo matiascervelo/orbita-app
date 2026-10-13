@@ -97,3 +97,36 @@ class NewSourcesTests(unittest.TestCase):
         from coletor import FEEDS
         self.assertGreater(len(FEEDS),6)
         self.assertEqual(len({url for _,_,url in FEEDS}),len(FEEDS))
+
+
+class DiagnosticRegressionTests(unittest.TestCase):
+    def test_relevant_democracy_article_from_previous_evening(self):
+        from coletor import select
+        story=dict(id='publico',title='Milhares ocupam Copacabana em ato pela democracia',
+                   url='https://example.org/evento',publishedAt='2026-10-12T22:04:00+00:00',
+                   source='Agência Brasil',feed='Agência Brasil — Política',baseCategory='Brasil')
+        chosen,_=select([story],datetime(2026,10,13,22,0,tzinfo=timezone.utc))
+        self.assertEqual([x['id'] for x in chosen],['publico'])
+
+    def test_preserves_prior_when_no_relevant_items_but_feed_is_healthy(self):
+        import tempfile,json
+        from unittest.mock import patch
+        from coletor import build
+        old='''<?xml version="1.0"?><rss><channel><item><title>Noticia genérica sem relevância</title><link>https://example.org/g</link><pubDate>Mon, 12 Oct 2026 20:00:00 GMT</pubDate></item></channel></rss>'''.encode('utf-8')
+        previous={'editionDate':'2026-10-12','status':'ready','items':[{'id':'anterior'}]}
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/'briefing.json';p.write_text(json.dumps(previous),encoding='utf-8')
+            with patch('coletor.fetch',return_value=old):
+                self.assertTrue(build(datetime(2026,10,13,22,0,tzinfo=timezone.utc),out=p))
+            self.assertEqual(json.loads(p.read_text(encoding='utf-8')),previous)
+
+    def test_all_feeds_failed_reports_error(self):
+        import tempfile,json
+        from unittest.mock import patch
+        from coletor import build
+        previous={'editionDate':'2026-10-12','status':'ready','items':[{'id':'anterior'}]}
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/'briefing.json';p.write_text(json.dumps(previous),encoding='utf-8')
+            with patch('coletor.fetch',side_effect=ConnectionError('offline')):
+                self.assertFalse(build(datetime(2026,10,13,22,0,tzinfo=timezone.utc),out=p))
+            self.assertEqual(json.loads(p.read_text(encoding='utf-8')),previous)
