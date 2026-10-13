@@ -1,10 +1,10 @@
 {
   "editionDate": "2026-10-13",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-13T22:22:35.126223+00:00",
+  "generatedAt": "2026-10-13T22:48:38.275171+00:00",
   "status": "ready",
-  "sourceFeedsOk": 6,
-  "sourceFeedsTotal": 6,
+  "sourceFeedsOk": 7,
+  "sourceFeedsTotal": 10,
   "items": [
     {
       "id": "160a25eb0b8f3f29",
@@ -14,44 +14,39 @@
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Política",
       "category": "Brasil"
-    },
-    {
-      "id": "d359ca90bc13ff49",
-      "title": "Jornalista brasileiro crítico a Milei é deportado da Argentina",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/jornalista-brasileiro-critico-milei-e-deportado-da-argentina",
-      "publishedAt": "2026-10-12T20:01:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "8b12986d47953361",
-      "title": "Flávio Bolsonaro participa de missa na Catedral de Brasília",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-bolsonaro-participa-de-missa-na-catedral-de-brasilia-0",
-      "publishedAt": "2026-10-12T21:03:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
-      "id": "a979d503dc8b026b",
-      "title": "Polícia do Rio apreende armas após morte de suboficial do Bope",
-      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-10/policia-do-rio-apreende-armas-apos-morte-de-suboficial-do-bope",
-      "publishedAt": "2026-10-12T20:49:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Geral",
-      "category": "Brasil"
-    },
-    {
-      "id": "283c1a39250c7a40",
-      "title": "Papa Leão XIV fará cirurgia para retirar nódulo no pulmão",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/papa-leao-xiv-fara-cirurgia-para-retirar-nodulo-no-pulmao",
-      "publishedAt": "2026-10-11T12:59:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
     }
   ],
-  "warnings": [],
-  "editorialNote": "Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Não publicar comercialmente antes de validar direitos."
+  "coverage": [
+    {
+      "category": "Mundo",
+      "target": 3,
+      "count": 0
+    },
+    {
+      "category": "Brasil",
+      "target": 3,
+      "count": 1
+    },
+    {
+      "category": "São Paulo",
+      "target": 2,
+      "count": 0
+    },
+    {
+      "category": "Mercado imobiliário",
+      "target": 4,
+      "count": 0
+    },
+    {
+      "category": "Interesses",
+      "target": 2,
+      "count": 0
+    }
+  ],
+  "warnings": [
+    "Senado Notícias — Geral: ParseError (undefined entity: line 24, column 25)",
+    "Governo SP Saúde — Notícias: URLError (<urlopen error timed out>)",
+    "MDIC — Comércio exterior: ValueError (Feed vazio, sem datas ou em formato inesperado)"
+  ],
+  "editorialNote": "Piloto experimental: manchetes e links de RSS com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Feeds públicos não implicam autorização para redistribuição comercial; licenças precisam ser validadas."
 }
