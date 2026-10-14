@@ -1,31 +1,49 @@
 {
   "editionDate": "2026-10-13",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-13T23:04:18.359655+00:00",
+  "generatedAt": "2026-10-14T01:45:08.353087+00:00",
   "status": "ready",
-  "sourceFeedsOk": 10,
+  "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "160a25eb0b8f3f29",
-      "title": "Milhares ocupam Copacabana em ato pela democracia e em apoio a Lula",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/milhares-de-pessoas-lotam-orla-de-copacabana-em-apoio-lula",
-      "publishedAt": "2026-10-12T22:04:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
+      "id": "5f038eb67cbaeabc",
+      "title": "IBGE disponibiliza Agenda semanal com programações para os dias 12 a 16 de outubro",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48258-ibge-disponibiliza-agenda-semanal-com-programacoes-para-os-dias-12-a-16-de-outubro.html",
+      "publishedAt": "2026-10-12T12:00:00+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
       "category": "Brasil"
+    },
+    {
+      "id": "45499710eab0703a",
+      "title": "Seminário debate o papel do IBGE no planejamento desenvolvimentista e nos Censos de 1970 e 1980",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48267-seminario-debate-o-papel-do-ibge-no-planejamento-desenvolvimentista-e-nos-censos-de-1970-e-1980.html",
+      "publishedAt": "2026-10-12T07:11:54+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "d359ca90bc13ff49",
+      "title": "Jornalista brasileiro crítico a Milei é deportado da Argentina",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/jornalista-brasileiro-critico-milei-e-deportado-da-argentina",
+      "publishedAt": "2026-10-12T20:01:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Brasil",
       "target": 3,
-      "count": 1
+      "count": 2
     },
     {
       "category": "São Paulo",
@@ -43,8 +61,6 @@
       "count": 0
     }
   ],
-  "warnings": [
-    "IBGE — Agência de Notícias: UnicodeDecodeError ('utf-8' codec can't decode byte 0x8b in position 1: invalid start byte)"
-  ],
+  "warnings": [],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
 }
