@@ -1,0 +1,24 @@
+name: Órbita 0.6 - Auditar fontes (sem publicar)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Auditar feeds RSS públicos (metadados somente)
+        run: python3 tools/auditar_feeds.py
+      - name: Disponibilizar relatório CSV e JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbita-auditoria-fontes
+          path: |
+            auditoria_feeds.csv
+            auditoria_feeds.json
+          retention-days: 7
