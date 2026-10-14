@@ -1,34 +1,88 @@
 {
-  "editionDate": "2026-10-13",
+  "editionDate": "2026-10-14",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-14T01:45:08.353087+00:00",
+  "generatedAt": "2026-10-14T10:39:23.475288+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "5f038eb67cbaeabc",
-      "title": "IBGE disponibiliza Agenda semanal com programações para os dias 12 a 16 de outubro",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48258-ibge-disponibiliza-agenda-semanal-com-programacoes-para-os-dias-12-a-16-de-outubro.html",
-      "publishedAt": "2026-10-12T12:00:00+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
+      "id": "838466544619b078",
+      "title": "Programa do Sebrae-SP reúne artesanato, gastronomia e empreendedorismo em Pirangi",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/programa-do-sebrae-sp-reune-artesanato-gastronomia-e-empreendedorismo-em-pirangi/",
+      "publishedAt": "2026-10-13T20:57:34+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Interesses"
+    },
+    {
+      "id": "c3b91510f751af14",
+      "title": "FMI prevê crescimento de 2,2% do PIB do Brasil em 2026",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/fmi-preve-crescimento-de-22-do-pib-do-brasil-em-2026",
+      "publishedAt": "2026-10-13T18:11:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "45499710eab0703a",
-      "title": "Seminário debate o papel do IBGE no planejamento desenvolvimentista e nos Censos de 1970 e 1980",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48267-seminario-debate-o-papel-do-ibge-no-planejamento-desenvolvimentista-e-nos-censos-de-1970-e-1980.html",
-      "publishedAt": "2026-10-12T07:11:54+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
+      "id": "63d2c315358eaf55",
+      "title": "5o Fórum Crie PP será realizado na Feira do Empreendedor em São Paulo",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/5o-forum-crie-pp-sera-realizado-na-feira-do-empreendedor-em-sao-paulo/",
+      "publishedAt": "2026-10-13T18:39:56+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "f3140f225996864c",
+      "title": "Feira do Empreendedor do Sebrae-SP reúne negócios, conhecimento e inovação em quatro dias de programação em São Paulo",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/feira-do-empreendedor-do-sebrae-sp-reune-negocios-conhecimento-e-inovacao-em-quatro-dias-de-programacao-em-sao-paulo/",
+      "publishedAt": "2026-10-13T18:10:06+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "29d19e2cb98e81a2",
+      "title": "Perdão de dívidas de MEIs terá impacto fiscal, mas redução de custos",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/perdao-de-dividas-de-meis-tera-impacto-de-r-3-bilhoes",
+      "publishedAt": "2026-10-14T01:09:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "d359ca90bc13ff49",
-      "title": "Jornalista brasileiro crítico a Milei é deportado da Argentina",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/jornalista-brasileiro-critico-milei-e-deportado-da-argentina",
-      "publishedAt": "2026-10-12T20:01:00+00:00",
+      "id": "04a1d7458167ee62",
+      "title": "Dólar sobe 0,74% e volta a fechar acima de R$ 5",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-sobe-074-e-volta-fechar-acima-de-r-5",
+      "publishedAt": "2026-10-13T21:57:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "d8c43eb610678130",
+      "title": "Norte-americanos ganham Nobel de Economia",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/norte-americanos-ganham-nobel-de-economia",
+      "publishedAt": "2026-10-13T11:04:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "45357d6c987a4c76",
+      "title": "Lula defende Sul Global; Flávio quer proximidade com EUA e Israel",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/lula-defende-sul-global-flavio-quer-proximidade-com-eua-e-israel",
+      "publishedAt": "2026-10-13T18:46:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "3572c74a16982fc2",
+      "title": "FMI reduz projeções de crescimento para América Latina",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/fmi-reduz-projecoes-de-crescimento-para-america-latina",
+      "publishedAt": "2026-10-13T12:24:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -38,17 +92,17 @@
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 3
     },
     {
       "category": "Brasil",
       "target": 3,
-      "count": 2
+      "count": 3
     },
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Mercado imobiliário",
@@ -58,7 +112,7 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [],
