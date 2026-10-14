@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Órbita 0.5 — agregação gratuita para piloto pessoal, sem dependências externas.
+"""Órbita 0.5.1 — agregação gratuita para piloto pessoal, sem dependências externas.
 
 Rastreia SOMENTE manchete, URL e metadados RSS. Não republica textos, imagens,
 resumos de terceiros nem inventa análises com IA. Uso público/comercial depende de
@@ -7,6 +7,7 @@ revisão dos termos e licenças de cada fonte.
 """
 from __future__ import annotations
 import argparse
+import gzip
 import hashlib
 import json
 import re
@@ -46,8 +47,8 @@ API_SOURCES = [
 
 TARGETS = [("Mundo",3), ("Brasil",3), ("São Paulo",2), ("Mercado imobiliário",4), ("Interesses",2)]
 PATTERNS = {
- "São Paulo": r"\bs[aã]o paulo\b|\bpaulistan[oa]s?\b|\bcapital paulista\b|\bmetro de sp\b|\bmetr[oô] de s[aã]o paulo\b|\bavenida paulista\b|\bpinheiros\b|\bmoema\b|\bbrooklin\b|\bitai[m]?\b",
- "Mercado imobiliário":r"\bim[oó]ve(?:l|is)\b|imobili[aá]ri|habita[cç][aã]o|\bconstru[cç][aã]o civil\b|incorporador|financiamento imobili|mercado residencial|\baluguel\b|\bloca[cç][aã]o\b|\bcondom[ií]nio\b|\bmetro quadrado\b|\bapartamento\b|\burbanismo\b|\barquitetura\b",
+ "São Paulo": r"\bs[aã]o paulo\b|\bpaulistan[oa]s?\b|\bcapital paulista\b|\bmetro de sp\b|\bmetr[oô] de s[aã]o paulo\b|\bavenida paulista\b|\bpinheiros\b|\bmoema\b|\bbrooklin\b|\bitaim\b",
+ "Mercado imobiliário":r"\bim[oó]ve(?:l|is)\b|imobili[aá]ri|habita[cç][aã]o|\bconstru[cç][aã]o civil\b|incorporador|financiamento imobili|mercado residencial|\baluguel\b|\bloca[cç][aã]o\b|\bcondom[ií]nio\b|\bmetro quadrado\b|\bapartamento\b|\burbanismo\b|\barquitetura\b|lan[cç]ament[oa]s? residencia|empreendiment[oa]s? imobili|setor imob",
  "Interesses":r"f[oó]rmula 1|\bf1\b|automobilismo|gastronomi|restauran|\bturismo\b|\bviagen[sm]\b|\bluxo\b|\bdesign\b|\bgrande pr[eê]mio\b|\bhotelaria\b|\bcircuito\b",
 }
 
@@ -103,12 +104,20 @@ def parse_rss(raw, source_name, base_cat):
     return out
 
 
+def normalize_response_bytes(raw):
+    """Alguns servidores devolvem gzip (1f 8b) mesmo sem pedido explícito."""
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+        if len(raw)>5_000_000: raise ValueError("Conteúdo descompactado excede limite")
+    return raw
+
+
 def parse_ibge_news(raw, source_name="IBGE — Agência de Notícias", base_cat="Brasil"):
     """Interpreta JSON da API oficial sem copiar introduções ou artigos.
 
     Os horários publicados sem timezone são interpretados como horário de Brasília.
     """
-    payload=json.loads(raw)
+    payload=json.loads(normalize_response_bytes(raw))
     entries=payload.get("items",[]) if isinstance(payload,dict) else []
     if not isinstance(entries,list): raise ValueError("IBGE: items não é lista")
     result=[]
@@ -138,8 +147,10 @@ def classify(article):
             return category
     base=article.get("baseCategory", "Brasil")
     if base=="São Paulo":
-        # Uma nota estadual de saúde não é automaticamente notícia da cidade.
-        return "São Paulo" if re.search(PATTERNS["São Paulo"],t,re.I) else "Brasil"
+        # Notícias de infraestrutura/metrô na capital; assuntos estaduais genéricos seguem em Brasil.
+        is_city=bool(re.search(PATTERNS["São Paulo"],t,re.I))
+        is_metro=bool(re.search(r"\bmetr[oô]\b|\blinha (?:[0-9]+|azul|verde|vermelha|amarela|lil[aá]s)\b",t,re.I))
+        return "São Paulo" if is_city or is_metro else "Brasil"
     if base=="Mercado imobiliário":
         return "Mercado imobiliário" if re.search(PATTERNS["Mercado imobiliário"],t,re.I) else "Brasil"
     if article.get("feed", "").startswith("BBC News Brasil"):
@@ -178,6 +189,29 @@ LOCAL_CONTEXT_TOPICS = re.compile(
     r"transport|prefeitura|zoneamento|requalifica[cç]|urban[aio]",
     re.I,
 )
+# Só as manchetes que indicam um fato relevante entram na edição.
+GLOBAL_IMPACT_TOPICS = re.compile(
+    r"\bargentina\b|\bmilei\b|\bestados unidos\b|\beua\b|"
+    r"\bchina\b|\br[uú]ssia\b|\bucr[aâ]nia\b|\bisrael\b|\bir[aã]\b|"
+    r"\beuropa\b|\buni[aã]o europeia\b|\bonu\b|\botan\b|\bmercosul\b|"
+    r"\btrump\b|\bputin\b|\bg20\b|\bfmi\b|\bbanco mundial\b|"
+    r"deporta[cç]|migra[cç]|tarifas? comerciais?|com[eé]rcio internacional|"
+    r"direitos humanos|mudan[cç]as? clim[aá]ticas?|desastre natural|acordo de paz",
+    re.I,
+)
+LOCAL_CHANGE_TOPICS = re.compile(
+    r"inaugura|nova linha|nova esta[cç][aã]o|obra|mobilidade|"
+    r"transporte|urbanismo|zoneamento|infraestrutura|aprova|licen[cç]a",
+    re.I,
+)
+SECTOR_CONTEXT_TOPICS = re.compile(
+    r"mercado imob|pre[cç]os? dos im[oó]veis|vendas? de im[oó]veis|"
+    r"lan[cç]amentos? residencia|cr[eé]dito imobili[aá]rio|"
+    r"financiamento imobili|setor imob|constru[cç][aã]o civil|"
+    r"loca[cç][aã]o residencial|investiment.*im[oó]v|"
+    r"valoriza[cç][aã]o imobili[aá]ria",
+    re.I,
+)
 
 
 def is_relevant(item):
@@ -195,18 +229,24 @@ def is_relevant(item):
 def relevance_score(item, cutoff):
     title=item["title"]
     category=item["category"]
-    # Um assunto setorial ou local ganha prioridade sobre variedade genérica.
-    score={"Mercado imobiliário": 12, "São Paulo": 9,
-           "Mundo": 4, "Brasil": 3, "Interesses": 6}.get(category,0)
-    if ECONOMY_TOPICS.search(title): score+=8
-    if PUBLIC_IMPACT_TOPICS.search(title): score+=5
-    if LOCAL_CONTEXT_TOPICS.search(title): score+=4
-    if F1_TOPICS.search(title): score+=7
-    if category=="Interesses" and re.search(PATTERNS["Interesses"], title, re.I): score+=4
-    # Fontes especialistas ajudam, mas não devem vencer notícias nacionais relevantes só pela origem.
-    hours=(cutoff-datetime.fromisoformat(item["publishedAt"])).total_seconds()/3600
-    # Atualidade conta, mas não deve superar a relevância para o usuário.
-    score-=hours/10
+    # Nota principal por pertinência; idade tem efeito moderado dentro das 48h.
+    score={"Mercado imobiliário": 7, "São Paulo": 5,
+           "Mundo": 3, "Brasil": 2, "Interesses": 2}.get(category,0)
+    if ECONOMY_TOPICS.search(title): score+=9
+    if PUBLIC_IMPACT_TOPICS.search(title): score+=8
+    if GLOBAL_IMPACT_TOPICS.search(title): score+=6
+    if LOCAL_CONTEXT_TOPICS.search(title): score+=5
+    if LOCAL_CHANGE_TOPICS.search(title) and category=="São Paulo": score+=3
+    if SECTOR_CONTEXT_TOPICS.search(title): score+=8
+    elif category=="Mercado imobiliário" and re.search(PATTERNS["Mercado imobiliário"],title,re.I): score+=5
+    if F1_TOPICS.search(title): score+=11
+    if category=="Interesses" and re.search(PATTERNS["Interesses"],title,re.I): score+=8
+    # Manchetes de fonte econômica especializada podem ser importantes mesmo
+    # sem trazer a palavra 'economia' explicitamente.
+    if item.get("feed","").endswith("— Economia") and category=="Brasil": score+=2
+    if item.get("source")=="IBGE" and category=="Brasil": score+=2
+    hours=max(0,(cutoff-datetime.fromisoformat(item["publishedAt"])).total_seconds()/3600)
+    score-=min(hours/16,2.5)
     return score
 
 
@@ -236,7 +276,7 @@ def select(items, now):
     # Portão mínimo de relevância: evita preencher a edição com celebridades, loteria,
     # notas burocráticas ou saúde genérica só para alcançar a meta de 14 itens.
     # Um fato público relevante da noite anterior não deve ser descartado por uma diferença marginal de pontuação.
-    minimum={"Mundo":6, "Brasil":6, "São Paulo":9, "Mercado imobiliário":10, "Interesses":8}
+    minimum={"Mundo":7, "Brasil":7, "São Paulo":9, "Mercado imobiliário":11, "Interesses":8}
     for category, n in TARGETS:
         count=0
         for article in eligible:
@@ -248,11 +288,11 @@ def select(items, now):
     return selected, edition_date.isoformat()
 
 def fetch(url):
-    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.5 (+RSS reader, personal testing)","Accept":"application/rss+xml, application/atom+xml, application/xml, text/xml"})
+    req=Request(url,headers={"User-Agent":"OrbitaPilot/0.5.1 (+RSS reader, personal testing)","Accept":"application/json, application/rss+xml, application/atom+xml, application/xml, text/xml", "Accept-Encoding":"identity"})
     with urlopen(req,timeout=13) as response:
         data=response.read(1_200_001)
         if len(data)>1_200_000:raise ValueError("Feed excede limite de segurança")
-        return data
+        return normalize_response_bytes(data)
 
 def build(now=None,fixture=None,out=OUT):
     now=now or datetime.now(timezone.utc)
@@ -299,6 +339,20 @@ def build(now=None,fixture=None,out=OUT):
           f"entradas totais {len(stories)}; últimas 48h antes do corte {seen_recent}; "
           f"sem bloqueios temáticos {recent_unblocked}; selecionadas {len(chosen)}", flush=True)
     print("[EDITORIAS] "+", ".join(f"{x['category']}={x['count']}" for x in coverage),flush=True)
+    # Diagnóstico por editoria ANTES do limiar, para separar falta de notícias
+    # de seleção editorial rigorosa. Não publica conteúdo extra.
+    candidates={category:0 for category,_ in TARGETS}
+    qualified={category:0 for category,_ in TARGETS}
+    for entry in stories:
+        when=datetime.fromisoformat(entry["publishedAt"])
+        if not editorial_cutoff-timedelta(hours=48)<=when<=editorial_cutoff or not is_relevant(entry):
+            continue
+        cat=classify(entry)
+        candidates[cat]+=1
+        trial={**entry,"category":cat}
+        if relevance_score(trial,editorial_cutoff)>={"Mundo":7,"Brasil":7,"São Paulo":9,"Mercado imobiliário":11,"Interesses":8}[cat]:
+            qualified[cat]+=1
+    print("[CANDIDATOS] "+", ".join(f"{cat}: {candidates[cat]} recentes, {qualified[cat]} com pontuação suficiente" for cat,_ in TARGETS), flush=True)
     data={"editionDate":day,"timezone":"America/Sao_Paulo","generatedAt":now.isoformat(),"status":"ready" if chosen else "unavailable","sourceFeedsOk":ok,"sourceFeedsTotal":len(FEEDS)+len(API_SOURCES),"items":chosen,"coverage":coverage,"warnings":warnings,"editorialNote":"Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."}
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
     # Quando há fontes válidas mas nenhum fato supera os critérios editoriais,

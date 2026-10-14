@@ -188,3 +188,50 @@ class OfficialSources05Tests(unittest.TestCase):
             self.assertEqual(outcome['status'],'ready')
             self.assertGreaterEqual(outcome['sourceFeedsOk'],1)
             self.assertEqual(outcome['sourceFeedsTotal'],11)
+
+
+class Update051Tests(unittest.TestCase):
+    def sample(self, article_id, title, category, hour=9, feed="Agência Brasil — Geral"):
+        return dict(id=article_id,title=title,url="https://example.org/"+article_id,
+                    publishedAt=f"2026-10-13T{hour:02}:00:00+00:00",
+                    source="Agência Brasil",feed=feed,baseCategory=category)
+
+    def test_ibge_gzip_api(self):
+        import gzip, json
+        from coletor import parse_ibge_news
+        raw=json.dumps({"items":[{"titulo":"IBGE anuncia inflação e IPCA",
+             "link":"https://example.org/ibge", "data_publicacao":"13/10/2026 07:05:00"}]}).encode()
+        self.assertEqual(len(parse_ibge_news(gzip.compress(raw))),1)
+
+    def test_gzip_rss_normalization(self):
+        import gzip
+        from coletor import normalize_response_bytes
+        self.assertEqual(normalize_response_bytes(gzip.compress(RSS)), RSS)
+
+    def test_global_relevance_without_legacy_keywords(self):
+        item=self.sample("argentina","Jornalista é deportado da Argentina após críticas a Milei", "Mundo")
+        chosen,_=select([item],datetime(2026,10,13,13,tzinfo=timezone.utc))
+        self.assertEqual([s["id"] for s in chosen],["argentina"])
+
+    def test_economy_world_and_local_by_context(self):
+        stories=[
+            self.sample("infra","Nova linha do metrô terá obra iniciada na capital", "São Paulo",feed="Agência SP — Notícias"),
+            self.sample("imovel","Novo projeto imobiliário para residências", "Mercado imobiliário",feed="Secovi-SP — Notícias"),
+            self.sample("geral","Instituição realiza seminário interno", "Brasil"),
+        ]
+        chosen,_=select(stories,datetime(2026,10,13,13,tzinfo=timezone.utc))
+        self.assertEqual({s["id"] for s in chosen},{"infra","imovel"})
+
+    def test_cutoff_still_holds_evening(self):
+        articles=[
+            self.sample("antes","Banco Central revisa inflação e juros", "Brasil",hour=10),
+            self.sample("depois","Banco Central revisa inflação e juros após reunião", "Brasil",hour=19),
+        ]
+        chosen,_=select(articles,datetime(2026,10,13,23,tzinfo=timezone.utc))
+        self.assertEqual([s["id"] for s in chosen],["antes"])
+
+    def test_old_articles_not_filled_to_quota(self):
+        old=self.sample("antigo","Banco Central altera inflação e juros", "Brasil",hour=10)
+        old["publishedAt"]="2026-10-09T10:00:00+00:00"
+        chosen,_=select([old],datetime(2026,10,13,23,tzinfo=timezone.utc))
+        self.assertEqual(chosen,[])
