@@ -1,88 +1,61 @@
 {
-  "editionDate": "2026-10-14",
+  "editionDate": "2026-10-15",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-14T10:39:23.475288+00:00",
+  "generatedAt": "2026-10-15T10:39:30.476559+00:00",
   "status": "ready",
-  "sourceFeedsOk": 11,
+  "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "838466544619b078",
-      "title": "Programa do Sebrae-SP reúne artesanato, gastronomia e empreendedorismo em Pirangi",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/programa-do-sebrae-sp-reune-artesanato-gastronomia-e-empreendedorismo-em-pirangi/",
-      "publishedAt": "2026-10-13T20:57:34+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Interesses"
-    },
-    {
-      "id": "c3b91510f751af14",
-      "title": "FMI prevê crescimento de 2,2% do PIB do Brasil em 2026",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/fmi-preve-crescimento-de-22-do-pib-do-brasil-em-2026",
-      "publishedAt": "2026-10-13T18:11:00+00:00",
+      "id": "4d51909cc1d2741b",
+      "title": "Confiança da indústria sobe em outubro, mas setor segue pessimista",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/confianca-da-industria-sobe-em-outubro-mas-setor-segue-pessimista",
+      "publishedAt": "2026-10-14T18:59:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "63d2c315358eaf55",
-      "title": "5o Fórum Crie PP será realizado na Feira do Empreendedor em São Paulo",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/5o-forum-crie-pp-sera-realizado-na-feira-do-empreendedor-em-sao-paulo/",
-      "publishedAt": "2026-10-13T18:39:56+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "f3140f225996864c",
-      "title": "Feira do Empreendedor do Sebrae-SP reúne negócios, conhecimento e inovação em quatro dias de programação em São Paulo",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/feira-do-empreendedor-do-sebrae-sp-reune-negocios-conhecimento-e-inovacao-em-quatro-dias-de-programacao-em-sao-paulo/",
-      "publishedAt": "2026-10-13T18:10:06+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "29d19e2cb98e81a2",
-      "title": "Perdão de dívidas de MEIs terá impacto fiscal, mas redução de custos",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/perdao-de-dividas-de-meis-tera-impacto-de-r-3-bilhoes",
-      "publishedAt": "2026-10-14T01:09:00+00:00",
+      "id": "95b44f06afb5e93c",
+      "title": "Setor de serviços cai 0,1% de julho para agosto, mostra IBGE",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/setor-de-servicos-cai-01-de-julho-para-agosto-mostra-ibge",
+      "publishedAt": "2026-10-14T13:02:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "04a1d7458167ee62",
-      "title": "Dólar sobe 0,74% e volta a fechar acima de R$ 5",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-sobe-074-e-volta-fechar-acima-de-r-5",
-      "publishedAt": "2026-10-13T21:57:00+00:00",
+      "id": "9f83f063b19f7525",
+      "title": "Governo federal regulamenta Marco Legal dos Jogos Eletrônicos",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-federal-regulamenta-marco-legal-dos-jogos-eletronicos",
+      "publishedAt": "2026-10-14T18:32:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
+    },
+    {
+      "id": "918cd4a9463d5957",
+      "title": "Colômbia vive protestos contra o governo de La Espriella",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/colombia-vive-protestos-contra-o-governo-de-la-espriella",
+      "publishedAt": "2026-10-14T21:31:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "1957a03b44623268",
+      "title": "Governo da Colômbia assina decreto que criminaliza protestos sociais",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/governo-da-colombia-assina-decreto-que-criminaliza-protestos-sociais",
+      "publishedAt": "2026-10-14T21:03:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     },
     {
       "id": "d8c43eb610678130",
       "title": "Norte-americanos ganham Nobel de Economia",
       "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/norte-americanos-ganham-nobel-de-economia",
       "publishedAt": "2026-10-13T11:04:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "45357d6c987a4c76",
-      "title": "Lula defende Sul Global; Flávio quer proximidade com EUA e Israel",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/lula-defende-sul-global-flavio-quer-proximidade-com-eua-e-israel",
-      "publishedAt": "2026-10-13T18:46:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "3572c74a16982fc2",
-      "title": "FMI reduz projeções de crescimento para América Latina",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/fmi-reduz-projecoes-de-crescimento-para-america-latina",
-      "publishedAt": "2026-10-13T12:24:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -102,7 +75,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 2
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
@@ -112,9 +85,11 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 1
+      "count": 0
     }
   ],
-  "warnings": [],
+  "warnings": [
+    "IBGE — Agência de Notícias: URLError (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certific)"
+  ],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
 }
