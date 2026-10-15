@@ -1,139 +1,203 @@
 #!/usr/bin/env python3
-"""Auditoria somente de metadados RSS/Atom. Não redistribui matérias nem fotos.
+"""Órbita 0.6: auditoria focada em SÃO PAULO (capital) e LUXO.
 
-Uso: python3 tools/auditar_feeds.py
-Saída: auditoria_feeds.csv / auditoria_feeds.json
-Requer somente a biblioteca padrão. Rodar no GitHub Actions para acesso externo.
+Executar em GitHub Actions com Python 3, somente biblioteca padrão.
+NÃO publica no app; não grava matérias/imagens; não faz login, bypass de paywall
+ou acesso a recursos pagos. Só testa metadados de feeds e páginas públicas.
+Saídas compatíveis com workflow já instalado:
+    auditoria_feeds.csv
+    auditoria_feeds.json
 """
 from __future__ import annotations
 
 import csv
 import gzip
+import html
 import json
 import re
 import sys
-import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 
-# Etapa 2: conserva as dez fontes testadas e adiciona sete candidatas.
-# 'Confirmado' = URL identificada em página oficial ou funcionando em teste anterior;
-# NÃO significa licença de uso comercial nem ausência de paywall.
-FEEDS = [
-    ("Agência Brasil — Internacional", "Mundo", "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml"),
-    ("Agência Brasil — Política", "Brasil", "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml"),
-    ("Agência Brasil — Economia", "Economia", "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml"),
-    ("InfoMoney", "Economia", "https://www.infomoney.com.br/feed/"),
-    ("Secovi-SP", "Imobiliário", "https://secovi.com.br/feed/"),
-    ("CBIC", "Imobiliário", "https://cbic.org.br/feed/"),
-    ("G1 — Mundo", "Mundo", "https://g1.globo.com/rss/g1/mundo/"),
-    ("G1 — Política", "Brasil", "https://g1.globo.com/rss/g1/politica/"),
-    ("CNN Brasil", "Brasil", "https://admin.cnnbrasil.com.br/feed/"),
-    ("Melhores Destinos", "Viagens", "https://www.melhoresdestinos.com.br/feed/"),
-    # Complementos a validar na auditoria real (sem republicar conteúdo):
-    ("Agência SP — Notícias", "São Paulo", "https://www.agenciasp.sp.gov.br/feed/"),
-    ("Sebrae-SP — Notícias", "Economia", "https://sp.agenciasebrae.com.br/feed/"),
-    ("ArchDaily Brasil", "Arquitetura e design", "https://feeds.feedburner.com/ArchdailyBR"),
-    ("Forbes Brasil", "Mercado de luxo", "https://forbes.com.br/feed/"),
-    ("Motorsport Brasil — Fórmula 1", "Fórmula 1", "https://motorsport.uol.com.br/rss/f1/news/"),
-    # Candidatos ainda NÃO verificados como RSS: falhas são esperadas e informativas.
-    ("CNN Viagem & Gastronomia — candidato", "Gastronomia e viagens", "https://www.cnnbrasil.com.br/viagemegastronomia/feed/"),
-    ("Prazeres da Mesa — candidato", "Gastronomia e viagens", "https://www.prazeresdamesa.com.br/feed/"),
+# Tipos: RSS = tentar analisar feed; PAGINA = somente verificar resposta da página.
+# A classificação é hipótese de cobertura, NÃO prova notícias da capital/luxo.
+# Apenas 'Mobilize', Secovi etc. têm URL ou RSS documentado no próprio site;
+# outros endereços RSS abaixo são CANDIDATOS e podem retornar erro/stale.
+SOURCES = [
+    # São Paulo — capital (sinal geográfico será analisado título a título)
+    {"fonte":"Mobilize — notícias (RSS oficial)", "editoria":"São Paulo", "modo":"RSS", "url":"https://www.mobilize.org.br/rss/noticias/", "situacao":"RSS oficial; filtrar SP capital"},
+    {"fonte":"Mobilize — metrô e trem (RSS oficial)", "editoria":"São Paulo", "modo":"RSS", "url":"https://www.mobilize.org.br/rss/noticias/?c=14", "situacao":"RSS oficial; alcance nacional"},
+    {"fonte":"Agência SP — Notícias", "editoria":"São Paulo", "modo":"RSS", "url":"https://www.agenciasp.sp.gov.br/feed/", "situacao":"RSS candidato; erro HTTP 500 na auditoria anterior"},
+    {"fonte":"Sebrae-SP — Notícias", "editoria":"São Paulo", "modo":"RSS", "url":"https://sp.agenciasebrae.com.br/feed/", "situacao":"RSS antes funcional; cobre o estado"},
+    {"fonte":"Diário do Transporte — candidato", "editoria":"São Paulo", "modo":"RSS", "url":"https://diariodotransporte.com.br/feed/", "situacao":"RSS candidato a verificar"},
+    {"fonte":"Prefeitura de São Paulo — Notícias", "editoria":"São Paulo", "modo":"PAGINA", "url":"https://prefeitura.sp.gov.br/noticias", "situacao":"Site oficial; sem RSS homologado"},
+    {"fonte":"VEJA São Paulo — portal", "editoria":"São Paulo", "modo":"PAGINA", "url":"https://vejasp.abril.com.br/", "situacao":"Artigos gratuitos e exclusivos; checar paywall"},
+    # Mercado de luxo — alguns portais generalistas precisam de filtragem
+    {"fonte":"Forbes Brasil — Geral", "editoria":"Mercado de luxo", "modo":"RSS", "url":"https://forbes.com.br/feed/", "situacao":"RSS antes funcional; mistura assuntos"},
+    {"fonte":"Hotelier News — Hotelaria", "editoria":"Mercado de luxo", "modo":"RSS", "url":"https://hoteliernews.com.br/feed/", "situacao":"Endereço RSS identificado; filtrar hotelaria premium"},
+    {"fonte":"Mercado & Consumo — Varejo", "editoria":"Mercado de luxo", "modo":"RSS", "url":"https://mercadoeconsumo.com.br/feed/", "situacao":"Endereço RSS; última data pode estar antiga"},
+    {"fonte":"Harper's Bazaar Brasil — candidato", "editoria":"Mercado de luxo", "modo":"RSS", "url":"https://harpersbazaar.uol.com.br/feed/", "situacao":"RSS candidato; validar endpoint"},
+    {"fonte":"Robb Report Brasil — feed candidato", "editoria":"Mercado de luxo", "modo":"RSS", "url":"https://www.robbreport.com.br/feed/", "situacao":"RSS NÃO confirmado; portal existe"},
+    {"fonte":"Robb Report Brasil — portal", "editoria":"Mercado de luxo", "modo":"PAGINA", "url":"https://www.robbreport.com.br/", "situacao":"Portal aberto; não comprova feed"},
+    {"fonte":"Casa Vogue — portal", "editoria":"Mercado de luxo", "modo":"PAGINA", "url":"https://casavogue.globo.com/", "situacao":"Site; arquitetura/design e acesso variáveis"},
+    {"fonte":"GQ Brasil — portal", "editoria":"Mercado de luxo", "modo":"PAGINA", "url":"https://gq.globo.com/", "situacao":"Site; estilo e consumo, RSS não confirmado"},
 ]
-NS = {"atom": "http://www.w3.org/2005/Atom", "dc": "http://purl.org/dc/elements/1.1/"}
 
-def parse_date(s: str) -> datetime | None:
-    if not s:
+ATOM = '{http://www.w3.org/2005/Atom}'
+DC = '{http://purl.org/dc/elements/1.1/}'
+
+# Sinais de cidade são apenas possíveis correspondências. 'São Paulo' pode
+# significar estado, município, time ou pessoa: confirmar geografia depois.
+CAPITAL_RE = re.compile(r'\b(?:s[aã]o paulo|paulistan[oa]s?|capital paulista|prefeitura de sp|metro de sp|metr[oô] de sp|linha\s*[12679][\s-]|faria lima|itaim bibi|pinheiros|moema|brooklin|jardins|vila mariana|ibirapuera|bela vista|jardim europa|vila madalena|avenida paulista|marginal tiet[eê]|marginal pinheiros|campo belo|para[ií]so|augusta|oscar freire|cptm)\b', re.I)
+LUXURY_RE = re.compile(r'\b(?:luxo|luxury|premium|alto padr[aã]o|exclusiv[oa]s?|sofistica(?:do|da)|joalheria|relojoaria|rolex|patek|audemars|cartier|herm[eè]s|louis vuitton|chanel|dior|prada|gucci|ferrari|porsche|lamborghini|bentley|rolls[- ]royce|private jet|jato executivo|iate|yacht|hotel de luxo|hotel cinco estrelas|five stars|four seasons|fasano|rosewood|mandarin oriental|relais ch[aâ]teaux|alta gastronomia|michelin|mans[aã]o)\b', re.I)
+
+
+def parse_date(value: str) -> datetime | None:
+    if not value:
         return None
-    s = s.strip()
     try:
-        dt = parsedate_to_datetime(s)
-    except (ValueError, TypeError, IndexError):
+        dt = parsedate_to_datetime(value.strip())
+    except (ValueError, IndexError, TypeError):
         try:
-            dt = datetime.fromisoformat(s.replace('Z', '+00:00'))
-        except ValueError:
+            dt = datetime.fromisoformat(value.strip().replace('Z', '+00:00'))
+        except (ValueError, TypeError):
             return None
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(timezone.utc)
 
 
-def parse_xml(blob: bytes):
+def get_first(element: ET.Element, keys: tuple[str, ...]) -> str:
+    for key in keys:
+        text = element.findtext(key)
+        if text and text.strip():
+            return text.strip()
+    return ''
+
+
+def parse_xml(blob: bytes) -> list[tuple[str, datetime | None]]:
     root = ET.fromstring(blob)
-    tag = root.tag.rsplit('}', 1)[-1].lower()
-    if tag not in ('rss','feed','rdf'):
-        raise ValueError(f'XML sem estrutura RSS/Atom reconhecível: {tag}')
-    if tag == 'feed':
-        items = root.findall('atom:entry', NS)
-        if not items:
-            items = root.findall('{http://www.w3.org/2005/Atom}entry')
-        title_tag='atom:title'; date_tags=('atom:published','atom:updated')
-    else:
-        items = root.findall('.//item')
-        title_tag='title'; date_tags=('pubDate','dc:date','date')
-    rec=[]
-    for item in items:
-        title = item.findtext(title_tag, default='', namespaces=NS).strip()
-        if not title and tag == 'feed':
-            title=item.findtext('{http://www.w3.org/2005/Atom}title',default='').strip()
-        dt=None
-        for dt_tag in date_tags:
-            dt=parse_date(item.findtext(dt_tag, default='', namespaces=NS))
-            if dt: break
-        rec.append((re.sub(r'\s+',' ',title)[:140],dt))
-    return rec
+    name = root.tag.rsplit('}', 1)[-1].lower()
+    if name not in ('rss', 'rdf', 'feed'):
+        raise ValueError(f'XML não é RSS/Atom (raiz={name})')
+    entries = root.findall('.//' + ATOM + 'entry') if name == 'feed' else root.findall('.//item')
+    if name == 'rdf' and not entries:
+        entries = root.findall('.//{http://purl.org/rss/1.0/}item')
+    results = []
+    for entry in entries:
+        if name == 'feed':
+            title = get_first(entry, (ATOM + 'title', 'title'))
+            raw_date = get_first(entry, (ATOM + 'published', ATOM + 'updated'))
+        else:
+            title = get_first(entry, ('title','{http://purl.org/rss/1.0/}title'))
+            raw_date = get_first(entry, ('pubDate', DC + 'date', 'date', '{http://purl.org/rss/1.0/modules/content/}date'))
+        title = re.sub(r'\s+', ' ', html.unescape(title)).strip()[:160]
+        results.append((title, parse_date(raw_date)))
+    return results
 
 
-def inspect(name: str, categoria: str, url: str, now: datetime):
-    out = dict(fonte=name,categoria=categoria,url=url,status='ERRO',http='',tipo='',itens=0,
-               datas_validas=0,ultimas_48h=0,ultimos_7dias=0,data_mais_recente='',exemplo='',erro='')
-    req = urllib.request.Request(url,headers={
-        'User-Agent': 'OrbitaPilotSourceAudit/0.6 (RSS metadata only; contact owner for content licensing)',
-        'Accept':'application/rss+xml, application/atom+xml, application/xml, text/xml, */*',
-        'Accept-Encoding': 'gzip',
-    })
+class PageTitle(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_title = False
+        self.title = ''
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'title':
+            self.in_title = True
+
+    def handle_endtag(self, tag):
+        if tag == 'title':
+            self.in_title = False
+
+    def handle_data(self, text):
+        if self.in_title:
+            self.title += text
+
+
+def inspect(source: dict[str, str], now: datetime) -> dict:
+    record = {
+        'fonte': source['fonte'],
+        'categoria': source['editoria'],
+        'modo': source['modo'],
+        'url': source['url'],
+        'situacao': source['situacao'],
+        'status': 'ERRO',
+        'http': '', 'tipo': '', 'itens': 0,
+        'datas_validas': 0, 'ultimas_48h': 0, 'ultimos_7dias': 0,
+        'possivel_sp_capital_7d': 0, 'possivel_luxo_7d': 0,
+        'data_mais_recente': '', 'exemplo': '', 'exemplo_relevante': '',
+        'erro': '', 'licenca': 'NÃO VERIFICADA', 'paywall': 'NÃO VERIFICADO',
+    }
+    headers = {
+        'User-Agent':'OrbitaSourceAudit/0.6 (pilot; public metadata and links only)',
+        'Accept':'application/rss+xml,application/atom+xml,application/xml,text/xml,text/html;q=0.8,*/*;q=0.5',
+        'Accept-Encoding':'gzip',
+    }
+    req = urllib.request.Request(source['url'], headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=14) as res:
-            out['http']=res.status
-            out['tipo']=res.headers.get('Content-Type','')[:120]
-            content=res.read(3_000_000)
-            if res.headers.get('Content-Encoding','').lower() == 'gzip' or content[:2]==b'\x1f\x8b':
-                content=gzip.decompress(content)
-        items=parse_xml(content)
-        times=[t for _,t in items if t is not None]
-        out['itens']=len(items)
-        out['datas_validas']=len(times)
-        out['ultimas_48h']=sum(now-timedelta(hours=48)<=t<=now+timedelta(minutes=20) for t in times)
-        out['ultimos_7dias']=sum(now-timedelta(days=7)<=t<=now+timedelta(minutes=20) for t in times)
-        out['data_mais_recente']=max(times).isoformat() if times else ''
-        out['exemplo']=next((title for title,_ in items if title),'')
-        out['status']='OK' if items else 'VAZIO'
+        with urllib.request.urlopen(req, timeout=12) as response:
+            record['http'] = getattr(response, 'status', 200)
+            record['tipo'] = response.headers.get('Content-Type', '')[:120]
+            content = response.read(4_000_000)
+            enc = response.headers.get('Content-Encoding', '').lower()
+            if 'gzip' in enc or content[:2] == b'\x1f\x8b':
+                content = gzip.decompress(content)
+        if source['modo'] == 'PAGINA':
+            title_parser = PageTitle()
+            title_parser.feed(content[:250_000].decode('utf-8', 'replace'))
+            record['exemplo'] = re.sub(r'\s+', ' ', title_parser.title).strip()[:160]
+            record['status'] = 'PAGINA_OK' if b'<html' in content[:4000].lower() else 'PAGINA_INDEFINIDA'
+        else:
+            feed_entries = parse_xml(content)
+            times = [dt for title, dt in feed_entries if dt]
+            recent = [(title, dt) for title,dt in feed_entries if dt and now-timedelta(days=7) <= dt <= now+timedelta(minutes=20)]
+            record['itens'] = len(feed_entries)
+            record['datas_validas'] = len(times)
+            record['ultimas_48h'] = sum(now - timedelta(hours=48) <= d <= now + timedelta(minutes=20) for d in times)
+            record['ultimos_7dias'] = len(recent)
+            record['possivel_sp_capital_7d'] = sum(bool(CAPITAL_RE.search(title)) for title, _ in recent)
+            record['possivel_luxo_7d'] = sum(bool(LUXURY_RE.search(title)) for title, _ in recent)
+            record['data_mais_recente'] = max(times).isoformat() if times else ''
+            record['exemplo'] = next((t for t,d in feed_entries if t), '')
+            matcher = CAPITAL_RE if source['editoria'] == 'São Paulo' else LUXURY_RE
+            record['exemplo_relevante'] = next((t for t,d in recent if matcher.search(t)), '')
+            record['status'] = 'OK' if len(feed_entries) > 0 else 'VAZIO'
     except Exception as exc:
-        out['erro']=f'{type(exc).__name__}: {str(exc)[:250]}'
-    return out
+        record['erro'] = (type(exc).__name__ + ': ' + str(exc))[:260]
+    return record
 
 
-def main():
-    now=datetime.now(timezone.utc)
-    results=[]
-    for name,cat,url in FEEDS:
-        item=inspect(name,cat,url,now)
-        results.append(item)
-        print(f"{item['status']:>5} | {item['fonte']:<31} | itens={item['itens']:<4} 48h={item['ultimas_48h']:<3} | {item['erro'] or item['data_mais_recente']}",flush=True)
-    keys=list(results[0])
-    with open('auditoria_feeds.csv','w',encoding='utf-8-sig',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=keys,delimiter=';')
-        writer.writeheader(); writer.writerows(results)
-    Path('auditoria_feeds.json').write_text(json.dumps({'executado_em_utc':now.isoformat(),'resultados':results},ensure_ascii=False,indent=2),encoding='utf-8')
-    success=sum(x['status']=='OK' for x in results)
-    recent=sum(x['ultimas_48h'] for x in results)
-    print(f'RESUMO: {success}/{len(results)} feeds responderam com itens; {recent} entradas com datas nas últimas 48h (ainda podem existir duplicatas).')
-    print('AVISO: OK significa feed legível, NÃO valida licença comercial nem artigo sem paywall.')
-    # Volta exit 0 para sempre carregar os relatórios, mesmo se as fontes falharem.
-    return 0
+def main() -> int:
+    now = datetime.now(timezone.utc)
+    rows=[]
+    for source in SOURCES:
+        result=inspect(source, now)
+        rows.append(result)
+        print(f"[{result['status']:<17}] {result['fonte'][:40]:<40} "
+              f"itens={result['itens']:<4} 48h={result['ultimas_48h']:<3} "
+              f"sinaisSP={result['possivel_sp_capital_7d']:<2} "
+              f"sinaisLuxo={result['possivel_luxo_7d']:<2} "
+              f"{result['erro'] or result['data_mais_recente']}", flush=True)
+    with open('auditoria_feeds.csv','w',encoding='utf-8-sig',newline='') as fp:
+        writer=csv.DictWriter(fp, fieldnames=list(rows[0]), delimiter=';')
+        writer.writeheader(); writer.writerows(rows)
+    Path('auditoria_feeds.json').write_text(json.dumps({
+        'executado_em_utc': now.isoformat(),
+        'nota':'Sinais de tema no título não confirmam cidade, luxo, artigos gratuitos ou licença comercial. PÁGINA_OK não é feed.',
+        'resultados':rows,
+    },ensure_ascii=False,indent=2),encoding='utf-8')
+    feed_ok=sum(r['status']=='OK' for r in rows)
+    page_ok=sum(r['status']=='PAGINA_OK' for r in rows)
+    print(f"RESUMO: {feed_ok} RSS funcionando; {page_ok} páginas acessíveis; "
+          f"{sum(r['ultimas_48h'] for r in rows)} entradas RSS em 48h (antes de deduplicar).", flush=True)
+    print('ATENÇÃO: esta auditoria não verifica paywall, direitos de publicação nem acesso a conteúdo completo.', flush=True)
+    return 0  # Sempre enviar os relatórios mesmo com alguns sites inacessíveis.
 
 if __name__ == '__main__':
     sys.exit(main())
