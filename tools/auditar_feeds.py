@@ -19,6 +19,9 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+# Etapa 2: conserva as dez fontes testadas e adiciona sete candidatas.
+# 'Confirmado' = URL identificada em página oficial ou funcionando em teste anterior;
+# NÃO significa licença de uso comercial nem ausência de paywall.
 FEEDS = [
     ("Agência Brasil — Internacional", "Mundo", "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml"),
     ("Agência Brasil — Política", "Brasil", "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml"),
@@ -30,6 +33,15 @@ FEEDS = [
     ("G1 — Política", "Brasil", "https://g1.globo.com/rss/g1/politica/"),
     ("CNN Brasil", "Brasil", "https://admin.cnnbrasil.com.br/feed/"),
     ("Melhores Destinos", "Viagens", "https://www.melhoresdestinos.com.br/feed/"),
+    # Complementos a validar na auditoria real (sem republicar conteúdo):
+    ("Agência SP — Notícias", "São Paulo", "https://www.agenciasp.sp.gov.br/feed/"),
+    ("Sebrae-SP — Notícias", "Economia", "https://sp.agenciasebrae.com.br/feed/"),
+    ("ArchDaily Brasil", "Arquitetura e design", "https://feeds.feedburner.com/ArchdailyBR"),
+    ("Forbes Brasil", "Mercado de luxo", "https://forbes.com.br/feed/"),
+    ("Motorsport Brasil — Fórmula 1", "Fórmula 1", "https://motorsport.uol.com.br/rss/f1/news/"),
+    # Candidatos ainda NÃO verificados como RSS: falhas são esperadas e informativas.
+    ("CNN Viagem & Gastronomia — candidato", "Gastronomia e viagens", "https://www.cnnbrasil.com.br/viagemegastronomia/feed/"),
+    ("Prazeres da Mesa — candidato", "Gastronomia e viagens", "https://www.prazeresdamesa.com.br/feed/"),
 ]
 NS = {"atom": "http://www.w3.org/2005/Atom", "dc": "http://purl.org/dc/elements/1.1/"}
 
@@ -118,7 +130,8 @@ def main():
     Path('auditoria_feeds.json').write_text(json.dumps({'executado_em_utc':now.isoformat(),'resultados':results},ensure_ascii=False,indent=2),encoding='utf-8')
     success=sum(x['status']=='OK' for x in results)
     recent=sum(x['ultimas_48h'] for x in results)
-    print(f'RESUMO: {success}/{len(results)} feeds responderam com itens; {recent} itens com datas nas últimas 48h.')
+    print(f'RESUMO: {success}/{len(results)} feeds responderam com itens; {recent} entradas com datas nas últimas 48h (ainda podem existir duplicatas).')
+    print('AVISO: OK significa feed legível, NÃO valida licença comercial nem artigo sem paywall.')
     # Volta exit 0 para sempre carregar os relatórios, mesmo se as fontes falharem.
     return 0
 
