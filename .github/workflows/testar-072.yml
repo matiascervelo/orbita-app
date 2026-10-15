@@ -1,0 +1,30 @@
+
+name: Órbita 0.7.2 - Prévia sem publicar
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  previa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Testar versão 0.7.2 offline
+        run: python3 -m unittest discover -s tests -p 'test_coletor_072.py' -v
+
+      - name: Gerar briefing 0.7.2 (sem publicar)
+        run: python3 coletor_072.py --out data/briefing_preview_072.json
+
+      - name: Disponibilizar relatório para análise
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbita-072-previa
+          path: data/briefing_preview_072.json
+          if-no-files-found: error
+          retention-days: 7
