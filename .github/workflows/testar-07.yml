@@ -1,0 +1,26 @@
+
+name: Órbita 0.7 - Prévia sem publicar
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  previa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testar regras da versão 0.7 (offline)
+        run: python3 -m unittest discover -s tests -p '*_07.py' -v
+      - name: Gerar prévia do briefing (não publicar)
+        run: python3 coletor_07.py --out data/briefing_preview_07.json
+      - name: Disponibilizar prévia para análise
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbita-07-previa
+          path: data/briefing_preview_07.json
+          retention-days: 7
