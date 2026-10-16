@@ -1,71 +1,89 @@
 {
-  "editionDate": "2026-10-15",
+  "editionDate": "2026-10-16",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-15T10:39:30.476559+00:00",
+  "generatedAt": "2026-10-16T10:38:41.003388+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "4d51909cc1d2741b",
-      "title": "Confiança da indústria sobe em outubro, mas setor segue pessimista",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/confianca-da-industria-sobe-em-outubro-mas-setor-segue-pessimista",
-      "publishedAt": "2026-10-14T18:59:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "a4074fa036c81dff",
+      "title": "Reforma tributária exige revisão de contratos de locação, alertam especialistas em evento do Secovi-SP",
+      "url": "https://secovi.com.br/reforma-tributaria-exige-revisao-de-contratos-de-locacao-alertam-especialistas-em-evento-do-secovi-sp/",
+      "publishedAt": "2026-10-15T21:05:27+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "c561c8a2e3987431",
+      "title": "Governo de SP lança Operação El Niño e apresenta estratégia de resiliência climática de R$ 29 bi em investimentos",
+      "url": "https://www.agenciasp.sp.gov.br/meio-ambiente/governo-de-sp-lanca-operacao-el-nino-e-apresenta-estrategia-de-resiliencia-climatica-de-r-29-bi-em-investimentos/",
+      "publishedAt": "2026-10-15T21:11:24+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "95b44f06afb5e93c",
-      "title": "Setor de serviços cai 0,1% de julho para agosto, mostra IBGE",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/setor-de-servicos-cai-01-de-julho-para-agosto-mostra-ibge",
-      "publishedAt": "2026-10-14T13:02:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "66a0b025e1f113f8",
+      "title": "Comissão aprova política de crédito para mulheres do campo",
+      "url": "https://www.camara.leg.br/noticias/1311515-comissao-aprova-politica-de-credito-para-mulheres-do-campo",
+      "publishedAt": "2026-10-15T18:56:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
       "category": "Brasil"
     },
     {
-      "id": "9f83f063b19f7525",
-      "title": "Governo federal regulamenta Marco Legal dos Jogos Eletrônicos",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-federal-regulamenta-marco-legal-dos-jogos-eletronicos",
-      "publishedAt": "2026-10-14T18:32:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "9ef0d3d2c1e625c3",
+      "title": "Sebrae-SP e Prefeitura de Mogi das Cruzes reforçam parceria para impulsionar pequenos negócios",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-prefeitura-de-mogi-das-cruzes-reforcam-parceria-para-impulsionar-pequenos-negocios/",
+      "publishedAt": "2026-10-15T14:50:40+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "918cd4a9463d5957",
-      "title": "Colômbia vive protestos contra o governo de La Espriella",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/colombia-vive-protestos-contra-o-governo-de-la-espriella",
-      "publishedAt": "2026-10-14T21:31:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "80a5e0cb91674ad9",
+      "title": "Secovi-SP promove primeiro evento voltado ao varejo e propõe aproximação com o mercado imobiliário",
+      "url": "https://secovi.com.br/secovi-sp-promove-primeiro-evento-voltado-ao-varejo-e-propoe-aproximacao-com-o-mercado-imobiliario/",
+      "publishedAt": "2026-10-15T20:10:34+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
-      "id": "1957a03b44623268",
-      "title": "Governo da Colômbia assina decreto que criminaliza protestos sociais",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/governo-da-colombia-assina-decreto-que-criminaliza-protestos-sociais",
-      "publishedAt": "2026-10-14T21:03:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "0e92cb78a6aad57d",
+      "title": "Pesquisa Mensal do Mercado Imobiliário – Agosto 2026",
+      "url": "https://secovi.com.br/pesquisa-mensal-do-mercado-imobiliario-agosto-2026/",
+      "publishedAt": "2026-10-15T19:20:05+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
-      "id": "d8c43eb610678130",
-      "title": "Norte-americanos ganham Nobel de Economia",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/norte-americanos-ganham-nobel-de-economia",
-      "publishedAt": "2026-10-13T11:04:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "93d62abc2ef5d7ab",
+      "title": "Consulta Nacional da ABNT sobre serviços imobiliários – participe até 21/10/2026",
+      "url": "https://secovi.com.br/consulta-nacional-da-abnt-sobre-servicos-imobiliarios-textos-dos-projetos-em-consulta/",
+      "publishedAt": "2026-10-15T20:36:17+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "b54c8f3ad0a4d4d5",
+      "title": "Diagnóstico de Turismo do Sebrae-SP cita potencial de Indiaporã",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/diagnostico-de-turismo-do-sebrae-sp-cita-potencial-de-indiapora/",
+      "publishedAt": "2026-10-15T19:14:41+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Interesses"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 3
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -80,12 +98,12 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 4
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [
