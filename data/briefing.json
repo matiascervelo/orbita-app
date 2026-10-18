@@ -1,29 +1,11 @@
 {
-  "editionDate": "2026-10-17",
+  "editionDate": "2026-10-18",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-17T10:33:29.348041+00:00",
+  "generatedAt": "2026-10-18T10:33:52.578031+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
-    {
-      "id": "a4074fa036c81dff",
-      "title": "Reforma tributária exige revisão de contratos de locação, alertam especialistas em evento do Secovi-SP",
-      "url": "https://secovi.com.br/reforma-tributaria-exige-revisao-de-contratos-de-locacao-alertam-especialistas-em-evento-do-secovi-sp/",
-      "publishedAt": "2026-10-15T21:05:27+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "1d749b37f4464b74",
-      "title": "Apresentações do O Varejo e o Mercado Imobiliário na Nova Economia – 15/10/2026",
-      "url": "https://secovi.com.br/apresentacoes-do-o-varejo-e-o-mercado-imobiliario-na-nova-economia-15-10-2026/",
-      "publishedAt": "2026-10-15T12:55:57+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
     {
       "id": "7b86b731f5e08a4a",
       "title": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
@@ -43,47 +25,20 @@
       "category": "Brasil"
     },
     {
-      "id": "66a0b025e1f113f8",
-      "title": "Comissão aprova política de crédito para mulheres do campo",
-      "url": "https://www.camara.leg.br/noticias/1311515-comissao-aprova-politica-de-credito-para-mulheres-do-campo",
-      "publishedAt": "2026-10-15T18:56:00+00:00",
-      "source": "Agência Câmara",
-      "feed": "Agência Câmara — Geral",
-      "category": "Brasil"
-    },
-    {
-      "id": "80a5e0cb91674ad9",
-      "title": "Secovi-SP promove primeiro evento voltado ao varejo e propõe aproximação com o mercado imobiliário",
-      "url": "https://secovi.com.br/secovi-sp-promove-primeiro-evento-voltado-ao-varejo-e-propoe-aproximacao-com-o-mercado-imobiliario/",
-      "publishedAt": "2026-10-15T20:10:34+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "0e92cb78a6aad57d",
-      "title": "Pesquisa Mensal do Mercado Imobiliário – Agosto 2026",
-      "url": "https://secovi.com.br/pesquisa-mensal-do-mercado-imobiliario-agosto-2026/",
-      "publishedAt": "2026-10-15T19:20:05+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "b88419536ca9b0a0",
-      "title": "Atirador mata pelo menos 4 pessoas em escola dos Estados Unidos",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/atirador-mata-pelo-menos-4-pessoas-em-escola-dos-estados-unidos",
-      "publishedAt": "2026-10-16T11:25:00+00:00",
+      "id": "e3726f8d81da4929",
+      "title": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/economia-lula-e-flavio-divergem-sobre-ajuste-fiscal-e-papel-do-estado",
+      "publishedAt": "2026-10-16T11:20:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -98,7 +53,7 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 4
+      "count": 0
     },
     {
       "category": "Interesses",
