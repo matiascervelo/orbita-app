@@ -1,36 +1,63 @@
 {
-  "editionDate": "2026-10-18",
+  "editionDate": "2026-10-19",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-18T10:33:52.578031+00:00",
+  "generatedAt": "2026-10-19T10:38:31.012970+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "7b86b731f5e08a4a",
-      "title": "Governo prevê crédito a empresas afetadas por fim da 6x1, diz Durigan",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-preve-credito-empresas-afetadas-por-fim-da-6x1-diz-durigan",
-      "publishedAt": "2026-10-16T21:36:00+00:00",
+      "id": "7740a69ddd836ca6",
+      "title": "Rodada de negócios aproxima empresas da construção civil em São Carlos",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/rodada-de-negocios-aproxima-empresas-da-construcao-civil-em-sao-carlos/",
+      "publishedAt": "2026-10-18T17:42:38+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "aa687ec586e9e45e",
+      "title": "Operação El Niño: Governo de São Paulo treina agentes na região de Araraquara para enfrentar efeitos das mudanças climáticas",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/operacao-el-nino-araraquara/",
+      "publishedAt": "2026-10-19T10:30:00+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "3beba320dccef17e",
+      "title": "Operação El Niño: Governo de São Paulo treina agentes na Grande São Paulo para enfrentar efeitos das mudanças climáticas",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/operacao-el-nino-grande-sp/",
+      "publishedAt": "2026-10-19T10:20:00+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "23656db9d94cc8e6",
+      "title": "Empresas de três regiões terão aporte de R$ 450 milhões para inovação",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/empresas-de-tres-regioes-terao-aporte-de-r-450-milhoes-para-inovacao",
+      "publishedAt": "2026-10-18T14:20:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "55a5d7163ef49266",
-      "title": "Brasil deve voltar a ser 8a maior economia do mundo em 2027, prevê FMI",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/brasil-deve-voltar-ser-8a-maior-economia-do-mundo-em-2027-preve-fmi",
-      "publishedAt": "2026-10-16T15:47:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "64081eb89e589e22",
+      "title": "Empreendedores da região buscam novas oportunidades na Feira do Empreendedor 2026",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/empreendedores-da-regiao-buscam-novas-oportunidades-na-feira-do-empreendedor-2026/",
+      "publishedAt": "2026-10-18T17:51:51+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "e3726f8d81da4929",
-      "title": "Economia: Lula e Flávio divergem sobre ajuste fiscal e papel do Estado",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/economia-lula-e-flavio-divergem-sobre-ajuste-fiscal-e-papel-do-estado",
-      "publishedAt": "2026-10-16T11:20:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "a1b6556059a7b1f6",
+      "title": "Sebrae-SP conecta empresa de Monte Azul Paulista a novas oportunidades no GAFFFF 2026",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-conecta-empresa-de-monte-azul-paulista-a-novas-oportunidades-no-gaffff-2026/",
+      "publishedAt": "2026-10-18T17:48:51+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
       "category": "Brasil"
     }
   ],
@@ -48,12 +75,12 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Interesses",
