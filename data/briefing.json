@@ -1,28 +1,55 @@
 {
-  "editionDate": "2026-10-20",
+  "editionDate": "2026-10-21",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-20T10:37:15.347432+00:00",
+  "generatedAt": "2026-10-21T10:39:15.164869+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "7740a69ddd836ca6",
-      "title": "Rodada de negócios aproxima empresas da construção civil em São Carlos",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/rodada-de-negocios-aproxima-empresas-da-construcao-civil-em-sao-carlos/",
-      "publishedAt": "2026-10-18T17:42:38+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Mercado imobiliário"
+      "id": "9ec98acc89c47444",
+      "title": "Itamaraty acusa Milei de tentar interferir na eleição brasileira",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/itamaraty-acusa-milei-de-tentar-interferir-na-eleicao-brasileira",
+      "publishedAt": "2026-10-21T01:23:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     },
     {
-      "id": "4d99942c99696a78",
-      "title": "Ato em São Paulo cobra neutralidade da Meta nas eleições",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/ato-em-sao-paulo-cobra-neutralidade-da-meta-nas-eleicoes",
-      "publishedAt": "2026-10-19T23:42:00+00:00",
+      "id": "18482c8fd2388490",
+      "title": "Beneficiários com NIS de final 3 a 0 recebem Bolsa Família de outubro",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/beneficiarios-com-nis-de-final-3-0-recebem-bolsa-familia-de-outubro",
+      "publishedAt": "2026-10-21T10:28:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "44c31d6e2efd2b87",
+      "title": "Governo de São Paulo reforça prevenção durante o El Niño com boletins diários de clima",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/el-nino-boletins-diarios/",
+      "publishedAt": "2026-10-21T10:01:00+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
       "category": "São Paulo"
+    },
+    {
+      "id": "2bc3e8af7f7ba527",
+      "title": "Dólar cai para R$ 5,01 com exterior e expectativa eleitoral no Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-cai-para-r-501-com-exterior-e-expectativa-eleitoral-no-brasil",
+      "publishedAt": "2026-10-20T22:34:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "3d023705d12ae3ed",
+      "title": "IBGE é autorizado a abrir 325 vagas temporárias",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/ibge-e-autorizado-abrir-325-vagas-temporarias",
+      "publishedAt": "2026-10-20T18:29:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
     },
     {
       "id": "3d9e59b735b05101",
@@ -34,38 +61,29 @@
       "category": "São Paulo"
     },
     {
-      "id": "2ed23080b5e85cd1",
-      "title": "Beneficiários com NIS de final 2 recebem Bolsa Família de outubro",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/beneficiarios-com-nis-de-final-2-recebem-bolsa-familia-de-outubro",
-      "publishedAt": "2026-10-20T10:30:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "id": "c732a953210f2c53",
+      "title": "Sebrae-SP promove oficina gratuita de liderança para o setor de turismo em Araçatuba",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-promove-oficina-gratuita-de-lideranca-para-o-setor-de-turismo-em-aracatuba/",
+      "publishedAt": "2026-10-20T10:48:35+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Interesses"
     },
     {
-      "id": "a0a7782d73ca20e0",
-      "title": "Economia cresce 0,5% em agosto após dois meses de recuo, estima FGV",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/economia-cresce-05-em-agosto-apos-dois-meses-de-recuo-estima-fgv",
-      "publishedAt": "2026-10-19T14:52:00+00:00",
+      "id": "65bb00d874e853b6",
+      "title": "Milei lança plano para demitir 21 mil servidores na Argentina",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/milei-lanca-plano-para-demitir-21-mil-servidores-na-argentina",
+      "publishedAt": "2026-10-20T19:31:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "00f9f06b38081148",
-      "title": "Pagamentos de outubro do Bolsa Família começam nesta segunda",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/pagamentos-de-outubro-do-bolsa-familia-comecam-nesta-segunda",
-      "publishedAt": "2026-10-19T13:04:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Brasil",
@@ -80,12 +98,12 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [],
