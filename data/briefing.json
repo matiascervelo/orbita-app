@@ -1,9 +1,9 @@
 {
-  "editionDate": "2026-10-22",
+  "editionDate": "2026-10-23",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-22T10:38:20.217635+00:00",
+  "generatedAt": "2026-10-23T10:36:32.650128+00:00",
   "status": "ready",
-  "sourceFeedsOk": 11,
+  "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
@@ -16,37 +16,55 @@
       "category": "Brasil"
     },
     {
-      "id": "c28b32f16a285ea7",
-      "title": "IBGE e Embaixada do Brasil na China discutem cooperação em datificação e inteligência artificial",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48336-ibge-e-embaixada-do-brasil-na-china-discutem-cooperacao-em-datificacao-e-inteligencia-artificial.html",
-      "publishedAt": "2026-10-21T05:03:11+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
-      "category": "Brasil"
-    },
-    {
-      "id": "1f2f79b69cfc8fd0",
-      "title": "ONU aponta falta de isenção da Meta em eleição brasileira",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/onu-aponta-falta-de-isencao-da-meta-em-eleicao-brasileira",
-      "publishedAt": "2026-10-21T19:47:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
-      "id": "9ec98acc89c47444",
-      "title": "Itamaraty acusa Milei de tentar interferir na eleição brasileira",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/itamaraty-acusa-milei-de-tentar-interferir-na-eleicao-brasileira",
-      "publishedAt": "2026-10-21T01:23:00+00:00",
+      "id": "6bfa612a35d8a616",
+      "title": "Economia da Argentina recua 1,7% em agosto sob risco de recessão",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/economia-da-argentina-recua-17-em-agosto-sob-risco-de-recessao",
+      "publishedAt": "2026-10-22T15:49:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
     },
     {
-      "id": "49889998f6668ed2",
-      "title": "ONU: El Niño pode ser o mais forte dos últimos 40 anos",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/onu-el-nino-pode-ser-o-mais-forte-dos-ultimos-40-anos",
-      "publishedAt": "2026-10-21T13:49:00+00:00",
+      "id": "3b06fdbe3f5f6ee4",
+      "title": "Operação El Niño: Defesa Civil realiza treinamento e anuncia investimentos, veículos e kits para municípios da Grande São Paulo",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/operacao-el-nino-defesa-civil-realiza-treinamento-e-anuncia-investimentos-veiculos-e-kits-para-municipios-da-grande-sao-paulo/",
+      "publishedAt": "2026-10-22T19:53:32+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "ddf315a5c65bf7d0",
+      "title": "Como o Governo de São Paulo prepara o agro para enfrentar eventos climáticos extremos",
+      "url": "https://www.agenciasp.sp.gov.br/agro/como-o-governo-de-sao-paulo-prepara-o-agro-para-enfrentar-eventos-climaticos-extremos/",
+      "publishedAt": "2026-10-22T18:00:24+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "dd7de31b8876339d",
+      "title": "Importações para pesquisa pública terão imunidade tributária",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/importacoes-para-pesquisa-publica-terao-imunidade-tributaria",
+      "publishedAt": "2026-10-21T17:41:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "40edd80df221c910",
+      "title": "Sebrae Móvel marca presença na Feira do Empreendedor 2026",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-movel-marca-presenca-na-feira-do-empreendedor-2026/",
+      "publishedAt": "2026-10-22T22:19:36+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "600c76b101274a26",
+      "title": "Governo francês anuncia proibição de protestos considerados ilegítimos",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/presidente-anuncia-proibicao-de-protestos-ilegitimos",
+      "publishedAt": "2026-10-22T11:32:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -66,7 +84,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Mercado imobiliário",
@@ -79,6 +97,8 @@
       "count": 0
     }
   ],
-  "warnings": [],
+  "warnings": [
+    "IBGE — Agência de Notícias: URLError (<urlopen error timed out>)"
+  ],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
 }
