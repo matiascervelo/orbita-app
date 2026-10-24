@@ -1,19 +1,19 @@
 {
-  "editionDate": "2026-10-23",
+  "editionDate": "2026-10-24",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-23T10:36:32.650128+00:00",
+  "generatedAt": "2026-10-24T10:35:07.125392+00:00",
   "status": "ready",
-  "sourceFeedsOk": 10,
+  "sourceFeedsOk": 9,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "378a5bb923444f20",
-      "title": "Governo destina R$ 6,49 bilhões a setor de exportação",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-destina-r-649-bilhoes-setor-de-exportacao",
-      "publishedAt": "2026-10-21T13:36:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "id": "a912ed19b564f54c",
+      "title": "Congresso em Rio Preto debate segurança jurídica no setor imobiliário",
+      "url": "https://secovi.com.br/congresso-em-rio-preto-debate-seguranca-juridica-no-setor-imobiliario/",
+      "publishedAt": "2026-10-23T15:37:25+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
       "id": "6bfa612a35d8a616",
@@ -25,40 +25,58 @@
       "category": "Mundo"
     },
     {
-      "id": "3b06fdbe3f5f6ee4",
-      "title": "Operação El Niño: Defesa Civil realiza treinamento e anuncia investimentos, veículos e kits para municípios da Grande São Paulo",
-      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/operacao-el-nino-defesa-civil-realiza-treinamento-e-anuncia-investimentos-veiculos-e-kits-para-municipios-da-grande-sao-paulo/",
-      "publishedAt": "2026-10-22T19:53:32+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
+      "id": "26f56de630c13aca",
+      "title": "Estúdio de games de Ourinhos expõe jogo na Feira do Empreendedor em São Paulo",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/estudio-de-games-de-ourinhos-expoe-jogo-na-feira-do-empreendedor-em-sao-paulo/",
+      "publishedAt": "2026-10-23T19:49:14+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
       "category": "São Paulo"
     },
     {
-      "id": "ddf315a5c65bf7d0",
-      "title": "Como o Governo de São Paulo prepara o agro para enfrentar eventos climáticos extremos",
-      "url": "https://www.agenciasp.sp.gov.br/agro/como-o-governo-de-sao-paulo-prepara-o-agro-para-enfrentar-eventos-climaticos-extremos/",
-      "publishedAt": "2026-10-22T18:00:24+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "dd7de31b8876339d",
-      "title": "Importações para pesquisa pública terão imunidade tributária",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/importacoes-para-pesquisa-publica-terao-imunidade-tributaria",
-      "publishedAt": "2026-10-21T17:41:00+00:00",
+      "id": "8e7dabf04ab90c9f",
+      "title": "BC reforça regras de proteção ao consumidor nas ofertas de crédito",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/bc-reforca-regras-de-protecao-ao-consumidor-nas-ofertas-de-credito",
+      "publishedAt": "2026-10-23T22:31:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "40edd80df221c910",
-      "title": "Sebrae Móvel marca presença na Feira do Empreendedor 2026",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-movel-marca-presenca-na-feira-do-empreendedor-2026/",
-      "publishedAt": "2026-10-22T22:19:36+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
+      "id": "2e66dfe5ddb6bb6a",
+      "title": "Dólar fecha abaixo de R$ 5 e recua 1,58% na semana",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-fecha-abaixo-de-r-5-e-recua-158-na-semana",
+      "publishedAt": "2026-10-23T22:02:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
+    },
+    {
+      "id": "8662125ddfc8ba60",
+      "title": "Receita abre consulta a lote residual do Imposto de Renda",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/receita-abre-consulta-lote-residual-do-imposto-de-renda",
+      "publishedAt": "2026-10-23T14:18:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "2d4982bb64a7e2b3",
+      "title": "Em meio a ajuste fiscal, Chile tem queda do PIB e desemprego em alta",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/em-meio-ajuste-fiscal-chile-tem-queda-do-pib-e-desemprego-em-alta",
+      "publishedAt": "2026-10-23T20:27:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "1eb434145e325c77",
+      "title": "Feirão Casa Paulista: R$ 27,4 milhões são liberados para apoiar famílias na compra do primeiro imóvel",
+      "url": "https://www.agenciasp.sp.gov.br/desenvolvimento/feira-casa-paulista-274-mi/",
+      "publishedAt": "2026-10-23T18:50:01+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
       "id": "600c76b101274a26",
@@ -74,7 +92,7 @@
     {
       "category": "Mundo",
       "target": 3,
-      "count": 2
+      "count": 3
     },
     {
       "category": "Brasil",
@@ -84,12 +102,12 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 2
+      "count": 1
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Interesses",
@@ -98,6 +116,7 @@
     }
   ],
   "warnings": [
+    "Agência Câmara — Geral: URLError (<urlopen error timed out>)",
     "IBGE — Agência de Notícias: URLError (<urlopen error timed out>)"
   ],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
