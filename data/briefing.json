@@ -1,9 +1,9 @@
 {
-  "editionDate": "2026-10-24",
+  "editionDate": "2026-10-25",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-24T10:35:07.125392+00:00",
+  "generatedAt": "2026-10-25T10:35:00.360817+00:00",
   "status": "ready",
-  "sourceFeedsOk": 9,
+  "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
@@ -16,13 +16,22 @@
       "category": "Mercado imobiliário"
     },
     {
-      "id": "6bfa612a35d8a616",
-      "title": "Economia da Argentina recua 1,7% em agosto sob risco de recessão",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/economia-da-argentina-recua-17-em-agosto-sob-risco-de-recessao",
-      "publishedAt": "2026-10-22T15:49:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "3c7f18b7c6d24e30",
+      "title": "Governo vai apresentar projeto de lei para perdoar dívidas dos setores de eventos, bares e restaurantes",
+      "url": "https://www.camara.leg.br/noticias/1313433-governo-vai-apresentar-projeto-de-lei-para-perdoar-dividas-dos-setores-de-eventos-bares-e-restaurantes",
+      "publishedAt": "2026-10-23T14:35:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
+      "category": "Interesses"
+    },
+    {
+      "id": "517d0443d42f1bdf",
+      "title": "Caminho da Capacitação: aos 53 anos, morador de Ribeirão Branco troca a construção civil pela massa do pão",
+      "url": "https://www.agenciasp.sp.gov.br/social/caminho-da-capacitacao-aos-53-anos/",
+      "publishedAt": "2026-10-24T13:01:00+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
       "id": "26f56de630c13aca",
@@ -68,31 +77,13 @@
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
-    },
-    {
-      "id": "1eb434145e325c77",
-      "title": "Feirão Casa Paulista: R$ 27,4 milhões são liberados para apoiar famílias na compra do primeiro imóvel",
-      "url": "https://www.agenciasp.sp.gov.br/desenvolvimento/feira-casa-paulista-274-mi/",
-      "publishedAt": "2026-10-23T18:50:01+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "600c76b101274a26",
-      "title": "Governo francês anuncia proibição de protestos considerados ilegítimos",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/presidente-anuncia-proibicao-de-protestos-ilegitimos",
-      "publishedAt": "2026-10-22T11:32:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 3
+      "count": 1
     },
     {
       "category": "Brasil",
@@ -112,11 +103,10 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [
-    "Agência Câmara — Geral: URLError (<urlopen error timed out>)",
     "IBGE — Agência de Notícias: URLError (<urlopen error timed out>)"
   ],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
