@@ -1,89 +1,62 @@
 {
-  "editionDate": "2026-10-25",
+  "editionDate": "2026-10-26",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-25T10:35:00.360817+00:00",
+  "generatedAt": "2026-10-26T10:45:31.257691+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "a912ed19b564f54c",
-      "title": "Congresso em Rio Preto debate segurança jurídica no setor imobiliário",
-      "url": "https://secovi.com.br/congresso-em-rio-preto-debate-seguranca-juridica-no-setor-imobiliario/",
-      "publishedAt": "2026-10-23T15:37:25+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "3c7f18b7c6d24e30",
-      "title": "Governo vai apresentar projeto de lei para perdoar dívidas dos setores de eventos, bares e restaurantes",
-      "url": "https://www.camara.leg.br/noticias/1313433-governo-vai-apresentar-projeto-de-lei-para-perdoar-dividas-dos-setores-de-eventos-bares-e-restaurantes",
-      "publishedAt": "2026-10-23T14:35:00+00:00",
-      "source": "Agência Câmara",
-      "feed": "Agência Câmara — Geral",
-      "category": "Interesses"
-    },
-    {
-      "id": "517d0443d42f1bdf",
-      "title": "Caminho da Capacitação: aos 53 anos, morador de Ribeirão Branco troca a construção civil pela massa do pão",
-      "url": "https://www.agenciasp.sp.gov.br/social/caminho-da-capacitacao-aos-53-anos/",
-      "publishedAt": "2026-10-24T13:01:00+00:00",
+      "id": "3b7ffb95f9dc978b",
+      "title": "Transporte Metropolitano de São Paulo tem gratuidade estendida até 22h na CPTM e 0h no metrô neste domingo por conta das eleições",
+      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/transporte-metropolitano-de-sao-paulo-tem-gratuidade-estendida-ate-22h-na-cptm-e-0h-no-metro-neste-domingo-por-conta-das-eleicoes/",
+      "publishedAt": "2026-10-25T22:47:59+00:00",
       "source": "Agência SP",
       "feed": "Agência SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "26f56de630c13aca",
-      "title": "Estúdio de games de Ourinhos expõe jogo na Feira do Empreendedor em São Paulo",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/estudio-de-games-de-ourinhos-expoe-jogo-na-feira-do-empreendedor-em-sao-paulo/",
-      "publishedAt": "2026-10-23T19:49:14+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
       "category": "São Paulo"
     },
     {
-      "id": "8e7dabf04ab90c9f",
-      "title": "BC reforça regras de proteção ao consumidor nas ofertas de crédito",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/bc-reforca-regras-de-protecao-ao-consumidor-nas-ofertas-de-credito",
-      "publishedAt": "2026-10-23T22:31:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "cb28b110693b0c7e",
+      "title": "Boletim – 25/10 – 14h – Governo de São Paulo mobiliza atendimentos após chuvas de até 120 milímetros no estado",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/boletim-25-10-14h-governo-de-sao-paulo-mobiliza-atendimentos-apos-chuvas-de-ate-120-milimetros-no-estado/",
+      "publishedAt": "2026-10-25T16:50:03+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "72940f2bcab0ea2b",
+      "title": "\"O povo é soberano e fez a sua escolha\", diz Motta ao parabenizar Lula pela reeleição",
+      "url": "https://www.camara.leg.br/noticias/1313758-o-povo-e-soberano-e-fez-a-sua-escolha-diz-motta-ao-parabenizar-lula-pela-reeleicao",
+      "publishedAt": "2026-10-26T03:07:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
       "category": "Brasil"
     },
     {
-      "id": "2e66dfe5ddb6bb6a",
-      "title": "Dólar fecha abaixo de R$ 5 e recua 1,58% na semana",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-fecha-abaixo-de-r-5-e-recua-158-na-semana",
-      "publishedAt": "2026-10-23T22:02:00+00:00",
+      "id": "069ece09f5d529db",
+      "title": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/motta-e-alcolumbre-lideres-do-congresso-nacional-parabenizam-lula",
+      "publishedAt": "2026-10-26T02:31:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "8662125ddfc8ba60",
-      "title": "Receita abre consulta a lote residual do Imposto de Renda",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/receita-abre-consulta-lote-residual-do-imposto-de-renda",
-      "publishedAt": "2026-10-23T14:18:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "c13c1ed4a6f32428",
+      "title": "Presidente do TSE afirma que a decisão de prorrogar a votação exigiu medidas extraordinárias",
+      "url": "https://www.camara.leg.br/noticias/1313728-presidente-do-tse-afirma-que-a-decisao-de-prorrogar-a-votacao-exigiu-medidas-extraordinarias",
+      "publishedAt": "2026-10-26T01:42:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
       "category": "Brasil"
-    },
-    {
-      "id": "2d4982bb64a7e2b3",
-      "title": "Em meio a ajuste fiscal, Chile tem queda do PIB e desemprego em alta",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/em-meio-ajuste-fiscal-chile-tem-queda-do-pib-e-desemprego-em-alta",
-      "publishedAt": "2026-10-23T20:27:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -93,17 +66,17 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 1
+      "count": 2
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 2
+      "count": 0
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 1
+      "count": 0
     }
   ],
   "warnings": [
