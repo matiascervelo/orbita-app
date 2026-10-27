@@ -1,55 +1,55 @@
 {
-  "editionDate": "2026-10-26",
+  "editionDate": "2026-10-27",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-26T10:45:31.257691+00:00",
+  "generatedAt": "2026-10-27T10:43:09.206111+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "3b7ffb95f9dc978b",
-      "title": "Transporte Metropolitano de São Paulo tem gratuidade estendida até 22h na CPTM e 0h no metrô neste domingo por conta das eleições",
-      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/transporte-metropolitano-de-sao-paulo-tem-gratuidade-estendida-ate-22h-na-cptm-e-0h-no-metro-neste-domingo-por-conta-das-eleicoes/",
-      "publishedAt": "2026-10-25T22:47:59+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
+      "id": "d174c26f119d500d",
+      "title": "Dólar sobe 8,21%, e bolsa cai 13,88% após reeleição de Lula",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-sobe-821-e-bolsa-cai-1388-apos-reeleicao-de-lula",
+      "publishedAt": "2026-10-26T22:07:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
     },
     {
-      "id": "cb28b110693b0c7e",
-      "title": "Boletim – 25/10 – 14h – Governo de São Paulo mobiliza atendimentos após chuvas de até 120 milímetros no estado",
-      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/boletim-25-10-14h-governo-de-sao-paulo-mobiliza-atendimentos-apos-chuvas-de-ate-120-milimetros-no-estado/",
-      "publishedAt": "2026-10-25T16:50:03+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "72940f2bcab0ea2b",
-      "title": "\"O povo é soberano e fez a sua escolha\", diz Motta ao parabenizar Lula pela reeleição",
-      "url": "https://www.camara.leg.br/noticias/1313758-o-povo-e-soberano-e-fez-a-sua-escolha-diz-motta-ao-parabenizar-lula-pela-reeleicao",
-      "publishedAt": "2026-10-26T03:07:00+00:00",
+      "id": "c0af2553c7247fa3",
+      "title": "Projeto cria política para incentivar economia compartilhada no campo",
+      "url": "https://www.camara.leg.br/noticias/1310135-projeto-cria-politica-para-incentivar-economia-compartilhada-no-campo",
+      "publishedAt": "2026-10-26T17:08:00+00:00",
       "source": "Agência Câmara",
       "feed": "Agência Câmara — Geral",
       "category": "Brasil"
     },
     {
-      "id": "069ece09f5d529db",
-      "title": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/motta-e-alcolumbre-lideres-do-congresso-nacional-parabenizam-lula",
-      "publishedAt": "2026-10-26T02:31:00+00:00",
+      "id": "0f0040900d687deb",
+      "title": "Trump questiona eleição brasileira e Alckmin rebate: “equivocado”",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/trump-questiona-eleicao-brasileira-e-alckmin-rebate-equivocado",
+      "publishedAt": "2026-10-26T23:18:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "c13c1ed4a6f32428",
-      "title": "Presidente do TSE afirma que a decisão de prorrogar a votação exigiu medidas extraordinárias",
-      "url": "https://www.camara.leg.br/noticias/1313728-presidente-do-tse-afirma-que-a-decisao-de-prorrogar-a-votacao-exigiu-medidas-extraordinarias",
-      "publishedAt": "2026-10-26T01:42:00+00:00",
+      "id": "659e045a9df80f18",
+      "title": "Projeto cria programa para simplificar regularização ambiental e fundiária de imóveis rurais",
+      "url": "https://www.camara.leg.br/noticias/1310183-projeto-cria-programa-para-simplificar-regularizacao-ambiental-e-fundiaria-de-imoveis-rurais",
+      "publishedAt": "2026-10-26T20:14:00+00:00",
       "source": "Agência Câmara",
       "feed": "Agência Câmara — Geral",
-      "category": "Brasil"
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "a7339a115a289c6b",
+      "title": "Sebrae-SP leva circuito Loja do Futuro a empresários de Santo André",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-leva-circuito-loja-do-futuro-a-empresarios-de-santo-andre/",
+      "publishedAt": "2026-10-26T22:00:07+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Interesses"
     }
   ],
   "coverage": [
@@ -66,17 +66,17 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 2
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [
