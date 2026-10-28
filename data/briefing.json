@@ -1,11 +1,38 @@
 {
-  "editionDate": "2026-10-27",
+  "editionDate": "2026-10-28",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-27T10:43:09.206111+00:00",
+  "generatedAt": "2026-10-28T10:50:42.057721+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
+    {
+      "id": "0976a9acfd1cd2dc",
+      "title": "SCP é ferramenta de investimento, não atalho para vender imóvel, alertam advogados no Secovi-SP",
+      "url": "https://secovi.com.br/scp-e-ferramenta-de-investimento-nao-atalho-para-vender-imovel-alertam-advogados-no-secovi-sp/",
+      "publishedAt": "2026-10-27T21:19:11+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "2a7dee004db3dc80",
+      "title": "Governo buscará cumprir meta fiscal com diálogo, diz Durigan",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-buscara-cumprir-meta-fiscal-com-dialogo-diz-durigan",
+      "publishedAt": "2026-10-27T16:04:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "0f67df320de94c3f",
+      "title": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-enviara-mp-do-imposto-seletivo-e-renova-subvencao-ao-diesel",
+      "publishedAt": "2026-10-27T14:33:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
     {
       "id": "d174c26f119d500d",
       "title": "Dólar sobe 8,21%, e bolsa cai 13,88% após reeleição de Lula",
@@ -16,47 +43,65 @@
       "category": "Brasil"
     },
     {
-      "id": "c0af2553c7247fa3",
-      "title": "Projeto cria política para incentivar economia compartilhada no campo",
-      "url": "https://www.camara.leg.br/noticias/1310135-projeto-cria-politica-para-incentivar-economia-compartilhada-no-campo",
-      "publishedAt": "2026-10-26T17:08:00+00:00",
-      "source": "Agência Câmara",
-      "feed": "Agência Câmara — Geral",
-      "category": "Brasil"
+      "id": "e0f2640e9129934a",
+      "title": "São Paulo São Libras registra 899 atendimentos durante as eleições em São Paulo",
+      "url": "https://www.agenciasp.sp.gov.br/social/sp-sao-libras-899-atendim-eleicoes/",
+      "publishedAt": "2026-10-27T20:28:04+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
     },
     {
-      "id": "0f0040900d687deb",
-      "title": "Trump questiona eleição brasileira e Alckmin rebate: “equivocado”",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/trump-questiona-eleicao-brasileira-e-alckmin-rebate-equivocado",
-      "publishedAt": "2026-10-26T23:18:00+00:00",
+      "id": "f89f1acf9c8b52e1",
+      "title": "Israelenses vão às urnas em eleição que pode tirar Netanyahu do poder",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/israelenses-vao-as-urnas-em-eleicao-que-pode-tirar-netanyahu-do-poder",
+      "publishedAt": "2026-10-27T17:36:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "5adaaa3e64b6f29c",
+      "title": "Após vitória nas urnas, Lula vai retomar viagens internacionais",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/apos-vitoria-nas-urnas-lula-vai-retomar-viagens-internacionais",
+      "publishedAt": "2026-10-27T23:09:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Política",
-      "category": "Brasil"
+      "category": "Interesses"
     },
     {
-      "id": "659e045a9df80f18",
-      "title": "Projeto cria programa para simplificar regularização ambiental e fundiária de imóveis rurais",
-      "url": "https://www.camara.leg.br/noticias/1310183-projeto-cria-programa-para-simplificar-regularizacao-ambiental-e-fundiaria-de-imoveis-rurais",
-      "publishedAt": "2026-10-26T20:14:00+00:00",
-      "source": "Agência Câmara",
-      "feed": "Agência Câmara — Geral",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "a7339a115a289c6b",
-      "title": "Sebrae-SP leva circuito Loja do Futuro a empresários de Santo André",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-leva-circuito-loja-do-futuro-a-empresarios-de-santo-andre/",
-      "publishedAt": "2026-10-26T22:00:07+00:00",
+      "id": "0ba2ad5911d11f3e",
+      "title": "Sebrae-SP e lideranças debatem o futuro do turismo em São José do Rio Preto",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-liderancas-debatem-o-futuro-do-turismo-em-sao-jose-do-rio-preto/",
+      "publishedAt": "2026-10-27T20:32:23+00:00",
       "source": "Sebrae-SP",
       "feed": "Sebrae-SP — Notícias",
       "category": "Interesses"
+    },
+    {
+      "id": "303c185721efd106",
+      "title": "Flávio Bolsonaro cruza fronteira argentina e segue para o Equador",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/flavio-bolsonaro-cruza-fronteira-argentina-e-segue-para-o-equador",
+      "publishedAt": "2026-10-28T09:00:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "fff34a858885a14b",
+      "title": "Anistia Internacional denunciará Milei à ONU por ataque a jornalistas",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/anistia-internacional-denunciara-milei-onu-por-ataque-jornalistas",
+      "publishedAt": "2026-10-27T17:35:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 3
     },
     {
       "category": "Brasil",
@@ -66,7 +111,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Mercado imobiliário",
@@ -76,7 +121,7 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 1
+      "count": 2
     }
   ],
   "warnings": [
