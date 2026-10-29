@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-10-28",
+  "editionDate": "2026-10-29",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-28T10:50:42.057721+00:00",
+  "generatedAt": "2026-10-29T10:51:47.785847+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
@@ -16,40 +16,40 @@
       "category": "Mercado imobiliário"
     },
     {
-      "id": "2a7dee004db3dc80",
-      "title": "Governo buscará cumprir meta fiscal com diálogo, diz Durigan",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-buscara-cumprir-meta-fiscal-com-dialogo-diz-durigan",
-      "publishedAt": "2026-10-27T16:04:00+00:00",
+      "id": "2e33b44eb29d6771",
+      "title": "Governo estuda restringir crédito a empresas por assédio eleitoral",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-estuda-restringir-credito-empresas-por-assedio-eleitoral",
+      "publishedAt": "2026-10-28T22:36:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "0f67df320de94c3f",
-      "title": "Governo vai enviar MP do Imposto Seletivo e renova subvenção ao diesel",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-enviara-mp-do-imposto-seletivo-e-renova-subvencao-ao-diesel",
-      "publishedAt": "2026-10-27T14:33:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "488a61dbd9f1a353",
+      "title": "Condo Meeting discute efeitos da reforma tributária e governança em supercondomínios",
+      "url": "https://secovi.com.br/condo-meeting-discute-efeitos-da-reforma-tributaria-e-governanca-em-supercondominios/",
+      "publishedAt": "2026-10-28T20:52:21+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "d174c26f119d500d",
-      "title": "Dólar sobe 8,21%, e bolsa cai 13,88% após reeleição de Lula",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-sobe-821-e-bolsa-cai-1388-apos-reeleicao-de-lula",
-      "publishedAt": "2026-10-26T22:07:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "cb97e49807eab722",
+      "title": "Seminário Jurídico do Secovi-SP alerta para indefinições da reforma tributária",
+      "url": "https://secovi.com.br/seminario-juridico-do-secovi-sp-alerta-para-indefinicoes-da-reforma-tributaria/",
+      "publishedAt": "2026-10-27T21:13:42+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "e0f2640e9129934a",
-      "title": "São Paulo São Libras registra 899 atendimentos durante as eleições em São Paulo",
-      "url": "https://www.agenciasp.sp.gov.br/social/sp-sao-libras-899-atendim-eleicoes/",
-      "publishedAt": "2026-10-27T20:28:04+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
+      "id": "aa285075418eac32",
+      "title": "Zoneamento, habitação social e distrato concentram riscos jurídicos do setor, apontam advogados no Secovi-SP",
+      "url": "https://secovi.com.br/zoneamento-habitacao-social-e-distrato-concentram-riscos-juridicos-do-setor-apontam-advogados-no-secovi-sp/",
+      "publishedAt": "2026-10-28T15:45:45+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
       "id": "f89f1acf9c8b52e1",
@@ -61,37 +61,19 @@
       "category": "Mundo"
     },
     {
-      "id": "5adaaa3e64b6f29c",
-      "title": "Após vitória nas urnas, Lula vai retomar viagens internacionais",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/apos-vitoria-nas-urnas-lula-vai-retomar-viagens-internacionais",
-      "publishedAt": "2026-10-27T23:09:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Interesses"
-    },
-    {
-      "id": "0ba2ad5911d11f3e",
-      "title": "Sebrae-SP e lideranças debatem o futuro do turismo em São José do Rio Preto",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-liderancas-debatem-o-futuro-do-turismo-em-sao-jose-do-rio-preto/",
-      "publishedAt": "2026-10-27T20:32:23+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Interesses"
-    },
-    {
-      "id": "303c185721efd106",
-      "title": "Flávio Bolsonaro cruza fronteira argentina e segue para o Equador",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/flavio-bolsonaro-cruza-fronteira-argentina-e-segue-para-o-equador",
-      "publishedAt": "2026-10-28T09:00:00+00:00",
+      "id": "3e099dc865891370",
+      "title": "Trump diz que não vai se \"envolver\", após carta de Flávio Bolsonaro",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/trump-diz-que-nao-vai-se-envolver-apos-carta-de-flavio-bolsonaro",
+      "publishedAt": "2026-10-28T22:06:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
     },
     {
-      "id": "fff34a858885a14b",
-      "title": "Anistia Internacional denunciará Milei à ONU por ataque a jornalistas",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/anistia-internacional-denunciara-milei-onu-por-ataque-jornalistas",
-      "publishedAt": "2026-10-27T17:35:00+00:00",
+      "id": "14d92d17ef0e97e0",
+      "title": "ONU aprova resolução contra embargo dos EUA a Cuba",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/onu-aprova-resolucao-contra-embargo-dos-eua-cuba",
+      "publishedAt": "2026-10-28T20:19:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -111,17 +93,17 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 1
+      "count": 2
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 2
+      "count": 0
     }
   ],
   "warnings": [
