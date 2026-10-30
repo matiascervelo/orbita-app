@@ -1,27 +1,27 @@
 {
-  "editionDate": "2026-10-29",
+  "editionDate": "2026-10-30",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-29T10:51:47.785847+00:00",
+  "generatedAt": "2026-10-30T10:50:51.834003+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "0976a9acfd1cd2dc",
-      "title": "SCP é ferramenta de investimento, não atalho para vender imóvel, alertam advogados no Secovi-SP",
-      "url": "https://secovi.com.br/scp-e-ferramenta-de-investimento-nao-atalho-para-vender-imovel-alertam-advogados-no-secovi-sp/",
-      "publishedAt": "2026-10-27T21:19:11+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
+      "id": "09f76f954e36ac66",
+      "title": "Presidente Prudente inaugura primeiro Sebrae Aqui Mulher da região para fortalecer empreendedorismo feminino",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/presidente-prudente-inaugura-primeiro-sebrae-aqui-mulher-da-regiao-para-fortalecer-empreendedorismo-feminino/",
+      "publishedAt": "2026-10-29T20:11:26+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Brasil"
     },
     {
-      "id": "2e33b44eb29d6771",
-      "title": "Governo estuda restringir crédito a empresas por assédio eleitoral",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/governo-estuda-restringir-credito-empresas-por-assedio-eleitoral",
-      "publishedAt": "2026-10-28T22:36:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "e6c713ef25855562",
+      "title": "Projeto abre crédito orçamentário para reformas no Porto de Salvador",
+      "url": "https://www.camara.leg.br/noticias/1314758-projeto-abre-credito-orcamentario-para-reformas-no-porto-de-salvador",
+      "publishedAt": "2026-10-29T12:10:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
       "category": "Brasil"
     },
     {
@@ -29,15 +29,6 @@
       "title": "Condo Meeting discute efeitos da reforma tributária e governança em supercondomínios",
       "url": "https://secovi.com.br/condo-meeting-discute-efeitos-da-reforma-tributaria-e-governanca-em-supercondominios/",
       "publishedAt": "2026-10-28T20:52:21+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Brasil"
-    },
-    {
-      "id": "cb97e49807eab722",
-      "title": "Seminário Jurídico do Secovi-SP alerta para indefinições da reforma tributária",
-      "url": "https://secovi.com.br/seminario-juridico-do-secovi-sp-alerta-para-indefinicoes-da-reforma-tributaria/",
-      "publishedAt": "2026-10-27T21:13:42+00:00",
       "source": "Secovi-SP",
       "feed": "Secovi-SP — Notícias",
       "category": "Brasil"
@@ -52,28 +43,55 @@
       "category": "Mercado imobiliário"
     },
     {
-      "id": "f89f1acf9c8b52e1",
-      "title": "Israelenses vão às urnas em eleição que pode tirar Netanyahu do poder",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/israelenses-vao-as-urnas-em-eleicao-que-pode-tirar-netanyahu-do-poder",
-      "publishedAt": "2026-10-27T17:36:00+00:00",
+      "id": "d3399033e82c6a9e",
+      "title": "Sebrae-SP promove missão empresarial à capital paulista para apresentar tendências e inovação no varejo",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-promove-missao-empresarial-a-capital-paulista-para-apresentar-tendencias-e-inovacao-no-varejo/",
+      "publishedAt": "2026-10-29T17:39:20+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "4685deab57044eeb",
+      "title": "Governo de São Paulo envia ajuda humanitária a Itapetininga após nova cheia do rio",
+      "url": "https://www.agenciasp.sp.gov.br/social/sp-volta-ajuda-humanitaria-itapetin/",
+      "publishedAt": "2026-10-29T20:50:09+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
+    },
+    {
+      "id": "f759a8a8851f424f",
+      "title": "FGTS mantém orçamento de R$ 144,5 bilhões para habitação em 2027",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/fgts-mantem-orcamento-de-r-1445-bilhoes-para-habitacao-em-2027",
+      "publishedAt": "2026-10-29T22:41:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "3b6e38558a9050c9",
+      "title": "Christine Lagarde renuncia à presidência do Banco Central Europeu",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/christine-lagarde-renuncia-presidencia-do-banco-central-europeu",
+      "publishedAt": "2026-10-29T13:52:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
     },
     {
-      "id": "3e099dc865891370",
-      "title": "Trump diz que não vai se \"envolver\", após carta de Flávio Bolsonaro",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/trump-diz-que-nao-vai-se-envolver-apos-carta-de-flavio-bolsonaro",
-      "publishedAt": "2026-10-28T22:06:00+00:00",
+      "id": "4e4146ee0921229b",
+      "title": "Sob pressão de Trump, Cuba comemora aprovação na ONU contra bloqueio",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/sob-pressao-de-trump-cuba-comemora-aprovacao-na-onu-contra-bloqueio",
+      "publishedAt": "2026-10-29T17:02:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
     },
     {
-      "id": "14d92d17ef0e97e0",
-      "title": "ONU aprova resolução contra embargo dos EUA a Cuba",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/onu-aprova-resolucao-contra-embargo-dos-eua-cuba",
-      "publishedAt": "2026-10-28T20:19:00+00:00",
+      "id": "2f1b50662496799b",
+      "title": "Israel: sem vencedor declarado, partidos discutem coligações",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/israel-sem-vencedor-declarado-partidos-discutem-coligacoes",
+      "publishedAt": "2026-10-29T13:03:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -93,7 +111,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Mercado imobiliário",
