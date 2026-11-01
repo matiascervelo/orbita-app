@@ -1,27 +1,18 @@
 {
-  "editionDate": "2026-10-31",
+  "editionDate": "2026-11-01",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-10-31T10:40:17.987089+00:00",
+  "generatedAt": "2026-11-01T10:43:45.416151+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "71a13597285edac9",
-      "title": "Governo de São Paulo simplifica regime tributário de 74 produtos, de material de construção a micro-ondas",
-      "url": "https://www.agenciasp.sp.gov.br/desenvolvimento/governo-de-sao-paulo-simplifica-regime-tributario-de-74-produtos-de-material-de-construcao-a-micro-ondas/",
-      "publishedAt": "2026-10-30T15:30:00+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "e6c713ef25855562",
-      "title": "Projeto abre crédito orçamentário para reformas no Porto de Salvador",
-      "url": "https://www.camara.leg.br/noticias/1314758-projeto-abre-credito-orcamentario-para-reformas-no-porto-de-salvador",
-      "publishedAt": "2026-10-29T12:10:00+00:00",
-      "source": "Agência Câmara",
-      "feed": "Agência Câmara — Geral",
+      "id": "adf51f40d601de12",
+      "title": "Acordo Mercosul-UE eleva exportações brasileiras em 21%",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/acordo-mercosul-ue-eleva-exportacoes-brasileiras-em-21",
+      "publishedAt": "2026-10-31T12:52:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
@@ -41,40 +32,13 @@
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
-    },
-    {
-      "id": "3b6e38558a9050c9",
-      "title": "Christine Lagarde renuncia à presidência do Banco Central Europeu",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/christine-lagarde-renuncia-presidencia-do-banco-central-europeu",
-      "publishedAt": "2026-10-29T13:52:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "e3a945b8c588a53e",
-      "title": "Oposição em Israel depende dos árabes para tirar Netanyahu do poder",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/oposicao-em-israel-depende-dos-arabes-para-tirar-netanyahu-do-poder",
-      "publishedAt": "2026-10-30T15:17:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "dc0a119bf0da6bac",
-      "title": "Risco de invasão de Cuba pelos EUA é real, avalia embaixador",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/risco-de-invasao-de-cuba-pelos-eua-e-real-avalia-embaixador",
-      "publishedAt": "2026-10-30T10:31:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 3
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -84,7 +48,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
