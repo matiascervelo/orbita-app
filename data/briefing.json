@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-11-01",
+  "editionDate": "2026-11-02",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-01T10:43:45.416151+00:00",
+  "generatedAt": "2026-11-02T11:02:25.914568+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
@@ -16,21 +16,30 @@
       "category": "Brasil"
     },
     {
-      "id": "1b42d0c4543eb553",
-      "title": "Dólar fecha a R$ 5,44 e registra maior alta semanal desde 2008",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/dolar-fecha-r-544-e-registra-maior-alta-semanal-desde-2008",
-      "publishedAt": "2026-10-30T22:40:00+00:00",
+      "id": "dc487d26d2f0f3cc",
+      "title": "Eleição nos Estados Unidos define futuro de Trump nesta terça-feira",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-10/eleicao-nos-estados-unidos-define-futuro-de-trump-nesta-terca-feira",
+      "publishedAt": "2026-11-01T17:44:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "f54679d1e6bc0fdd",
+      "title": "Denúncias de violência política quadriplicam em outubro no Disque 100",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/violencia-politica-disque-100-recebeu-189-denuncias-durante-eleicao",
+      "publishedAt": "2026-11-01T20:06:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "8bbe507fc63eecf3",
-      "title": "Acaba nesta sexta prazo para empresas escolherem modelo do Simples",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/acaba-nesta-sexta-prazo-para-empresas-escolherem-modelo-do-simples",
-      "publishedAt": "2026-10-30T11:00:00+00:00",
+      "id": "482e85ca365c5301",
+      "title": "Aluno é ameaçado de morte no DF por opção política",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/aluno-e-ameacado-de-morte-no-df-por-opcao-politica",
+      "publishedAt": "2026-10-31T19:15:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Política",
       "category": "Brasil"
     }
   ],
@@ -38,7 +47,7 @@
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Brasil",
