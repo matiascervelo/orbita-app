@@ -1,19 +1,19 @@
 {
-  "editionDate": "2026-11-02",
+  "editionDate": "2026-11-03",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-02T11:02:25.914568+00:00",
+  "generatedAt": "2026-11-03T10:57:31.141610+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "adf51f40d601de12",
-      "title": "Acordo Mercosul-UE eleva exportações brasileiras em 21%",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/acordo-mercosul-ue-eleva-exportacoes-brasileiras-em-21",
-      "publishedAt": "2026-10-31T12:52:00+00:00",
+      "id": "a6185d43dcf4c6e9",
+      "title": "Eleitores dos EUA demonstram pessimismo em relação à economia",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/eleitores-dos-eua-demonstram-pessimismo-em-relacao-economia",
+      "publishedAt": "2026-11-02T14:47:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     },
     {
       "id": "dc487d26d2f0f3cc",
@@ -25,29 +25,47 @@
       "category": "Mundo"
     },
     {
-      "id": "f54679d1e6bc0fdd",
-      "title": "Denúncias de violência política quadriplicam em outubro no Disque 100",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/violencia-politica-disque-100-recebeu-189-denuncias-durante-eleicao",
-      "publishedAt": "2026-11-01T20:06:00+00:00",
+      "id": "16dde9a59d463730",
+      "title": "Economista de Plano Real acusa BC de causar rombo fiscal via juros",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/economista-de-plano-real-acusa-bc-de-causar-rombo-fiscal-juros",
+      "publishedAt": "2026-11-02T17:09:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "9ec70664dc17cd04",
+      "title": "Desembargador assume governo de MS após licença de governador e vice",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/desembargador-assume-governo-de-ms-apos-licenca-de-governador-e-vice",
+      "publishedAt": "2026-11-02T20:29:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "482e85ca365c5301",
-      "title": "Aluno é ameaçado de morte no DF por opção política",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/aluno-e-ameacado-de-morte-no-df-por-opcao-politica",
-      "publishedAt": "2026-10-31T19:15:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
+      "id": "14b6936a74cd1264",
+      "title": "Governo de SP mobiliza atendimentos após 92 alertas de chuvas em todo o estado",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/governo-mobiliza-atendimentos/",
+      "publishedAt": "2026-11-02T13:46:27+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
       "category": "Brasil"
+    },
+    {
+      "id": "0188ca309b4568b0",
+      "title": "ONU ressalta importância de proteger jornalistas e acesso à informação",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/onu-ressalta-importancia-de-proteger-jornalistas-e-acesso-informacao",
+      "publishedAt": "2026-11-02T18:21:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 3
     },
     {
       "category": "Brasil",
