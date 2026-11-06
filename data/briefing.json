@@ -1,29 +1,11 @@
 {
-  "editionDate": "2026-11-05",
+  "editionDate": "2026-11-06",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-05T11:07:46.130603+00:00",
+  "generatedAt": "2026-11-06T11:05:41.250862+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
-    {
-      "id": "627f4f6e243f93c2",
-      "title": "Governo de SP mobiliza mil policiais por dia para reforçar segurança do GP de Fórmula 1",
-      "url": "https://www.agenciasp.sp.gov.br/seguranca-publica/governo-de-sp-mobiliza-mil-policiais-por-dia-para-reforcar-seguranca-do-gp-de-formula-1/",
-      "publishedAt": "2026-11-05T10:07:01+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "Interesses"
-    },
-    {
-      "id": "2a89721c390ef9e0",
-      "title": "Dólar cai a R$ 5,45 após eleições nos EUA e antes do Copom",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-cai-r-545-apos-eleicoes-nos-eua-e-antes-do-copom",
-      "publishedAt": "2026-11-04T23:17:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
     {
       "id": "c37de2659709bc06",
       "title": "Guerra, economia, IA e casos de corrupção derrotam Trump nos EUA",
@@ -34,13 +16,31 @@
       "category": "Mundo"
     },
     {
-      "id": "0984af95c86197ea",
-      "title": "GP de F1 terá trem expresso com viagens diretas para Interlagos neste fim de semana",
-      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/gp-sao-paulo-trem-ex/",
-      "publishedAt": "2026-11-04T22:01:19+00:00",
+      "id": "f29f90931e278cbb",
+      "title": "Governo define minerais críticos prioritários para investimentos",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-define-minerais-criticos-prioritarios-para-investimentos",
+      "publishedAt": "2026-11-05T22:55:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "c64d1a84a4d04c77",
+      "title": "Novo Centro Administrativo transforma o Campos Elíseos com arquitetura sustentável e requalificação do Parque Princesa Isabel",
+      "url": "https://www.agenciasp.sp.gov.br/infraestrutura/centro-administrativo-isabe/",
+      "publishedAt": "2026-11-06T10:21:50+00:00",
       "source": "Agência SP",
       "feed": "Agência SP — Notícias",
-      "category": "Interesses"
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "d6aaf8e3597365e6",
+      "title": "Brasil no Mundo analisa eleições nos EUA e geopolítica internacional",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/brasil-no-mundo-analisa-eleicoes-nos-eua-e-geopolitica-internacional",
+      "publishedAt": "2026-11-05T18:00:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     },
     {
       "id": "7a8b83a9fde4c9d1",
@@ -52,28 +52,28 @@
       "category": "Mundo"
     },
     {
-      "id": "bd5383badd9f8b9d",
-      "title": "Eleições nos EUA têm vitórias históricas de minorias sub-representadas",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/eleicoes-nos-eua-tem-vitorias-historicas-de-minorias-sub-representadas",
-      "publishedAt": "2026-11-04T20:23:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "ab2b9584e7898362",
+      "title": "Sebrae-SP e parceiros estruturam projeto para qualificar mulheres para o setor da construção civil",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-parceiros-estruturam-projeto-para-qualificar-mulheres-para-o-setor-da-construcao-civil/",
+      "publishedAt": "2026-11-05T19:39:25+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
-      "id": "e4286346d3b31650",
-      "title": "Setor produtivo critica manutenção da Selic em 13,75% ao ano",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/setor-produtivo-critica-manutencao-da-selic-em-1375-ao-ano",
-      "publishedAt": "2026-11-04T22:34:00+00:00",
+      "id": "41a07371488a5cdb",
+      "title": "Dólar volta a aproximar-se de R$ 5,49 em dia de instabilidade global",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-volta-aproximar-se-de-r-549-em-dia-de-instabilidade-global",
+      "publishedAt": "2026-11-05T22:11:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "f2e5404f0a607c55",
-      "title": "Banco Central surpreende e mantém juros básicos em 13,75% ao ano",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-surpreende-e-mantem-juros-basicos-em-1375-ao-ano",
-      "publishedAt": "2026-11-04T21:33:00+00:00",
+      "id": "5b9a1349d79518fa",
+      "title": "Imposto do pecado: entenda cobrança sobre cigarros, bebidas e veículos",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/imposto-do-pecado-entenda-cobranca-sobre-cigarros-bebidas-e-veiculos",
+      "publishedAt": "2026-11-05T20:10:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
@@ -98,12 +98,12 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 2
+      "count": 0
     }
   ],
   "warnings": [
