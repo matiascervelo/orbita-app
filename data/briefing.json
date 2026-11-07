@@ -1,20 +1,11 @@
 {
-  "editionDate": "2026-11-06",
+  "editionDate": "2026-11-07",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-06T11:05:41.250862+00:00",
+  "generatedAt": "2026-11-07T10:46:10.146252+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
-    {
-      "id": "c37de2659709bc06",
-      "title": "Guerra, economia, IA e casos de corrupção derrotam Trump nos EUA",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/guerra-economia-ia-e-casos-de-corrupcao-derrotam-trump-nos-eua",
-      "publishedAt": "2026-11-04T14:31:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
     {
       "id": "f29f90931e278cbb",
       "title": "Governo define minerais críticos prioritários para investimentos",
@@ -25,13 +16,22 @@
       "category": "Brasil"
     },
     {
-      "id": "c64d1a84a4d04c77",
-      "title": "Novo Centro Administrativo transforma o Campos Elíseos com arquitetura sustentável e requalificação do Parque Princesa Isabel",
-      "url": "https://www.agenciasp.sp.gov.br/infraestrutura/centro-administrativo-isabe/",
-      "publishedAt": "2026-11-06T10:21:50+00:00",
+      "id": "95a4bab371ce00b0",
+      "title": "Dólar sobe para R$ 5,51, com dados de emprego nos EUA",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-para-r-551-com-dados-de-emprego-nos-eua",
+      "publishedAt": "2026-11-06T22:10:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "8d85b986c6100b12",
+      "title": "Defesa Civil de SP prevê pancadas de chuva em diferentes regiões de São Paulo neste domingo de Enem e Fórmula 1",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/domingo-de-enem-e-formula-1-sera-marcado-por-pancadas-de-chuva-em-diferentes-regioes-de-sao-paulo/",
+      "publishedAt": "2026-11-06T19:00:23+00:00",
       "source": "Agência SP",
       "feed": "Agência SP — Notícias",
-      "category": "Mercado imobiliário"
+      "category": "São Paulo"
     },
     {
       "id": "d6aaf8e3597365e6",
@@ -43,40 +43,31 @@
       "category": "Mundo"
     },
     {
-      "id": "7a8b83a9fde4c9d1",
-      "title": "Entenda as eleições de meio de mandato do presidente nos EUA",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/entenda-eleicoes-de-meio-de-mandato-do-presidente-nos-eua",
-      "publishedAt": "2026-11-05T10:28:00+00:00",
+      "id": "9837f9c83cedb53e",
+      "title": "Governo de SP oferece transporte metropolitano gratuito para estudantes nos dias de Enem",
+      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/governo-do-estado-de-sao-paulo-oferece-transporte-metropolitano-gratuito-para-estudantes-nos-dias-de-enem/",
+      "publishedAt": "2026-11-07T00:46:08+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "03401db30f596161",
+      "title": "Presidente do Paraguai renuncia em meio à crise bancária; vice assume",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/presidente-do-paraguai-renuncia-em-meio-crise-bancaria-vice-assume",
+      "publishedAt": "2026-11-05T17:26:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
     },
     {
-      "id": "ab2b9584e7898362",
-      "title": "Sebrae-SP e parceiros estruturam projeto para qualificar mulheres para o setor da construção civil",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-parceiros-estruturam-projeto-para-qualificar-mulheres-para-o-setor-da-construcao-civil/",
-      "publishedAt": "2026-11-05T19:39:25+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "41a07371488a5cdb",
-      "title": "Dólar volta a aproximar-se de R$ 5,49 em dia de instabilidade global",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-volta-aproximar-se-de-r-549-em-dia-de-instabilidade-global",
-      "publishedAt": "2026-11-05T22:11:00+00:00",
+      "id": "490e531c08e92831",
+      "title": "Eleitores dos EUA derrotam big techs e ações de IA despencam",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/eleitores-dos-eua-derrotam-big-techs-e-acoes-de-ia-despencam",
+      "publishedAt": "2026-11-06T16:12:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "5b9a1349d79518fa",
-      "title": "Imposto do pecado: entenda cobrança sobre cigarros, bebidas e veículos",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/imposto-do-pecado-entenda-cobranca-sobre-cigarros-bebidas-e-veiculos",
-      "publishedAt": "2026-11-05T20:10:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
@@ -93,12 +84,12 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 2
+      "count": 0
     },
     {
       "category": "Interesses",
