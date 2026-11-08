@@ -1,20 +1,11 @@
 {
-  "editionDate": "2026-11-07",
+  "editionDate": "2026-11-08",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-07T10:46:10.146252+00:00",
+  "generatedAt": "2026-11-08T10:46:55.333154+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
-    {
-      "id": "f29f90931e278cbb",
-      "title": "Governo define minerais críticos prioritários para investimentos",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-define-minerais-criticos-prioritarios-para-investimentos",
-      "publishedAt": "2026-11-05T22:55:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
     {
       "id": "95a4bab371ce00b0",
       "title": "Dólar sobe para R$ 5,51, com dados de emprego nos EUA",
@@ -25,56 +16,29 @@
       "category": "Brasil"
     },
     {
-      "id": "8d85b986c6100b12",
-      "title": "Defesa Civil de SP prevê pancadas de chuva em diferentes regiões de São Paulo neste domingo de Enem e Fórmula 1",
-      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/domingo-de-enem-e-formula-1-sera-marcado-por-pancadas-de-chuva-em-diferentes-regioes-de-sao-paulo/",
-      "publishedAt": "2026-11-06T19:00:23+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "d6aaf8e3597365e6",
-      "title": "Brasil no Mundo analisa eleições nos EUA e geopolítica internacional",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/brasil-no-mundo-analisa-eleicoes-nos-eua-e-geopolitica-internacional",
-      "publishedAt": "2026-11-05T18:00:00+00:00",
+      "id": "6b68e6d7cccd26fb",
+      "title": "IBGE confirma crescimento de 3,4% da economia em 2024",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/ibge-confirma-crescimento-de-34-da-economia-em-2024",
+      "publishedAt": "2026-11-06T13:59:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "9837f9c83cedb53e",
-      "title": "Governo de SP oferece transporte metropolitano gratuito para estudantes nos dias de Enem",
-      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/governo-do-estado-de-sao-paulo-oferece-transporte-metropolitano-gratuito-para-estudantes-nos-dias-de-enem/",
-      "publishedAt": "2026-11-07T00:46:08+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "03401db30f596161",
-      "title": "Presidente do Paraguai renuncia em meio à crise bancária; vice assume",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/presidente-do-paraguai-renuncia-em-meio-crise-bancaria-vice-assume",
-      "publishedAt": "2026-11-05T17:26:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "490e531c08e92831",
-      "title": "Eleitores dos EUA derrotam big techs e ações de IA despencam",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/eleitores-dos-eua-derrotam-big-techs-e-acoes-de-ia-despencam",
-      "publishedAt": "2026-11-06T16:12:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "a87c95f0413f5ee8",
+      "title": "Defesa Civil de SP emite mais de 40 alertas de chuva e mantém gabinete de crise em todo o estado neste final de semana",
+      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/defesa-civil-de-sp-emite-mais-de-40-alertas-de-chuva-e-mantem-gabinete-de-crise-em-todo-o-estado-neste-final-de-semana/",
+      "publishedAt": "2026-11-07T17:57:54+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "Brasil"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 3
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -84,7 +48,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
