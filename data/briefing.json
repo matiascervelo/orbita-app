@@ -1,37 +1,55 @@
 {
-  "editionDate": "2026-11-08",
+  "editionDate": "2026-11-09",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-08T10:46:55.333154+00:00",
+  "generatedAt": "2026-11-09T11:00:34.536716+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "95a4bab371ce00b0",
-      "title": "Dólar sobe para R$ 5,51, com dados de emprego nos EUA",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-para-r-551-com-dados-de-emprego-nos-eua",
-      "publishedAt": "2026-11-06T22:10:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "id": "d97e84d138732b7a",
+      "title": "F1: Muralha Paulista apoia PM na prisão de 12 procurados durante GP de São Paulo",
+      "url": "https://www.agenciasp.sp.gov.br/seguranca-publica/f1-muralha-paulista-apoia-pm-na-prisao-de-12-procurados-durante-gp-de-sao-paulo/",
+      "publishedAt": "2026-11-09T00:25:27+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
     },
     {
-      "id": "6b68e6d7cccd26fb",
-      "title": "IBGE confirma crescimento de 3,4% da economia em 2024",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/ibge-confirma-crescimento-de-34-da-economia-em-2024",
-      "publishedAt": "2026-11-06T13:59:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "a87c95f0413f5ee8",
-      "title": "Defesa Civil de SP emite mais de 40 alertas de chuva e mantém gabinete de crise em todo o estado neste final de semana",
-      "url": "https://www.agenciasp.sp.gov.br/defesa-civil/defesa-civil-de-sp-emite-mais-de-40-alertas-de-chuva-e-mantem-gabinete-de-crise-em-todo-o-estado-neste-final-de-semana/",
-      "publishedAt": "2026-11-07T17:57:54+00:00",
+      "id": "84389a8740885cbd",
+      "title": "PIB paulista avança 1,5% no acumulado de 2026",
+      "url": "https://www.agenciasp.sp.gov.br/desenvolvimento/pib-paulista-avanca-15-no-acumulado-de-2026/",
+      "publishedAt": "2026-11-09T10:14:00+00:00",
       "source": "Agência SP",
       "feed": "Agência SP — Notícias",
       "category": "Brasil"
+    },
+    {
+      "id": "b89d2a9d3b282ff1",
+      "title": "Lula se compromete com responsabilidade fiscal e busca conciliação",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-busca-conciliacao-e-se-compromete-com-responsabilidade-fiscal",
+      "publishedAt": "2026-11-09T01:16:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Política",
+      "category": "Brasil"
+    },
+    {
+      "id": "6de94445d9d168e7",
+      "title": "Movimentações no Senado antecipam disputa pelo comando da Casa em 2027",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/movimentacoes-no-senado-antecipam-disputa-pelo-comando-da-casa-em-2027",
+      "publishedAt": "2026-11-08T23:37:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Política",
+      "category": "Brasil"
+    },
+    {
+      "id": "23ae71a851ea9a3d",
+      "title": "Suspeito de lavar dinheiro para organização criminosa é preso em shopping de luxo de SP",
+      "url": "https://www.agenciasp.sp.gov.br/seguranca-publica/suspeito-de-lavar-dinheiro-para-organizacao-criminosa-e-preso-em-shopping-de-luxo-de-sp/",
+      "publishedAt": "2026-11-08T17:36:08+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "Interesses"
     }
   ],
   "coverage": [
@@ -48,7 +66,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Mercado imobiliário",
@@ -58,7 +76,7 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [
