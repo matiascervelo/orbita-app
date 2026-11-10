@@ -1,62 +1,62 @@
 {
-  "editionDate": "2026-11-09",
+  "editionDate": "2026-11-10",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-09T11:00:34.536716+00:00",
+  "generatedAt": "2026-11-10T10:56:11.339741+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "d97e84d138732b7a",
-      "title": "F1: Muralha Paulista apoia PM na prisão de 12 procurados durante GP de São Paulo",
-      "url": "https://www.agenciasp.sp.gov.br/seguranca-publica/f1-muralha-paulista-apoia-pm-na-prisao-de-12-procurados-durante-gp-de-sao-paulo/",
-      "publishedAt": "2026-11-09T00:25:27+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "84389a8740885cbd",
-      "title": "PIB paulista avança 1,5% no acumulado de 2026",
-      "url": "https://www.agenciasp.sp.gov.br/desenvolvimento/pib-paulista-avanca-15-no-acumulado-de-2026/",
-      "publishedAt": "2026-11-09T10:14:00+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "Brasil"
-    },
-    {
-      "id": "b89d2a9d3b282ff1",
-      "title": "Lula se compromete com responsabilidade fiscal e busca conciliação",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-busca-conciliacao-e-se-compromete-com-responsabilidade-fiscal",
-      "publishedAt": "2026-11-09T01:16:00+00:00",
+      "id": "ca47c34ff9c3a990",
+      "title": "Bolsa sobe 2,22% e registra maior alta diária desde outubro",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bolsa-sobe-222-e-registra-maior-alta-diaria-desde-outubro",
+      "publishedAt": "2026-11-09T22:38:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "6de94445d9d168e7",
-      "title": "Movimentações no Senado antecipam disputa pelo comando da Casa em 2027",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/movimentacoes-no-senado-antecipam-disputa-pelo-comando-da-casa-em-2027",
-      "publishedAt": "2026-11-08T23:37:00+00:00",
+      "id": "4940fa1178d41293",
+      "title": "BC passa a divulgar lista de empresas aptas a operar com criptoativos",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-passa-divulgar-lista-de-empresas-aptas-operar-com-criptoativos",
+      "publishedAt": "2026-11-09T20:42:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "23ae71a851ea9a3d",
-      "title": "Suspeito de lavar dinheiro para organização criminosa é preso em shopping de luxo de SP",
-      "url": "https://www.agenciasp.sp.gov.br/seguranca-publica/suspeito-de-lavar-dinheiro-para-organizacao-criminosa-e-preso-em-shopping-de-luxo-de-sp/",
-      "publishedAt": "2026-11-08T17:36:08+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
+      "id": "41b7cda2b8093ad9",
+      "title": "Filipinas suspendem importação de carne suína brasileira por 60 dias",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/filipinas-suspendem-importacao-de-carne-suina-brasileira-por-60-dias",
+      "publishedAt": "2026-11-09T19:39:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "4cdfdebf306a24ae",
+      "title": "Comissão debate exploração sexual de crianças e adolescentes em rodovias e no turismo",
+      "url": "https://www.camara.leg.br/noticias/1317272-comissao-debate-exploracao-sexual-de-criancas-e-adolescentes-em-rodovias-e-no-turismo",
+      "publishedAt": "2026-11-09T17:16:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
       "category": "Interesses"
+    },
+    {
+      "id": "4dfc9c237fd99f84",
+      "title": "ONU diz que 2026 será um dos anos mais quentes já registrados",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/onu-diz-que-2026-sera-um-dos-anos-mais-quentes-ja-registrados",
+      "publishedAt": "2026-11-09T13:49:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Brasil",
@@ -66,7 +66,7 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
