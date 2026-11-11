@@ -1,62 +1,89 @@
 {
-  "editionDate": "2026-11-10",
+  "editionDate": "2026-11-11",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-10T10:56:11.339741+00:00",
+  "generatedAt": "2026-11-11T11:03:33.594819+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "ca47c34ff9c3a990",
-      "title": "Bolsa sobe 2,22% e registra maior alta diária desde outubro",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bolsa-sobe-222-e-registra-maior-alta-diaria-desde-outubro",
-      "publishedAt": "2026-11-09T22:38:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
+      "id": "fa80055203623a84",
+      "title": "Reforma tributária muda anúncio, contrato e rotina de corretores e imobiliárias",
+      "url": "https://secovi.com.br/reforma-tributaria-muda-anuncio-contrato-e-rotina-de-corretores-e-imobiliarias/",
+      "publishedAt": "2026-11-10T16:09:00+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
-      "id": "4940fa1178d41293",
-      "title": "BC passa a divulgar lista de empresas aptas a operar com criptoativos",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bc-passa-divulgar-lista-de-empresas-aptas-operar-com-criptoativos",
-      "publishedAt": "2026-11-09T20:42:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "41b7cda2b8093ad9",
-      "title": "Filipinas suspendem importação de carne suína brasileira por 60 dias",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/filipinas-suspendem-importacao-de-carne-suina-brasileira-por-60-dias",
-      "publishedAt": "2026-11-09T19:39:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "4cdfdebf306a24ae",
-      "title": "Comissão debate exploração sexual de crianças e adolescentes em rodovias e no turismo",
-      "url": "https://www.camara.leg.br/noticias/1317272-comissao-debate-exploracao-sexual-de-criancas-e-adolescentes-em-rodovias-e-no-turismo",
-      "publishedAt": "2026-11-09T17:16:00+00:00",
+      "id": "bf7af58cc4a81bc1",
+      "title": "Câmara aprova projeto que amplia acesso ao crédito imobiliário do Programa Habite Seguro para profissionais ameaçados",
+      "url": "https://www.camara.leg.br/noticias/1318193-camara-aprova-projeto-que-amplia-acesso-ao-credito-imobiliario-do-programa-habite-seguro-para-profissionais-ameacados",
+      "publishedAt": "2026-11-11T00:27:00+00:00",
       "source": "Agência Câmara",
       "feed": "Agência Câmara — Geral",
-      "category": "Interesses"
+      "category": "Mercado imobiliário"
     },
     {
-      "id": "4dfc9c237fd99f84",
-      "title": "ONU diz que 2026 será um dos anos mais quentes já registrados",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/onu-diz-que-2026-sera-um-dos-anos-mais-quentes-ja-registrados",
-      "publishedAt": "2026-11-09T13:49:00+00:00",
+      "id": "64476447cfa81629",
+      "title": "Intermediação é o elo decisivo dos negócios imobiliários, diz Jorge Cury na abertura do Conexão Imobiliária Secovi-SP",
+      "url": "https://secovi.com.br/intermediacao-e-o-elo-decisivo-dos-negocios-imobiliarios-diz-jorge-cury-na-abertura-do-conexao-imobiliaria-secovi-sp/",
+      "publishedAt": "2026-11-10T13:46:10+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "5b62a922e4a1bbdf",
+      "title": "Ajuste fiscal, juros e reforma tributária pautam debate sobre o rumo do país depois das eleições",
+      "url": "https://secovi.com.br/ajuste-fiscal-juros-e-reforma-tributaria-pautam-debate-sobre-o-rumo-do-pais-depois-das-eleicoes/",
+      "publishedAt": "2026-11-10T15:39:19+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "9f5220176caaded1",
+      "title": "Câmara aprova crédito de 18,5 bi para exportadores afetados por novo tarifaço dos EUA",
+      "url": "https://www.camara.leg.br/noticias/1317853-camara-aprova-credito-de-185-bi-para-exportadores-afetados-por-novo-tarifaco-dos-eua",
+      "publishedAt": "2026-11-10T21:39:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
+      "category": "Brasil"
+    },
+    {
+      "id": "0d7e8b61802a6be0",
+      "title": "Escuta, valores e firmeza guiam a liderança de empresárias do mercado imobiliário",
+      "url": "https://secovi.com.br/escuta-valores-e-firmeza-guiam-a-lideranca-de-empresarias-do-mercado-imobiliario/",
+      "publishedAt": "2026-11-10T22:02:16+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "32f46351ccbea241",
+      "title": "São Paulo recebe festival de filmes sobre mobilidade urbana",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/sao-paulo-recebe-festival-de-filmes-sobre-mobilidade-urbana",
+      "publishedAt": "2026-11-11T10:10:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "feed": "Agência Brasil — Geral",
+      "category": "São Paulo"
+    },
+    {
+      "id": "383e1f413b19698c",
+      "title": "Dólar sobe 1,46% e fecha no maior valor em 15 meses",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-146-e-fecha-no-maior-valor-em-15-meses",
+      "publishedAt": "2026-11-10T23:25:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -66,17 +93,17 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 4
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 1
+      "count": 0
     }
   ],
   "warnings": [
