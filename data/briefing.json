@@ -1,28 +1,37 @@
 {
-  "editionDate": "2026-11-12",
+  "editionDate": "2026-11-13",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-12T11:07:25.556247+00:00",
+  "generatedAt": "2026-11-13T11:03:36.780870+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "fa80055203623a84",
-      "title": "Reforma tributária muda anúncio, contrato e rotina de corretores e imobiliárias",
-      "url": "https://secovi.com.br/reforma-tributaria-muda-anuncio-contrato-e-rotina-de-corretores-e-imobiliarias/",
-      "publishedAt": "2026-11-10T16:09:00+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
+      "id": "7a8954fc381bbcee",
+      "title": "Governo de São Paulo oferece transporte metropolitano gratuito para estudantes no domingo (15) de Enem",
+      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/governo-de-sao-paulo-oferece-transporte-metropolitano-gratuito-para-estudantes-no-domingo-15-de-enem/",
+      "publishedAt": "2026-11-12T22:43:33+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "São Paulo"
     },
     {
-      "id": "fa44b6807d59ab3d",
-      "title": "Pacote fiscal prevê 120 dias para Congresso discutir supersalários",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/pacote-fiscal-preve-120-dias-para-congresso-discutir-supersalarios",
-      "publishedAt": "2026-11-11T22:40:00+00:00",
+      "id": "053ab5844b3bc523",
+      "title": "Reúso de computadores pelo governo brasileiro gera economia de água",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/reuso-de-computadores-pelo-governo-brasileiro-gera-economia-de-agua",
+      "publishedAt": "2026-11-12T15:24:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
+    },
+    {
+      "id": "05ff83725776403e",
+      "title": "Governo de SP entrega condomínio Vida Longa em Mogi Guaçu para idosos em situação de vulnerabilidade",
+      "url": "https://www.agenciasp.sp.gov.br/social/governo-de-sp-entrega-condominio-vida-longa-em-mogi-guacu-para-idosos-em-situacao-de-vulnerabilidade/",
+      "publishedAt": "2026-11-12T21:25:57+00:00",
+      "source": "Agência SP",
+      "feed": "Agência SP — Notícias",
+      "category": "Mercado imobiliário"
     },
     {
       "id": "2a2b29338d307cbb",
@@ -52,21 +61,21 @@
       "category": "Mercado imobiliário"
     },
     {
-      "id": "1027db2a3f5505a3",
-      "title": "Governo anuncia medidas de ajuste para economia de até R$ 60 bilhões",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-anuncia-medidas-de-ajuste-para-economia-de-ate-r-60-bilhoes",
-      "publishedAt": "2026-11-11T20:48:00+00:00",
+      "id": "5bfef8aad87d04ae",
+      "title": "Senado aprova texto-base de pacote que prevê economia de até R$ 60 bi",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/senado-aprova-texto-base-de-pacote-que-preve-economia-de-ate-r-60-bi",
+      "publishedAt": "2026-11-13T00:54:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "75ad7468f9988992",
-      "title": "Proposta que facilita transição tributária será enviada ao Congresso",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/proposta-que-facilita-transicao-tributaria-sera-enviada-ao-Congresso",
-      "publishedAt": "2026-11-11T16:32:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "7e83d3b07a8ac466",
+      "title": "Comissão de Finanças debate com Receita Federal regulamentação da reforma tributária",
+      "url": "https://www.camara.leg.br/noticias/1319043-comissao-de-financas-debate-com-receita-federal-regulamentacao-da-reforma-tributaria",
+      "publishedAt": "2026-11-12T22:04:00+00:00",
+      "source": "Agência Câmara",
+      "feed": "Agência Câmara — Geral",
       "category": "Brasil"
     },
     {
@@ -76,15 +85,6 @@
       "publishedAt": "2026-11-11T20:22:35+00:00",
       "source": "Sebrae-SP",
       "feed": "Sebrae-SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "32f46351ccbea241",
-      "title": "São Paulo recebe festival de filmes sobre mobilidade urbana",
-      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/sao-paulo-recebe-festival-de-filmes-sobre-mobilidade-urbana",
-      "publishedAt": "2026-11-11T10:10:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Geral",
       "category": "São Paulo"
     }
   ],
