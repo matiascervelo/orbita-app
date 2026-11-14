@@ -1,64 +1,19 @@
 {
-  "editionDate": "2026-11-13",
+  "editionDate": "2026-11-14",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-13T11:03:36.780870+00:00",
+  "generatedAt": "2026-11-14T16:35:00.149580+00:00",
   "status": "ready",
   "sourceFeedsOk": 10,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "7a8954fc381bbcee",
-      "title": "Governo de São Paulo oferece transporte metropolitano gratuito para estudantes no domingo (15) de Enem",
-      "url": "https://www.agenciasp.sp.gov.br/transporte-e-transito/governo-de-sao-paulo-oferece-transporte-metropolitano-gratuito-para-estudantes-no-domingo-15-de-enem/",
-      "publishedAt": "2026-11-12T22:43:33+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "São Paulo"
-    },
-    {
-      "id": "053ab5844b3bc523",
-      "title": "Reúso de computadores pelo governo brasileiro gera economia de água",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/reuso-de-computadores-pelo-governo-brasileiro-gera-economia-de-agua",
-      "publishedAt": "2026-11-12T15:24:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "05ff83725776403e",
-      "title": "Governo de SP entrega condomínio Vida Longa em Mogi Guaçu para idosos em situação de vulnerabilidade",
-      "url": "https://www.agenciasp.sp.gov.br/social/governo-de-sp-entrega-condominio-vida-longa-em-mogi-guacu-para-idosos-em-situacao-de-vulnerabilidade/",
-      "publishedAt": "2026-11-12T21:25:57+00:00",
-      "source": "Agência SP",
-      "feed": "Agência SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "2a2b29338d307cbb",
-      "title": "“Não existe bala de prata”: com juros altos, incorporadores precisam de precisão e parcerias de longo prazo",
-      "url": "https://secovi.com.br/nao-existe-bala-de-prata-com-juros-altos-incorporadores-precisam-de-precisao-e-parcerias-de-longo-prazo/",
-      "publishedAt": "2026-11-11T22:04:24+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "9f99f73df4e4a3ed",
-      "title": "Fundos imobiliários buscam escala e parceria com incorporadoras para crescer com juros altos",
-      "url": "https://secovi.com.br/fundos-imobiliarios-buscam-escala-e-parceria-com-incorporadoras-para-crescer-com-juros-altos/",
-      "publishedAt": "2026-11-11T21:59:16+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "9d155eaa0a51e30f",
-      "title": "Fórum de Fundos Imobiliários do Secovi-SP homenageia Arthur Parkinson e vê indústria com espaço para crescer",
-      "url": "https://secovi.com.br/forum-de-fundos-imobiliarios-do-secovi-sp-homenageia-arthur-parkinson-e-ve-industria-com-espaco-para-crescer/",
-      "publishedAt": "2026-11-11T21:51:37+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
+      "id": "a23f712e6d604d7e",
+      "title": "Festival do Vale da Grama celebra identidade regional e fortalece turismo e negócios locais com apoio do Sebrae-SP",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/festival-do-vale-da-grama-celebra-identidade-regional-e-fortalece-turismo-e-negocios-locais-com-apoio-do-sebrae-sp/",
+      "publishedAt": "2026-11-13T19:31:23+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Interesses"
     },
     {
       "id": "5bfef8aad87d04ae",
@@ -79,13 +34,22 @@
       "category": "Brasil"
     },
     {
-      "id": "1b4a73542914a494",
-      "title": "Empreendedores de Itararé vivenciam experiência no varejo em São Paulo",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/empreendedores-de-itarare-vivenciam-experiencia-no-varejo-em-sao-paulo/",
-      "publishedAt": "2026-11-11T20:22:35+00:00",
+      "id": "f973ca98f4fdd697",
+      "title": "Congresso aprova 24 projetos com crédito suplementar para ministérios",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/congresso-aprova-24-projetos-com-credito-suplementar-para-ministerios",
+      "publishedAt": "2026-11-12T18:33:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Política",
+      "category": "Brasil"
+    },
+    {
+      "id": "25f21ac5e609e72d",
+      "title": "Cachaça de Alambique do Circuito das Águas Paulista terá Indicação Geográfica oficializada em novembro",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/cachaca-de-alambique-do-circuito-das-aguas-paulista-tera-indicacao-geografica-oficializada-em-novembro/",
+      "publishedAt": "2026-11-13T21:16:54+00:00",
       "source": "Sebrae-SP",
       "feed": "Sebrae-SP — Notícias",
-      "category": "São Paulo"
+      "category": "Interesses"
     }
   ],
   "coverage": [
@@ -102,17 +66,17 @@
     {
       "category": "São Paulo",
       "target": 2,
-      "count": 2
+      "count": 0
     },
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 4
+      "count": 0
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 2
     }
   ],
   "warnings": [
