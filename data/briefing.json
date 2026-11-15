@@ -1,9 +1,9 @@
 {
-  "editionDate": "2026-11-14",
+  "editionDate": "2026-11-15",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-14T16:35:00.149580+00:00",
+  "generatedAt": "2026-11-15T17:03:06.031340+00:00",
   "status": "ready",
-  "sourceFeedsOk": 10,
+  "sourceFeedsOk": 9,
   "sourceFeedsTotal": 11,
   "items": [
     {
@@ -16,39 +16,39 @@
       "category": "Interesses"
     },
     {
-      "id": "5bfef8aad87d04ae",
-      "title": "Senado aprova texto-base de pacote que prevê economia de até R$ 60 bi",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/senado-aprova-texto-base-de-pacote-que-preve-economia-de-ate-r-60-bi",
-      "publishedAt": "2026-11-13T00:54:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
-      "id": "7e83d3b07a8ac466",
-      "title": "Comissão de Finanças debate com Receita Federal regulamentação da reforma tributária",
-      "url": "https://www.camara.leg.br/noticias/1319043-comissao-de-financas-debate-com-receita-federal-regulamentacao-da-reforma-tributaria",
-      "publishedAt": "2026-11-12T22:04:00+00:00",
-      "source": "Agência Câmara",
-      "feed": "Agência Câmara — Geral",
-      "category": "Brasil"
-    },
-    {
-      "id": "f973ca98f4fdd697",
-      "title": "Congresso aprova 24 projetos com crédito suplementar para ministérios",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/congresso-aprova-24-projetos-com-credito-suplementar-para-ministerios",
-      "publishedAt": "2026-11-12T18:33:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
-      "id": "25f21ac5e609e72d",
-      "title": "Cachaça de Alambique do Circuito das Águas Paulista terá Indicação Geográfica oficializada em novembro",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/cachaca-de-alambique-do-circuito-das-aguas-paulista-tera-indicacao-geografica-oficializada-em-novembro/",
-      "publishedAt": "2026-11-13T21:16:54+00:00",
+      "id": "ba4a8cb8be9d8e0e",
+      "title": "Sebrae-SP e Prefeitura de Pedreira promovem encontro para conectar empresários e estimular novos negócios na região",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-prefeitura-de-pedreira-promovem-encontro-para-conectar-empresarios-e-estimular-novos-negocios-na-regiao/",
+      "publishedAt": "2026-11-13T21:25:01+00:00",
       "source": "Sebrae-SP",
       "feed": "Sebrae-SP — Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "b8a2111ffe630f69",
+      "title": "Lula cita herói anticolonial das Filipinas ao comentar sua reeleição",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/lula-cita-heroi-anticolonial-das-filipinas-ao-comentar-sua-reeleicao",
+      "publishedAt": "2026-11-14T19:48:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "c57f87cca3b6945b",
+      "title": "Dólar fecha estável a R$ 5,65, mas sobe 2,63% na semana",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-fecha-estavel-r-565-mas-sobe-263-na-semana",
+      "publishedAt": "2026-11-13T21:53:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "dc03e4763b53320d",
+      "title": "Circuito Cultural começa no Rio com celebração da Consciência Negra",
+      "url": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-11/circuito-cultural-comeca-no-rio-com-celebracao-da-consciencia-negra",
+      "publishedAt": "2026-11-14T21:26:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Cultura",
       "category": "Interesses"
     }
   ],
@@ -80,6 +80,7 @@
     }
   ],
   "warnings": [
+    "Agência Câmara — Geral: URLError (<urlopen error timed out>)",
     "IBGE — Agência de Notícias: URLError (<urlopen error timed out>)"
   ],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
