@@ -1,62 +1,53 @@
 {
-  "editionDate": "2026-11-15",
+  "editionDate": "2026-11-16",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-15T17:03:06.031340+00:00",
+  "generatedAt": "2026-11-16T20:23:47.004900+00:00",
   "status": "ready",
-  "sourceFeedsOk": 9,
+  "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "a23f712e6d604d7e",
-      "title": "Festival do Vale da Grama celebra identidade regional e fortalece turismo e negócios locais com apoio do Sebrae-SP",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/festival-do-vale-da-grama-celebra-identidade-regional-e-fortalece-turismo-e-negocios-locais-com-apoio-do-sebrae-sp/",
-      "publishedAt": "2026-11-13T19:31:23+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Interesses"
-    },
-    {
-      "id": "ba4a8cb8be9d8e0e",
-      "title": "Sebrae-SP e Prefeitura de Pedreira promovem encontro para conectar empresários e estimular novos negócios na região",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/sebrae-sp-e-prefeitura-de-pedreira-promovem-encontro-para-conectar-empresarios-e-estimular-novos-negocios-na-regiao/",
-      "publishedAt": "2026-11-13T21:25:01+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Brasil"
-    },
-    {
-      "id": "b8a2111ffe630f69",
-      "title": "Lula cita herói anticolonial das Filipinas ao comentar sua reeleição",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/lula-cita-heroi-anticolonial-das-filipinas-ao-comentar-sua-reeleicao",
-      "publishedAt": "2026-11-14T19:48:00+00:00",
+      "id": "dd8abf5d85271185",
+      "title": "Caixa começa a pagar parcela do Bolsa Família de novembro",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-comeca-pagar-parcela-do-bolsa-familia-de-novembro",
+      "publishedAt": "2026-11-16T10:28:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "c57f87cca3b6945b",
-      "title": "Dólar fecha estável a R$ 5,65, mas sobe 2,63% na semana",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-fecha-estavel-r-565-mas-sobe-263-na-semana",
-      "publishedAt": "2026-11-13T21:53:00+00:00",
+      "id": "f40eaa41b3c44c34",
+      "title": "Caminhos da Reportagem mostra negócios de impacto social",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caminhos-da-reportagem-mostra-negocios-de-impacto-social",
+      "publishedAt": "2026-11-16T10:27:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "dc03e4763b53320d",
-      "title": "Circuito Cultural começa no Rio com celebração da Consciência Negra",
-      "url": "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-11/circuito-cultural-comeca-no-rio-com-celebracao-da-consciencia-negra",
-      "publishedAt": "2026-11-14T21:26:00+00:00",
+      "id": "657a72570bcb624f",
+      "title": "IBGE recebe homenagem pelos seus 90 anos na Assembleia Legislativa da Bahia",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48647-ibge-recebe-homenagem-pelos-seus-90-anos-na-assembleia-legislativa-da-bahia.html",
+      "publishedAt": "2026-11-16T07:29:43+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "e7601ccdf79e7cfc",
+      "title": "Eleitores de Cabo Verde vão às urnas domingo escolher o presidente",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/eleitores-de-cabo-verde-vao-urnas-domingo-escolher-o-presidente",
+      "publishedAt": "2026-11-15T13:33:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Cultura",
-      "category": "Interesses"
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Brasil",
@@ -76,12 +67,9 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 2
+      "count": 0
     }
   ],
-  "warnings": [
-    "Agência Câmara — Geral: URLError (<urlopen error timed out>)",
-    "IBGE — Agência de Notícias: URLError (<urlopen error timed out>)"
-  ],
+  "warnings": [],
   "editorialNote": "Piloto experimental: manchetes, URLs e datas de RSS e API pública, com filtro de relevância por regras. Sem resumos IA ou checagem editorial humana. Acesso público não implica autorização para redistribuição comercial; licenças precisam ser validadas."
 }
