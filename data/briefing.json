@@ -1,36 +1,36 @@
 {
-  "editionDate": "2026-11-16",
+  "editionDate": "2026-11-17",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-16T20:23:47.004900+00:00",
+  "generatedAt": "2026-11-17T19:09:01.047812+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "dd8abf5d85271185",
-      "title": "Caixa começa a pagar parcela do Bolsa Família de novembro",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-comeca-pagar-parcela-do-bolsa-familia-de-novembro",
-      "publishedAt": "2026-11-16T10:28:00+00:00",
+      "id": "1871b00bfdc50e68",
+      "title": "Beneficiários com NIS de final 2 recebem Bolsa Família de novembro",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/beneficiarios-com-nis-de-final-2-recebem-bolsa-familia-de-novembro",
+      "publishedAt": "2026-11-17T10:02:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "f40eaa41b3c44c34",
-      "title": "Caminhos da Reportagem mostra negócios de impacto social",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caminhos-da-reportagem-mostra-negocios-de-impacto-social",
-      "publishedAt": "2026-11-16T10:27:00+00:00",
+      "id": "63d2628d9bfc5fa4",
+      "title": "Dólar sobe para R$ 5,77 e fecha no maior valor desde abril de 2025",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-para-r-577-e-fecha-no-maior-valor-desde-abril-de-2025",
+      "publishedAt": "2026-11-16T23:06:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "657a72570bcb624f",
-      "title": "IBGE recebe homenagem pelos seus 90 anos na Assembleia Legislativa da Bahia",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48647-ibge-recebe-homenagem-pelos-seus-90-anos-na-assembleia-legislativa-da-bahia.html",
-      "publishedAt": "2026-11-16T07:29:43+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
+      "id": "632f251de57f05d5",
+      "title": "Economia circular movimenta até R$ 90,7 bilhões no Brasil, aponta CNI",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/economia-circular-movimenta-ate-r-907-bilhoes-no-brasil-aponta-cni",
+      "publishedAt": "2026-11-16T18:25:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
