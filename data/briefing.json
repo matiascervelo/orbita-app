@@ -1,53 +1,62 @@
 {
-  "editionDate": "2026-11-17",
+  "editionDate": "2026-11-18",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-17T19:09:01.047812+00:00",
+  "generatedAt": "2026-11-18T18:49:42.380855+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "1871b00bfdc50e68",
-      "title": "Beneficiários com NIS de final 2 recebem Bolsa Família de novembro",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/beneficiarios-com-nis-de-final-2-recebem-bolsa-familia-de-novembro",
-      "publishedAt": "2026-11-17T10:02:00+00:00",
+      "id": "adb8f22fa91452ca",
+      "title": "Durigan prevê impacto inicial da reforma tributária sobre inflação",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/durigan-preve-impacto-inicial-da-reforma-tributaria-sobre-inflacao",
+      "publishedAt": "2026-11-17T18:56:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "63d2628d9bfc5fa4",
-      "title": "Dólar sobe para R$ 5,77 e fecha no maior valor desde abril de 2025",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-sobe-para-r-577-e-fecha-no-maior-valor-desde-abril-de-2025",
-      "publishedAt": "2026-11-16T23:06:00+00:00",
+      "id": "d0112ee1b4a21d7a",
+      "title": "Reforma tributária: Receita descarta punição a erros de boa-fé",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/reforma-tributaria-receita-descarta-punicao-erros-de-boa-fe",
+      "publishedAt": "2026-11-17T15:30:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Economia",
       "category": "Brasil"
     },
     {
-      "id": "632f251de57f05d5",
-      "title": "Economia circular movimenta até R$ 90,7 bilhões no Brasil, aponta CNI",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/economia-circular-movimenta-ate-r-907-bilhoes-no-brasil-aponta-cni",
-      "publishedAt": "2026-11-16T18:25:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "d8c73c6524d09d83",
+      "title": "Implementação da reforma tributária precisa ser adiada",
+      "url": "https://secovi.com.br/implementacao-da-reforma-tributaria-precisa-ser-adiada/",
+      "publishedAt": "2026-11-18T08:00:27+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "e7601ccdf79e7cfc",
-      "title": "Eleitores de Cabo Verde vão às urnas domingo escolher o presidente",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/eleitores-de-cabo-verde-vao-urnas-domingo-escolher-o-presidente",
-      "publishedAt": "2026-11-15T13:33:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
+      "id": "bc2732877a6c392d",
+      "title": "Pesquisa Mensal do Mercado Imobiliário – Setembro 2026",
+      "url": "https://secovi.com.br/pesquisa-mensal-do-mercado-imobiliario-setembro-2026/",
+      "publishedAt": "2026-11-17T20:23:08+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "2640ad18e0bff087",
+      "title": "Basilio Jafet aponta burocracia e lentidão nas aprovações como desafios para o setor imobiliário",
+      "url": "https://secovi.com.br/basilio-jafet-aponta-burocracia-e-lentidao-nas-aprovacoes-como-desafios-para-o-setor-imobiliario/",
+      "publishedAt": "2026-11-17T16:13:30+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Brasil",
@@ -62,7 +71,7 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 2
     },
     {
       "category": "Interesses",
