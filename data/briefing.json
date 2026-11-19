@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-11-18",
+  "editionDate": "2026-11-19",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-18T18:49:42.380855+00:00",
+  "generatedAt": "2026-11-19T18:57:46.607516+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
@@ -25,13 +25,22 @@
       "category": "Brasil"
     },
     {
-      "id": "d8c73c6524d09d83",
-      "title": "Implementação da reforma tributária precisa ser adiada",
-      "url": "https://secovi.com.br/implementacao-da-reforma-tributaria-precisa-ser-adiada/",
-      "publishedAt": "2026-11-18T08:00:27+00:00",
+      "id": "c8888259317ed40e",
+      "title": "Senado rejeita mudanças no texto e aprova ajuste fiscal do governo",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/senado-rejeita-mudancas-no-texto-e-aprova-ajuste-fiscal-do-governo",
+      "publishedAt": "2026-11-18T22:39:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Política",
+      "category": "Brasil"
+    },
+    {
+      "id": "05e2a9caba5e8bce",
+      "title": "Inteligência urbana, infraestrutura e planejamento orientam debate sobre o futuro imobiliário de Jundiaí",
+      "url": "https://secovi.com.br/inteligencia-urbana-infraestrutura-e-planejamento-orientam-debate-sobre-o-futuro-imobiliario-de-jundiai/",
+      "publishedAt": "2026-11-18T14:02:35+00:00",
       "source": "Secovi-SP",
       "feed": "Secovi-SP — Notícias",
-      "category": "Brasil"
+      "category": "Mercado imobiliário"
     },
     {
       "id": "bc2732877a6c392d",
@@ -50,13 +59,22 @@
       "source": "Secovi-SP",
       "feed": "Secovi-SP — Notícias",
       "category": "Mercado imobiliário"
+    },
+    {
+      "id": "49b9daac82113713",
+      "title": "Estados Unidos entram em alerta após sucessivas panes tecnológicas",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/estados-unidos-entram-em-alerta-apos-sucessivas-panes-tecnologicas",
+      "publishedAt": "2026-11-18T19:08:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Brasil",
@@ -71,7 +89,7 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 2
+      "count": 3
     },
     {
       "category": "Interesses",
