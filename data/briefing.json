@@ -1,29 +1,11 @@
 {
-  "editionDate": "2026-11-19",
+  "editionDate": "2026-11-20",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-19T18:57:46.607516+00:00",
+  "generatedAt": "2026-11-20T18:34:34.506555+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
-    {
-      "id": "adb8f22fa91452ca",
-      "title": "Durigan prevê impacto inicial da reforma tributária sobre inflação",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/durigan-preve-impacto-inicial-da-reforma-tributaria-sobre-inflacao",
-      "publishedAt": "2026-11-17T18:56:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "d0112ee1b4a21d7a",
-      "title": "Reforma tributária: Receita descarta punição a erros de boa-fé",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/reforma-tributaria-receita-descarta-punicao-erros-de-boa-fe",
-      "publishedAt": "2026-11-17T15:30:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
     {
       "id": "c8888259317ed40e",
       "title": "Senado rejeita mudanças no texto e aprova ajuste fiscal do governo",
@@ -43,28 +25,64 @@
       "category": "Mercado imobiliário"
     },
     {
-      "id": "bc2732877a6c392d",
-      "title": "Pesquisa Mensal do Mercado Imobiliário – Setembro 2026",
-      "url": "https://secovi.com.br/pesquisa-mensal-do-mercado-imobiliario-setembro-2026/",
-      "publishedAt": "2026-11-17T20:23:08+00:00",
+      "id": "81141a0e99cf240c",
+      "title": "CMN amplia controle sobre recolhimentos de tributos dos bancos",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/cmn-amplia-controle-sobre-recolhimentos-de-tributos-dos-bancos",
+      "publishedAt": "2026-11-19T23:33:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "440d2909f98afd5b",
+      "title": "Banco Central amplia acesso de cooperativas ao mercado aberto",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/banco-central-amplia-acesso-de-cooperativas-ao-mercado-aberto",
+      "publishedAt": "2026-11-19T23:22:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "14783f0b94721908",
+      "title": "Minha Casa, Minha Vida caminha para 3 milhões de unidades contratadas, afirma secretário nacional de Habitação",
+      "url": "https://secovi.com.br/minha-casa-minha-vida-caminha-para-3-milhoes-de-unidades-contratadas-afirma-secretario-nacional-de-habitacao/",
+      "publishedAt": "2026-11-19T21:29:07+00:00",
       "source": "Secovi-SP",
       "feed": "Secovi-SP — Notícias",
       "category": "Mercado imobiliário"
     },
     {
-      "id": "2640ad18e0bff087",
-      "title": "Basilio Jafet aponta burocracia e lentidão nas aprovações como desafios para o setor imobiliário",
-      "url": "https://secovi.com.br/basilio-jafet-aponta-burocracia-e-lentidao-nas-aprovacoes-como-desafios-para-o-setor-imobiliario/",
-      "publishedAt": "2026-11-17T16:13:30+00:00",
+      "id": "fb28fea1ff08a31c",
+      "title": "Palco Arena debate IA, dados e novas fontes de receita para corretores e imobiliárias",
+      "url": "https://secovi.com.br/palco-arena-debate-ia-dados-e-novas-fontes-de-receita-para-corretores-e-imobiliarias/",
+      "publishedAt": "2026-11-19T19:38:33+00:00",
       "source": "Secovi-SP",
       "feed": "Secovi-SP — Notícias",
       "category": "Mercado imobiliário"
     },
     {
-      "id": "49b9daac82113713",
-      "title": "Estados Unidos entram em alerta após sucessivas panes tecnológicas",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/estados-unidos-entram-em-alerta-apos-sucessivas-panes-tecnologicas",
-      "publishedAt": "2026-11-18T19:08:00+00:00",
+      "id": "ca0d99d190397b02",
+      "title": "Uso de drones em guerra interna da Colômbia cresce 132% sob Espriella",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/uso-de-drones-em-guerra-interna-da-colombia-cresce-132-sob-espriella",
+      "publishedAt": "2026-11-19T17:21:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "3fff1ecdb6812315",
+      "title": "Xi, Trump e Putin sinalizam disposição para diálogo entre potências",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/xi-trump-e-putin-sinalizam-disposicao-para-dialogo-entre-potencias",
+      "publishedAt": "2026-11-19T20:33:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
+    },
+    {
+      "id": "ee0c920026928e36",
+      "title": "Tribunal da ONU conclui que Mianmar cometeu genocídio contra rohingyas",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/tribunal-da-onu-conclui-que-mianmar-cometeu-genocidio",
+      "publishedAt": "2026-11-19T14:20:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -74,7 +92,7 @@
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 3
     },
     {
       "category": "Brasil",
