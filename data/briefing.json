@@ -1,29 +1,11 @@
 {
-  "editionDate": "2026-11-20",
+  "editionDate": "2026-11-21",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-20T18:34:34.506555+00:00",
+  "generatedAt": "2026-11-21T17:25:44.439833+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
-    {
-      "id": "c8888259317ed40e",
-      "title": "Senado rejeita mudanças no texto e aprova ajuste fiscal do governo",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/senado-rejeita-mudancas-no-texto-e-aprova-ajuste-fiscal-do-governo",
-      "publishedAt": "2026-11-18T22:39:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
-      "id": "05e2a9caba5e8bce",
-      "title": "Inteligência urbana, infraestrutura e planejamento orientam debate sobre o futuro imobiliário de Jundiaí",
-      "url": "https://secovi.com.br/inteligencia-urbana-infraestrutura-e-planejamento-orientam-debate-sobre-o-futuro-imobiliario-de-jundiai/",
-      "publishedAt": "2026-11-18T14:02:35+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
     {
       "id": "81141a0e99cf240c",
       "title": "CMN amplia controle sobre recolhimentos de tributos dos bancos",
@@ -43,22 +25,13 @@
       "category": "Brasil"
     },
     {
-      "id": "14783f0b94721908",
-      "title": "Minha Casa, Minha Vida caminha para 3 milhões de unidades contratadas, afirma secretário nacional de Habitação",
-      "url": "https://secovi.com.br/minha-casa-minha-vida-caminha-para-3-milhoes-de-unidades-contratadas-afirma-secretario-nacional-de-habitacao/",
-      "publishedAt": "2026-11-19T21:29:07+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "fb28fea1ff08a31c",
-      "title": "Palco Arena debate IA, dados e novas fontes de receita para corretores e imobiliárias",
-      "url": "https://secovi.com.br/palco-arena-debate-ia-dados-e-novas-fontes-de-receita-para-corretores-e-imobiliarias/",
-      "publishedAt": "2026-11-19T19:38:33+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
+      "id": "171dfc565cd0e34d",
+      "title": "Dólar supera R$ 5,93 e fecha no maior valor desde abril de 2025",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-supera-r-593-e-fecha-no-maior-valor-desde-abril-de-2025",
+      "publishedAt": "2026-11-19T22:47:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
     },
     {
       "id": "ca0d99d190397b02",
@@ -68,31 +41,13 @@
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
-    },
-    {
-      "id": "3fff1ecdb6812315",
-      "title": "Xi, Trump e Putin sinalizam disposição para diálogo entre potências",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/xi-trump-e-putin-sinalizam-disposicao-para-dialogo-entre-potencias",
-      "publishedAt": "2026-11-19T20:33:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
-    },
-    {
-      "id": "ee0c920026928e36",
-      "title": "Tribunal da ONU conclui que Mianmar cometeu genocídio contra rohingyas",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/tribunal-da-onu-conclui-que-mianmar-cometeu-genocidio",
-      "publishedAt": "2026-11-19T14:20:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 3
+      "count": 1
     },
     {
       "category": "Brasil",
@@ -107,7 +62,7 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 3
+      "count": 0
     },
     {
       "category": "Interesses",
