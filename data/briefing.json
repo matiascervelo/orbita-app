@@ -1,58 +1,40 @@
 {
-  "editionDate": "2026-11-21",
+  "editionDate": "2026-11-22",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-21T17:25:44.439833+00:00",
+  "generatedAt": "2026-11-22T17:47:19.654702+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "81141a0e99cf240c",
-      "title": "CMN amplia controle sobre recolhimentos de tributos dos bancos",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/cmn-amplia-controle-sobre-recolhimentos-de-tributos-dos-bancos",
-      "publishedAt": "2026-11-19T23:33:00+00:00",
+      "id": "ff35448b35ad4934",
+      "title": "Ex-presidente Jair Bolsonaro está internado em UTI no Distrito Federal",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/ex-presidente-jair-bolsonaro-esta-internado-em-uti-no-distrito-federal",
+      "publishedAt": "2026-11-21T17:55:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "440d2909f98afd5b",
-      "title": "Banco Central amplia acesso de cooperativas ao mercado aberto",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/banco-central-amplia-acesso-de-cooperativas-ao-mercado-aberto",
-      "publishedAt": "2026-11-19T23:22:00+00:00",
+      "id": "c11434885596dd17",
+      "title": "Especialista analisa impacto de reformas previdenciárias no país",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/especialista-analisa-impacto-de-reformas-previdenciarias-no-pais",
+      "publishedAt": "2026-11-21T11:56:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Geral",
       "category": "Brasil"
-    },
-    {
-      "id": "171dfc565cd0e34d",
-      "title": "Dólar supera R$ 5,93 e fecha no maior valor desde abril de 2025",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-supera-r-593-e-fecha-no-maior-valor-desde-abril-de-2025",
-      "publishedAt": "2026-11-19T22:47:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
-      "category": "Brasil"
-    },
-    {
-      "id": "ca0d99d190397b02",
-      "title": "Uso de drones em guerra interna da Colômbia cresce 132% sob Espriella",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/uso-de-drones-em-guerra-interna-da-colombia-cresce-132-sob-espriella",
-      "publishedAt": "2026-11-19T17:21:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 1
+      "count": 0
     },
     {
       "category": "Brasil",
       "target": 3,
-      "count": 3
+      "count": 2
     },
     {
       "category": "São Paulo",
