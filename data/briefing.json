@@ -1,11 +1,29 @@
 {
-  "editionDate": "2026-11-22",
+  "editionDate": "2026-11-23",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-22T17:47:19.654702+00:00",
+  "generatedAt": "2026-11-23T22:00:33.446663+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
+    {
+      "id": "7da8eedbf4574a2e",
+      "title": "Sebrae abre inscrições para empreendedores negros",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/sebrae-abre-inscricoes-para-empreendedores-negros",
+      "publishedAt": "2026-11-23T10:00:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "6ac2962e3f8e38e2",
+      "title": "A 15 dias do evento, IBGE prorroga inscrições da conferência em Natal, de 08 a 10/12",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48710-a-15-dias-do-evento-ibge-prorroga-inscricoes-da-conferencia-em-natal-de-08-a-10-12.html",
+      "publishedAt": "2026-11-23T05:34:08+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
+      "category": "Brasil"
+    },
     {
       "id": "ff35448b35ad4934",
       "title": "Ex-presidente Jair Bolsonaro está internado em UTI no Distrito Federal",
@@ -13,15 +31,6 @@
       "publishedAt": "2026-11-21T17:55:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
-      "id": "c11434885596dd17",
-      "title": "Especialista analisa impacto de reformas previdenciárias no país",
-      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/especialista-analisa-impacto-de-reformas-previdenciarias-no-pais",
-      "publishedAt": "2026-11-21T11:56:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Geral",
       "category": "Brasil"
     }
   ],
@@ -34,7 +43,7 @@
     {
       "category": "Brasil",
       "target": 3,
-      "count": 2
+      "count": 3
     },
     {
       "category": "São Paulo",
