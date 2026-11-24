@@ -1,36 +1,36 @@
 {
-  "editionDate": "2026-11-23",
+  "editionDate": "2026-11-24",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-23T22:00:33.446663+00:00",
+  "generatedAt": "2026-11-24T20:38:03.194573+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "7da8eedbf4574a2e",
-      "title": "Sebrae abre inscrições para empreendedores negros",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/sebrae-abre-inscricoes-para-empreendedores-negros",
-      "publishedAt": "2026-11-23T10:00:00+00:00",
+      "id": "b24ac89e1449aa48",
+      "title": "Deputada de SP tem entrada na Cisjordânia negada por governo de Israel",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/deputada-de-sp-tem-entrada-na-cisjordania-negada-por-governo-de-israel",
+      "publishedAt": "2026-11-23T21:14:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "6ac2962e3f8e38e2",
-      "title": "A 15 dias do evento, IBGE prorroga inscrições da conferência em Natal, de 08 a 10/12",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48710-a-15-dias-do-evento-ibge-prorroga-inscricoes-da-conferencia-em-natal-de-08-a-10-12.html",
-      "publishedAt": "2026-11-23T05:34:08+00:00",
+      "id": "5c2315a91830482e",
+      "title": "Novas cestas do IPCA e do INPC serão apresentadas pelo IBGE em 30 de novembro na Fiesp",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48722-novas-cestas-do-ipca-e-do-inpc-serao-apresentadas-pelo-ibge-em-30-de-novembro-na-fiesp.html",
+      "publishedAt": "2026-11-24T06:33:18+00:00",
       "source": "IBGE",
       "feed": "IBGE — Agência de Notícias",
       "category": "Brasil"
     },
     {
-      "id": "ff35448b35ad4934",
-      "title": "Ex-presidente Jair Bolsonaro está internado em UTI no Distrito Federal",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/ex-presidente-jair-bolsonaro-esta-internado-em-uti-no-distrito-federal",
-      "publishedAt": "2026-11-21T17:55:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
+      "id": "270a678d7e603b54",
+      "title": "IBGE faz coletiva em Caicó (RN) para divulgar conferência internacional no estado",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48721-ibge-faz-coletiva-em-caico-rn-para-divulgar-conferencia-internacional-no-estado-2.html",
+      "publishedAt": "2026-11-24T06:23:35+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
       "category": "Brasil"
     }
   ],
