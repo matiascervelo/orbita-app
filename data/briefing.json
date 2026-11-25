@@ -1,37 +1,55 @@
 {
-  "editionDate": "2026-11-24",
+  "editionDate": "2026-11-25",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-24T20:38:03.194573+00:00",
+  "generatedAt": "2026-11-25T19:53:28.529359+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "b24ac89e1449aa48",
-      "title": "Deputada de SP tem entrada na Cisjordânia negada por governo de Israel",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/deputada-de-sp-tem-entrada-na-cisjordania-negada-por-governo-de-israel",
-      "publishedAt": "2026-11-23T21:14:00+00:00",
+      "id": "55051e167cdf85f9",
+      "title": "Governo libera R$ 3,43 bilhões do Orçamento após ajuste fiscal",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-libera-r-343-bilhoes-do-orcamento-apos-ajuste-fiscal",
+      "publishedAt": "2026-11-25T10:02:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
+    },
+    {
+      "id": "893ce5d2dbd30b16",
+      "title": "Condomínio não é empresa",
+      "url": "https://secovi.com.br/condominio-nao-e-empresa/",
+      "publishedAt": "2026-11-25T08:00:26+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "16e4653c9ea88252",
+      "title": "Lula sanciona ajuste fiscal aprovado no Congresso",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-sanciona-ajuste-fiscal-aprovado-no-congresso",
+      "publishedAt": "2026-11-24T20:25:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Política",
       "category": "Brasil"
     },
     {
-      "id": "5c2315a91830482e",
-      "title": "Novas cestas do IPCA e do INPC serão apresentadas pelo IBGE em 30 de novembro na Fiesp",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48722-novas-cestas-do-ipca-e-do-inpc-serao-apresentadas-pelo-ibge-em-30-de-novembro-na-fiesp.html",
-      "publishedAt": "2026-11-24T06:33:18+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
+      "id": "c66b016ad4f0aaa7",
+      "title": "Presidente Prudente lança Trilha Prudente para fortalecer o ecossistema de inovação e impulsionar pequenos negócios",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/presidente-prudente-lanca-trilha-prudente-para-fortalecer-o-ecossistema-de-inovacao-e-impulsionar-pequenos-negocios/",
+      "publishedAt": "2026-11-24T20:19:05+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
       "category": "Brasil"
     },
     {
-      "id": "270a678d7e603b54",
-      "title": "IBGE faz coletiva em Caicó (RN) para divulgar conferência internacional no estado",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48721-ibge-faz-coletiva-em-caico-rn-para-divulgar-conferencia-internacional-no-estado-2.html",
-      "publishedAt": "2026-11-24T06:23:35+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
-      "category": "Brasil"
+      "id": "411c076777c53665",
+      "title": "ONU aprova proposta do Brasil de turismo amigável para muçulmanos",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/onu-aprova-proposta-do-brasil-de-turismo-amigavel-para-muculmanos",
+      "publishedAt": "2026-11-24T21:22:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Interesses"
     }
   ],
   "coverage": [
@@ -53,12 +71,12 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 0
+      "count": 1
     }
   ],
   "warnings": [],
