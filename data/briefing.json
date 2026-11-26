@@ -1,18 +1,27 @@
 {
-  "editionDate": "2026-11-25",
+  "editionDate": "2026-11-26",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-25T19:53:28.529359+00:00",
+  "generatedAt": "2026-11-26T19:34:47.161235+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
   "items": [
     {
-      "id": "55051e167cdf85f9",
-      "title": "Governo libera R$ 3,43 bilhões do Orçamento após ajuste fiscal",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-libera-r-343-bilhoes-do-orcamento-apos-ajuste-fiscal",
-      "publishedAt": "2026-11-25T10:02:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Economia",
+      "id": "7f8e03088c5dd247",
+      "title": "Teto de juros do financiamento imobiliário “vai ser resolvido”, acredita presidente do Bradesco",
+      "url": "https://secovi.com.br/teto-de-juros-do-financiamento-imobiliario-vai-ser-resolvido-acredita-presidente-do-bradesco/",
+      "publishedAt": "2026-11-25T15:37:22+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "3f05e3412fbcfded",
+      "title": "Presidente do IBGE recebe Medalha Zeferino Vaz da Unicamp e dá ao reitor medalha pelos 90 anos do IBGE",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48758-presidente-do-ibge-recebe-medalha-zeferino-vaz-da-unicamp-e-da-ao-reitor-medalha-pelos-90-anos-do-ibge.html",
+      "publishedAt": "2026-11-25T09:20:03+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
       "category": "Brasil"
     },
     {
@@ -25,6 +34,15 @@
       "category": "Mercado imobiliário"
     },
     {
+      "id": "c4fb6438852a8459",
+      "title": "Missões empresariais do Sebrae-SP levam empreendedores do Sudoeste Paulista e Alto Vale do Ribeira a congresso em Avaré",
+      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/missoes-empresariais-do-sebrae-sp-levam-empreendedores-do-sudoeste-paulista-e-alto-vale-do-ribeira-a-congresso-em-avare/",
+      "publishedAt": "2026-11-25T11:58:40+00:00",
+      "source": "Sebrae-SP",
+      "feed": "Sebrae-SP — Notícias",
+      "category": "Brasil"
+    },
+    {
       "id": "16e4653c9ea88252",
       "title": "Lula sanciona ajuste fiscal aprovado no Congresso",
       "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-sanciona-ajuste-fiscal-aprovado-no-congresso",
@@ -34,13 +52,13 @@
       "category": "Brasil"
     },
     {
-      "id": "c66b016ad4f0aaa7",
-      "title": "Presidente Prudente lança Trilha Prudente para fortalecer o ecossistema de inovação e impulsionar pequenos negócios",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/presidente-prudente-lanca-trilha-prudente-para-fortalecer-o-ecossistema-de-inovacao-e-impulsionar-pequenos-negocios/",
-      "publishedAt": "2026-11-24T20:19:05+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Brasil"
+      "id": "c2c742814aba01ab",
+      "title": "Gana é eleita na ONU Turismo e Brasil assume vice-presidência",
+      "url": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/gana-e-eleita-na-onu-turismo-e-brasil-assume-vice-presidencia",
+      "publishedAt": "2026-11-26T00:36:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Interesses"
     },
     {
       "id": "411c076777c53665",
@@ -50,13 +68,22 @@
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Interesses"
+    },
+    {
+      "id": "a2246ba60c142902",
+      "title": "Brasil decide que embaixador não deve voltar à Argentina de Milei",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/brasil-decide-que-embaixador-nao-deve-mais-voltar-argentina-de-milei",
+      "publishedAt": "2026-11-25T17:41:00+00:00",
+      "source": "Agência Brasil",
+      "feed": "Agência Brasil — Internacional",
+      "category": "Mundo"
     }
   ],
   "coverage": [
     {
       "category": "Mundo",
       "target": 3,
-      "count": 0
+      "count": 1
     },
     {
       "category": "Brasil",
@@ -71,12 +98,12 @@
     {
       "category": "Mercado imobiliário",
       "target": 4,
-      "count": 1
+      "count": 2
     },
     {
       "category": "Interesses",
       "target": 2,
-      "count": 1
+      "count": 2
     }
   ],
   "warnings": [],
