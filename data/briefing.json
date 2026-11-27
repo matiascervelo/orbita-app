@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-11-26",
+  "editionDate": "2026-11-27",
   "timezone": "America/Sao_Paulo",
-  "generatedAt": "2026-11-26T19:34:47.161235+00:00",
+  "generatedAt": "2026-11-27T19:27:03.913665+00:00",
   "status": "ready",
   "sourceFeedsOk": 11,
   "sourceFeedsTotal": 11,
@@ -16,42 +16,6 @@
       "category": "Mercado imobiliário"
     },
     {
-      "id": "3f05e3412fbcfded",
-      "title": "Presidente do IBGE recebe Medalha Zeferino Vaz da Unicamp e dá ao reitor medalha pelos 90 anos do IBGE",
-      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48758-presidente-do-ibge-recebe-medalha-zeferino-vaz-da-unicamp-e-da-ao-reitor-medalha-pelos-90-anos-do-ibge.html",
-      "publishedAt": "2026-11-25T09:20:03+00:00",
-      "source": "IBGE",
-      "feed": "IBGE — Agência de Notícias",
-      "category": "Brasil"
-    },
-    {
-      "id": "893ce5d2dbd30b16",
-      "title": "Condomínio não é empresa",
-      "url": "https://secovi.com.br/condominio-nao-e-empresa/",
-      "publishedAt": "2026-11-25T08:00:26+00:00",
-      "source": "Secovi-SP",
-      "feed": "Secovi-SP — Notícias",
-      "category": "Mercado imobiliário"
-    },
-    {
-      "id": "c4fb6438852a8459",
-      "title": "Missões empresariais do Sebrae-SP levam empreendedores do Sudoeste Paulista e Alto Vale do Ribeira a congresso em Avaré",
-      "url": "https://sp.agenciasebrae.com.br/cultura-empreendedora/missoes-empresariais-do-sebrae-sp-levam-empreendedores-do-sudoeste-paulista-e-alto-vale-do-ribeira-a-congresso-em-avare/",
-      "publishedAt": "2026-11-25T11:58:40+00:00",
-      "source": "Sebrae-SP",
-      "feed": "Sebrae-SP — Notícias",
-      "category": "Brasil"
-    },
-    {
-      "id": "16e4653c9ea88252",
-      "title": "Lula sanciona ajuste fiscal aprovado no Congresso",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/lula-sanciona-ajuste-fiscal-aprovado-no-congresso",
-      "publishedAt": "2026-11-24T20:25:00+00:00",
-      "source": "Agência Brasil",
-      "feed": "Agência Brasil — Política",
-      "category": "Brasil"
-    },
-    {
       "id": "c2c742814aba01ab",
       "title": "Gana é eleita na ONU Turismo e Brasil assume vice-presidência",
       "url": "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-11/gana-e-eleita-na-onu-turismo-e-brasil-assume-vice-presidencia",
@@ -61,19 +25,46 @@
       "category": "Interesses"
     },
     {
-      "id": "411c076777c53665",
-      "title": "ONU aprova proposta do Brasil de turismo amigável para muçulmanos",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/onu-aprova-proposta-do-brasil-de-turismo-amigavel-para-muculmanos",
-      "publishedAt": "2026-11-24T21:22:00+00:00",
+      "id": "d84b3e58f9b2812c",
+      "title": "CMN reduz juros do Fundo Clima para baterias nacionais",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/cmn-reduz-juros-do-fundo-clima-para-baterias-nacionais",
+      "publishedAt": "2026-11-27T10:02:00+00:00",
       "source": "Agência Brasil",
-      "feed": "Agência Brasil — Internacional",
-      "category": "Interesses"
+      "feed": "Agência Brasil — Economia",
+      "category": "Brasil"
     },
     {
-      "id": "a2246ba60c142902",
-      "title": "Brasil decide que embaixador não deve voltar à Argentina de Milei",
-      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/brasil-decide-que-embaixador-nao-deve-mais-voltar-argentina-de-milei",
-      "publishedAt": "2026-11-25T17:41:00+00:00",
+      "id": "3b95c6a43475b98a",
+      "title": "Preços da indústria sobem 0,98% em outubro, puxados por alimentos e combustíveis",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48755-precos-da-industria-sobem-0-98-em-outubro-puxados-por-alimentos-e-combustiveis.html",
+      "publishedAt": "2026-11-26T12:00:00+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "00fb2209452058df",
+      "title": "Em novembro IPCA-15 é de 0,22%",
+      "url": "http://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/48751-noticiaipca15novembro.html",
+      "publishedAt": "2026-11-26T12:00:00+00:00",
+      "source": "IBGE",
+      "feed": "IBGE — Agência de Notícias",
+      "category": "Brasil"
+    },
+    {
+      "id": "bd483a5d5fd0f1b7",
+      "title": "Fundo de pensão, fundo imobiliário e franquia: o self storage tem mais de um caminho para crescer",
+      "url": "https://secovi.com.br/fundo-de-pensao-fundo-imobiliario-e-franquia-o-self-storage-tem-mais-de-um-caminho-para-crescer/",
+      "publishedAt": "2026-11-26T21:05:21+00:00",
+      "source": "Secovi-SP",
+      "feed": "Secovi-SP — Notícias",
+      "category": "Mercado imobiliário"
+    },
+    {
+      "id": "d399460f2bab6e57",
+      "title": "China: questões comerciais com EUA devem ser resolvidas com diálogo",
+      "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/china-questoes-comerciais-com-eua-devem-ser-resolvidas-com-dialogo",
+      "publishedAt": "2026-11-26T11:54:00+00:00",
       "source": "Agência Brasil",
       "feed": "Agência Brasil — Internacional",
       "category": "Mundo"
@@ -103,7 +94,7 @@
     {
       "category": "Interesses",
       "target": 2,
-      "count": 2
+      "count": 1
     }
   ],
   "warnings": [],
